@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.FirstImage_Container {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    margin-top: 110px;
+}
+
+.FirstImage_Img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+    .FirstImage_Container {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        margin-top: 110px;
+    }
+
+    .FirstImage_Img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:1025px) {
+    .FirstImage_Container {
+        position: absolute;
+        width: 100%;
+        height: 350px;
+        margin-top: 110px;
+    }
+
+    .FirstImage_Img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .FirstImage_Container {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        margin-top: 110px;
+    }
+
+    .FirstImage_Img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .FirstImage_Container {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        margin-top: 110px;
+    }
+
+    .FirstImage_Img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+}

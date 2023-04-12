@@ -1,9 +1,9 @@
-import Navbar from "./Componets/Navbar/Navbar";
+import Home from "./Pages/Home/Home";
 
 function App() {
   return (
     <div className="app">
-      <Navbar />
+      <Home />
     </div>
   );
 }
