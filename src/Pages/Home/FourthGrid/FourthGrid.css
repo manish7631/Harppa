@@ -1,0 +1,284 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.FourthGrid_Container {
+    width: 100%;
+    height: auto;
+}
+
+.FourthGrid_Heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.FourthGrid_Section {
+    width: 100%;
+    height: auto;
+
+}
+
+.FourthGrid_Main {
+    width: 100%;
+    height: auto;
+}
+
+.FourthGrid_Section_Main_First_Card {
+    font-size: 15px;
+    font-weight: 800;
+    margin: 10px auto 20px auto;
+    line-height: 19px;
+    letter-spacing: 1px;
+    width: 25%;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    padding: 10px;
+    border: 1px solid #8d8484;
+}
+
+.FourthGrid_Section_Main_First_Card_Heading {
+    font-size: 25px;
+    font-weight: 600;
+    color: #c74126;
+    text-align: center;
+}
+
+.FourthGrid_Section_Main_First_Card_Paragraph {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3a3c3e;
+}
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+
+    .FourthGrid_Container {
+        width: 100%;
+        height: auto;
+    }
+
+    .FourthGrid_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .FourthGrid_Section {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .FourthGrid_Main {
+        width: 100%;
+        height: auto;
+    }
+
+    .FourthGrid_Section_Main_First_Card {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 10px auto 20px auto;
+        line-height: 19px;
+        letter-spacing: 1px;
+        width: 35%;
+        height: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        padding: 10px;
+        border: 1px solid #8d8484;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Heading {
+        font-size: 25px;
+        font-weight: 600;
+        color: #c74126;
+        text-align: center;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Paragraph {
+        font-size: 18px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+    .FourthGrid_Container {
+        width: 100%;
+        height: auto;
+    }
+
+    .FourthGrid_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .FourthGrid_Section {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .FourthGrid_Main {
+        width: 100%;
+        height: auto;
+    }
+
+    .FourthGrid_Section_Main_First_Card {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 10px auto 20px auto;
+        line-height: 19px;
+        letter-spacing: 1px;
+        width: 45%;
+        height: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        padding: 10px;
+        border: 1px solid #8d8484;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Heading {
+        font-size: 25px;
+        font-weight: 600;
+        color: #c74126;
+        text-align: center;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Paragraph {
+        font-size: 18px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    .FourthGrid_Container {
+        width: 100%;
+        height: auto;
+    }
+
+    .FourthGrid_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .FourthGrid_Section {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .FourthGrid_Main {
+        width: 100%;
+        height: auto;
+    }
+
+    .FourthGrid_Section_Main_First_Card {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 10px auto 20px auto;
+        line-height: 19px;
+        letter-spacing: 1px;
+        width: 65%;
+        height: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        padding: 10px;
+        border: 1px solid #8d8484;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Heading {
+        font-size: 25px;
+        font-weight: 600;
+        color: #c74126;
+        text-align: center;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Paragraph {
+        font-size: 18px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+
+    .FourthGrid_Container {
+        width: 100%;
+        height: auto;
+    }
+
+    .FourthGrid_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .FourthGrid_Section {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .FourthGrid_Main {
+        width: 100%;
+        height: auto;
+    }
+
+    .FourthGrid_Section_Main_First_Card {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 10px auto 20px auto;
+        line-height: 19px;
+        letter-spacing: 1px;
+        width: 75%;
+        height: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        padding: 10px;
+        border: 1px solid #8d8484;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Heading {
+        font-size: 25px;
+        font-weight: 600;
+        color: #c74126;
+        text-align: center;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Paragraph {
+        font-size: 18px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+}
