@@ -1,7 +1,9 @@
 import React from "react";
-import "./Navbar.css";
 import ImageLogo from "../../Image/ImageLogo.png";
 import { NavLink } from "react-router-dom";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import "./Navbar.css";
+
 const Navbar = () => {
   return (
     <div className="Navbar_Container">
@@ -25,6 +27,12 @@ const Navbar = () => {
               </ul>
             );
           })}
+        </div>
+
+        {/* --------------Right Side Menu-------------------- */}
+
+        <div className="Navbar_Menu">
+          <MenuRoundedIcon />
         </div>
       </div>
     </div>
