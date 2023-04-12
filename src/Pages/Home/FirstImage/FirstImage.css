@@ -5,10 +5,10 @@
 }
 
 .FirstImage_Container {
-    position: absolute;
     width: 100%;
     height: 300px;
-    margin-top: 110px;
+    margin: 110px 0px 0px 0px;
+    box-sizing: border-box;
 }
 
 .FirstImage_Img {
@@ -19,7 +19,7 @@
 
 @media screen and (min-width:1025px) and (max-width:1200px) {
     .FirstImage_Container {
-        position: absolute;
+
         width: 100%;
         height: 300px;
         margin-top: 110px;
@@ -33,9 +33,9 @@
 
 }
 
-@media screen and (min-width:769px) and (max-width:1025px) {
+@media screen and (min-width:769px) and (max-width:1024px) {
     .FirstImage_Container {
-        position: absolute;
+
         width: 100%;
         height: 350px;
         margin-top: 110px;
@@ -50,7 +50,7 @@
 
 @media screen and (min-width:481px) and (max-width:768px) {
     .FirstImage_Container {
-        position: absolute;
+
         width: 100%;
         height: 300px;
         margin-top: 110px;
@@ -65,7 +65,7 @@
 
 @media screen and (min-width:320px) and (max-width:480px) {
     .FirstImage_Container {
-        position: absolute;
+
         width: 100%;
         height: 300px;
         margin-top: 110px;

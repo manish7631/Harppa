@@ -12,6 +12,8 @@
     z-index: 10;
     margin-left: 0;
     margin-right: 0;
+    top: 0;
+    left: 0;
 }
 
 .Navbar_Section {
@@ -79,6 +81,8 @@
         z-index: 10;
         margin-left: 0;
         margin-right: 0;
+        top: 0;
+        left: 0;
     }
 
 
@@ -123,7 +127,7 @@
 
 }
 
-@media screen and (min-width:769px) and (max-width:1025px) {
+@media screen and (min-width:769px) and (max-width:1024px) {
     .Navbar_Container {
         width: 100%;
         height: 110px;
@@ -132,6 +136,8 @@
         z-index: 10;
         margin-left: 0;
         margin-right: 0;
+        top: 0;
+        left: 0;
     }
 
 
@@ -186,6 +192,8 @@
         z-index: 10;
         margin-left: 0;
         margin-right: 0;
+        top: 0;
+        left: 0;
     }
 
 
@@ -272,6 +280,8 @@
         z-index: 10;
         margin-left: 0;
         margin-right: 0;
+        top: 0;
+        left: 0;
     }
 
 
