@@ -64,9 +64,11 @@
     font-weight: 600;
 }
 
-.Navbar_Menu {
+.Navbar_Menu,
+.Navbar_Close {
     display: none;
 }
+
 
 @media screen and (min-width:1025px) and (max-width:1200px) {
     .Navbar_Container {
@@ -114,7 +116,8 @@
         font-weight: 600;
     }
 
-    .Navbar_Menu {
+    .Navbar_Menu,
+    .Navbar_Close {
         display: none;
     }
 
@@ -166,7 +169,8 @@
         font-weight: 600;
     }
 
-    .Navbar_Menu {
+    .Navbar_Menu,
+    .Navbar_Close {
         display: none;
     }
 
@@ -198,16 +202,49 @@
         color: #c74126;
     }
 
+
     .Navbar_Right_Side {
-        display: none;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: rgb(199, 230, 230);
+        transition: 1s;
+        transform: translate(-100vh);
+    }
+
+    .Navbar_responsive_nav {
+        transform: none;
+
     }
 
     .Navbar_Menu {
-        display: block;
-        font-size: 28px;
+        display: block !important;
+        font-size: 25px;
         font-weight: 600;
         color: #c74126;
+        cursor: pointer !important;
     }
+
+    .Navbar_Close {
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        right: 1rem;
+        color: #c74126;
+        font-size: 28px;
+        font-weight: 600;
+        cursor: pointer;
+
+    }
+
+
 
 }
 
@@ -238,14 +275,42 @@
     }
 
     .Navbar_Right_Side {
-        display: none;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: rgb(199, 230, 230);
+        transition: 1s;
+        transform: translate(-100vh);
+    }
+
+    .Navbar_responsive_nav {
+        transform: none;
     }
 
     .Navbar_Menu {
-        display: block;
+        display: block !important;
         font-size: 25px;
         font-weight: 600;
         color: #c74126;
+        cursor: pointer !important;
     }
+
+    .Navbar_Close {
+        display: block;
+        position: absolute;
+        top: 2.5rem;
+        right: 1rem;
+        color: #c74126;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
 
 }
