@@ -27,7 +27,11 @@ const Navbar = () => {
             return (
               <ul>
                 <li>
-                  <NavLink id="Navbar_Right_Side_Item" to={`${e.path}`}>
+                  <NavLink
+                    onClick={showNavbar}
+                    id="Navbar_Right_Side_Item"
+                    to={`${e.path}`}
+                  >
                     {e.title}
                   </NavLink>
                 </li>
