@@ -7,6 +7,7 @@ import Era from "../../../Image/Era.png";
 import Risthal from "../../../Image/Risthal.png";
 import Bihar from "../../../Image/Bihar.png";
 import Budha from "../../../Image/Budha.png";
+import Allabhad from "../../../Image/Allabhad.png";
 
 const FourthGrid = () => {
   return (
@@ -79,10 +80,10 @@ const FourthGrid = () => {
           </div>
 
           {/* ------------------Search By Site------------------- */}
-          {/* <div>
-            <h3 className="FourthGrid_Section_Main_Second_Card_Heading">
+          <div>
+            {/* <h3 className="FourthGrid_Section_Main_Second_Card_Heading">
               Search By Site
-            </h3>
+            </h3> */}
             <div className="FourthGrid_Section_Main_Second_Card">
               <Card
                 sx={{
@@ -174,8 +175,37 @@ const FourthGrid = () => {
                   </CardContent>
                 </CardActionArea>
               </Card>
-            </div> */}
-          {/* </div> */}
+
+              <Card
+                sx={{
+                  backgroundColor: "transparent",
+                }}
+                className="FourthGrid_Section_Main_Second_Card_Card"
+              >
+                <CardActionArea>
+                  <CardContent>
+                    <h3 className="FourthGrid_Section_Main_First_Card_Card_Heading">
+                      Allahabad Pillar
+                    </h3>
+                  </CardContent>
+                  <CardMedia
+                    component="img"
+                    className="FourthGrid_Section_Main_Second_Card_Image"
+                    image={Allabhad}
+                    alt="green iguana"
+                  />
+                  <CardContent>
+                    <p className="FourthGrid_Section_Main_First_Card_Paragraph">
+                      A round, monolithic sandstone column. Beside
+                      Samudragupta's praśasti, it also bears two inscriptions by
+                      Aśoka as well as a number of mediaeval inscriptions, some
+                      of which are…
+                    </p>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </div>
+          </div>
         </div>
       </div>
     </div>

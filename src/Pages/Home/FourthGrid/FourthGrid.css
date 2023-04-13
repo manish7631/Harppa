@@ -78,8 +78,7 @@
 
 .FourthGrid_Section_Main_Second_Card {
     width: 90%;
-    height: 500px;
-    border: 1px solid red;
+    height: auto;
     margin: 0px auto 30px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -93,10 +92,11 @@
     margin: 10px auto 20px auto;
     line-height: 19px;
     letter-spacing: 1px;
-    width: 363.6px;
+    min-width: 363.6px;
     height: 400px;
     padding: 10px;
     border: 1px solid green;
+    margin: 10px 20px;
 }
 
 .FourthGrid_Section_Main_First_Card_Card_Heading {
@@ -176,6 +176,50 @@
 
     }
 
+    .FourthGrid_Section_Main_Second_Card_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        padding: 20px 0px;
+
+    }
+
+    .FourthGrid_Section_Main_Second_Card {
+        width: 90%;
+        height: auto;
+        margin: 0px auto 30px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .FourthGrid_Section_Main_Second_Card_Card {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 10px auto 20px auto;
+        line-height: 19px;
+        letter-spacing: 1px;
+        min-width: 443.6px;
+        height: 400px;
+        padding: 10px;
+        border: 1px solid green;
+        margin: 10px 20px;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Card_Heading {
+        font-size: 25px;
+        font-weight: 600;
+        color: #c74126;
+        text-align: center;
+    }
+
+    .FourthGrid_Section_Main_Second_Card_Image {
+        width: 100%;
+        height: 200px;
+    }
+
 }
 
 @media screen and (min-width:769px) and (max-width:1024px) {
@@ -242,6 +286,51 @@
         overflow: hidden;
 
     }
+
+    .FourthGrid_Section_Main_Second_Card_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        padding: 20px 0px;
+
+    }
+
+    .FourthGrid_Section_Main_Second_Card {
+        width: 90%;
+        height: auto;
+        margin: 0px auto 30px auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .FourthGrid_Section_Main_Second_Card_Card {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 10px auto 20px auto;
+        line-height: 19px;
+        letter-spacing: 1px;
+        min-width: 343.6px;
+        height: 400px;
+        padding: 10px;
+        border: 1px solid green;
+        margin: 10px 20px;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Card_Heading {
+        font-size: 25px;
+        font-weight: 600;
+        color: #c74126;
+        text-align: center;
+    }
+
+    .FourthGrid_Section_Main_Second_Card_Image {
+        width: 100%;
+        height: 200px;
+    }
+
 }
 
 @media screen and (min-width:481px) and (max-width:768px) {
@@ -308,6 +397,50 @@
         overflow: hidden;
 
     }
+
+    .FourthGrid_Section_Main_Second_Card_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        padding: 20px 0px;
+
+    }
+
+    .FourthGrid_Section_Main_Second_Card {
+        width: 90%;
+        height: auto;
+        margin: 0px auto 30px auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .FourthGrid_Section_Main_Second_Card_Card {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 10px auto 20px auto;
+        line-height: 19px;
+        letter-spacing: 1px;
+        min-width: 433.6px;
+        height: 400px;
+        padding: 10px;
+        border: 1px solid green;
+        margin: 10px 20px;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Card_Heading {
+        font-size: 25px;
+        font-weight: 600;
+        color: #c74126;
+        text-align: center;
+    }
+
+    .FourthGrid_Section_Main_Second_Card_Image {
+        width: 100%;
+        height: 200px;
+    }
 }
 
 @media screen and (min-width:320px) and (max-width:480px) {
@@ -315,6 +448,7 @@
     .FourthGrid_Container {
         width: 100%;
         height: auto;
+
     }
 
     .FourthGrid_Heading {
@@ -342,12 +476,8 @@
         margin: 10px auto 20px auto;
         line-height: 19px;
         letter-spacing: 1px;
-        width: 75%;
+        width: 80%;
         height: 100%;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-        overflow: hidden;
         padding: 10px;
         border: 1px solid #8d8484;
     }
@@ -368,6 +498,52 @@
         font-size: 18px;
         font-weight: 600;
         color: #3a3c3e;
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+    }
+
+    .FourthGrid_Section_Main_Second_Card_Heading {
+        font-size: 25px;
+        font-weight: 600;
+        color: #c74126;
+        text-align: center;
+    }
+
+    .FourthGrid_Section_Main_Second_Card {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+
+    }
+
+    .FourthGrid_Section_Main_Second_Card_Card {
+        font-size: 15px;
+        font-weight: 800;
+        margin: 10px auto 20px auto;
+        line-height: 19px;
+        letter-spacing: 1px;
+        width: 75% !important;
+        height: 100%;
+        padding: 10px;
+        border: 1px solid #8d8484;
+    }
+
+    .FourthGrid_Section_Main_First_Card_Card_Heading {
+        font-size: 25px;
+        font-weight: 600;
+        color: #c74126;
+        text-align: center;
+    }
+
+    .FourthGrid_Section_Main_Second_Card_Image {
+        width: 100%;
+        height: 200px;
     }
 
 }
