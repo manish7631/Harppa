@@ -92,7 +92,7 @@
     margin: 10px auto 20px auto;
     line-height: 19px;
     letter-spacing: 1px;
-    min-width: 363.6px;
+    width: 90%;
     height: 400px;
     padding: 10px;
     border: 1px solid green;
@@ -190,7 +190,7 @@
         height: auto;
         margin: 0px auto 30px auto;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         gap: 20px;
     }
@@ -201,7 +201,7 @@
         margin: 10px auto 20px auto;
         line-height: 19px;
         letter-spacing: 1px;
-        min-width: 443.6px;
+        width: 90%;
         height: 400px;
         padding: 10px;
         border: 1px solid green;
@@ -312,7 +312,7 @@
         margin: 10px auto 20px auto;
         line-height: 19px;
         letter-spacing: 1px;
-        min-width: 343.6px;
+        width: 90%;
         height: 400px;
         padding: 10px;
         border: 1px solid green;
@@ -420,14 +420,13 @@
     .FourthGrid_Section_Main_Second_Card_Card {
         font-size: 15px;
         font-weight: 800;
+        margin: 10px auto 20px auto;
         line-height: 19px;
         letter-spacing: 1px;
-        width: 433.6px;
+        width: 70%;
         height: 400px;
-        margin: auto;
         padding: 10px;
-        border: 1px solid green;
-        margin: 10px 20px;
+        border: 1px solid #8d8484;
     }
 
     .FourthGrid_Section_Main_First_Card_Card_Heading {
