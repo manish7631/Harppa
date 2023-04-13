@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.About_Container {
+    width: 100%;
+    height: 500px;
+    margin: 110px 0px 0px 0px;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+}
+
+.About_Main {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+
+}
+
+.About_img_Card {
+    width: 50%;
+    height: 380px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.About_img_Text {
+    width: 50%;
+    padding: 10px 15px 25px 10px;
+    box-sizing: border-box;
+    height: 380px;
+    margin: 10px;
+
+}
+
+.para {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px;
+    line-height: 19px;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 80%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 14;
+    overflow: hidden;
+    padding: 10px;
+    color: #3a3c3e;
+
+}
+
+.ReadMore {
+    width: 120px;
+    height: 40px;
+    background-color: rgba(101, 155, 174, 0.8);
+    color: white;
+    border-radius: 10px;
+    float: right;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+    .About_Container {
+        width: 100%;
+        height: 500px;
+        margin: 110px 0px 0px 0px;
+        padding-top: 10px;
+        box-sizing: border-box;
+
+    }
+
+    .About_Main {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        margin: 50px auto;
+
+    }
+
+    .About_img_Card {
+        width: 50%;
+        height: 380px;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    .About_img_Text {
+        width: 50%;
+        padding: 10px 15px 25px 10px;
+        box-sizing: border-box;
+        height: 380px;
+        margin: 10px;
+
+    }
+
+    .para {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 10px;
+        line-height: 19px;
+        letter-spacing: 1px;
+        width: 100%;
+        height: 80%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 14;
+        overflow: hidden;
+        padding: 10px;
+        color: #3a3c3e;
+
+    }
+
+    .ReadMore {
+        width: 120px;
+        height: 40px;
+        background-color: rgba(101, 155, 174, 0.8);
+        color: white;
+        border-radius: 10px;
+        float: right;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .About_Container {
+        width: 100%;
+        height: 500px;
+        margin: 110px 0px 0px 0px;
+        padding-top: 10px;
+        box-sizing: border-box;
+
+    }
+
+    .About_Main {
+        width: 99%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        margin: 50px auto;
+
+    }
+
+    .About_img_Card {
+        width: 50%;
+        height: 380px;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    .About_img_Text {
+        width: 50%;
+        padding: 10px 15px 25px 10px;
+        box-sizing: border-box;
+        height: 380px;
+        margin: 10px;
+
+    }
+
+    .para {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 10px;
+        line-height: 19px;
+        letter-spacing: 1px;
+        width: 100%;
+        height: 80%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 14;
+        overflow: hidden;
+        padding: 10px;
+        color: #3a3c3e;
+
+    }
+
+    .ReadMore {
+        width: 120px;
+        height: 40px;
+        background-color: rgba(101, 155, 174, 0.8);
+        color: white;
+        border-radius: 10px;
+        float: right;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .About_Container {
+        width: 100%;
+        height: auto;
+        margin: 110px 0px 0px 0px;
+        padding-top: 10px;
+        box-sizing: border-box;
+
+    }
+
+    .About_Main {
+        width: 99%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        margin: 50px auto;
+
+    }
+
+    .About_img_Card {
+        width: 70%;
+        height: 380px;
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+
+    .About_img_Text {
+        width: 70%;
+        padding: 10px 15px 25px 10px;
+        box-sizing: border-box;
+        height: 380px;
+        margin: 10px auto;
+
+    }
+
+    .para {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 10px;
+        line-height: 19px;
+        letter-spacing: 1px;
+        width: 100%;
+        height: 80%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 14;
+        overflow: hidden;
+        padding: 10px;
+        color: #3a3c3e;
+
+    }
+
+    .ReadMore {
+        width: 120px;
+        height: 40px;
+        background-color: rgba(101, 155, 174, 0.8);
+        color: white;
+        border-radius: 10px;
+        float: right;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .About_Container {
+        width: 100%;
+        height: auto;
+        margin: 110px 0px 0px 0px;
+        padding-top: 10px;
+        box-sizing: border-box;
+
+    }
+
+    .About_Main {
+        width: 99%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        margin: 50px auto;
+
+    }
+
+    .About_img_Card {
+        width: 90%;
+        height: 380px;
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+
+    .About_img_Text {
+        width: 90%;
+        padding: 10px 15px 25px 10px;
+        box-sizing: border-box;
+        height: 380px;
+        margin: 10px auto;
+
+    }
+
+    .para {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 10px;
+        line-height: 19px;
+        letter-spacing: 1px;
+        width: 100%;
+        height: 80%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 14;
+        overflow: hidden;
+        padding: 10px;
+        color: #3a3c3e;
+
+    }
+
+    .ReadMore {
+        width: 120px;
+        height: 40px;
+        background-color: rgba(101, 155, 174, 0.8);
+        color: white;
+        border-radius: 10px;
+        float: right;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}

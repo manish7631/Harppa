@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import ImageLogo from "../../Image/ImageLogo.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import "./Navbar.css";
@@ -15,7 +15,9 @@ const Navbar = () => {
       <div className="Navbar_Section">
         {/* ----------------Left Side -------------- */}
         <div className="Navbar_Left_Side">
-          <img src={ImageLogo} alt="Navbar_Logo" />
+          <Link to="/">
+            <img className="Navbar_Logo" src={ImageLogo} alt="Navbar_Logo" />
+          </Link>
           <h3>Computational Epigraphy Lab (CEL)</h3>
         </div>
         {/* ----------------Right Side-------------------- */}
