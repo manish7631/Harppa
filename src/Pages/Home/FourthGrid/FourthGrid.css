@@ -34,7 +34,7 @@
     margin: 10px auto 20px auto;
     line-height: 19px;
     letter-spacing: 1px;
-    width: 363.6px;
+    width: 25%;
     height: 400px;
     padding: 10px;
     border: 1px solid #8d8484;
@@ -143,7 +143,7 @@
         margin: 10px auto 20px auto;
         line-height: 19px;
         letter-spacing: 1px;
-        width: 443.6px;
+        width: 35%;
         height: 400px;
         padding: 10px;
         border: 1px solid #8d8484;
@@ -254,7 +254,7 @@
         margin: 10px auto 20px auto;
         line-height: 19px;
         letter-spacing: 1px;
-        width: 463.6px;
+        width: 45%;
         height: 400px;
         padding: 10px;
         border: 1px solid #8d8484;
@@ -365,7 +365,7 @@
         margin: 10px auto 20px auto;
         line-height: 19px;
         letter-spacing: 1px;
-        min-width: 433.6px;
+        width: 70%;
         height: 400px;
         padding: 10px;
         border: 1px solid #8d8484;
@@ -408,7 +408,7 @@
     }
 
     .FourthGrid_Section_Main_Second_Card {
-        width: 90%;
+        width: 100%;
         height: auto;
         margin: 0px auto 30px auto;
         display: grid;
@@ -420,11 +420,11 @@
     .FourthGrid_Section_Main_Second_Card_Card {
         font-size: 15px;
         font-weight: 800;
-        margin: 10px auto 20px auto;
         line-height: 19px;
         letter-spacing: 1px;
-        min-width: 433.6px;
+        width: 433.6px;
         height: 400px;
+        margin: auto;
         padding: 10px;
         border: 1px solid green;
         margin: 10px 20px;
