@@ -61,17 +61,7 @@ const Footer = () => {
               <h3>How To Use</h3>{" "}
             </NavLink>
           </IconButton>
-          <IconButton className="Footer_Section_Text_Text">
-            <NavLink
-              to="/terms"
-              className={({ isActive }) => (isActive ? "active_nav" : "")}
-              style={{
-                textDecoration: "none",
-              }}
-            >
-              <h3>Terms & Conditions</h3>{" "}
-            </NavLink>
-          </IconButton>
+
           <IconButton className="Footer_Section_Text_Text">
             <NavLink
               to="/contact"
