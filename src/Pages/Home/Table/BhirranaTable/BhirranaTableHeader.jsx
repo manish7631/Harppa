@@ -14,23 +14,9 @@ export const BhirranaTableHeader = () => {
       <Box>
         <Box>
           <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar id="Bhirrana_AppBar" position="static">
               <Toolbar>
-                <Typography
-                  variant="h4"
-                  noWrap
-                  component="div"
-                  sx={{
-                    display: {
-                      xs: "block",
-                      sm: "block",
-                      fontWeight: "bold",
-                      color: "white",
-                    },
-                  }}
-                >
-                  Bhirrana
-                </Typography>
+                <h2 className="Banawali_Heading">Bhirrana</h2>
 
                 {/* -------------------------------Search Collaboration Div Here----------------------------------- */}
 

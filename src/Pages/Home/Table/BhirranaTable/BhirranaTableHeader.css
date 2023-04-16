@@ -1,19 +1,176 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.BhirranaTableHeader_Container{
-    width: 98%;
+
+.BhirranaTableHeader_Container {
+    width: 80%;
     height: auto;
     padding: 2px;
     margin: 110px auto;
 }
-.BhirranaTableHeader_Section_Left{
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    margin: 10px 0px 5px 10px;
-    align-items: center;
+
+
+#Bhirrana_AppBar {
+    background-color: rgb(115, 140, 136);
+    width: 100%;
 }
- 
+
+.Bhirrana_Heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+}
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+
+    .BhirranaTableHeader_Container {
+        width: 90%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+    }
+
+
+    #Bhirrana_AppBar {
+        background-color: rgb(115, 140, 136);
+        width: 100%;
+    }
+
+    .Bhirrana_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        color: white;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+    .BhirranaTableHeader_Container {
+        width: 80%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+    }
+
+
+    #Bhirrana_AppBar {
+        background-color: rgb(115, 140, 136);
+        width: 100%;
+    }
+
+    .Bhirrana_CardList_MobileDevice {
+        width: 80%;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .Bhirrana_TableList_LargeDevice {
+        display: none;
+    }
+
+    .Bhirrana_Card_Mobile {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .Bhirrana_Mobile_Card_Left {
+        font-size: 28px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Bhirrana_Mobile_Card_Right {
+        font-size: 20px;
+        font-weight: 500;
+        color: #3a3c3e;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    .BhirranaTableHeader_Container {
+        width: 90%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+    }
+
+
+    #Bhirrana_AppBar {
+        background-color: rgb(115, 140, 136);
+        width: 100%;
+    }
+
+    .Bhirrana_CardList_MobileDevice {
+        width: 90%;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .Bhirrana_TableList_LargeDevice {
+        display: none;
+    }
+
+    .Bhirrana_Card_Mobile {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .Bhirrana_Mobile_Card_Left {
+        font-size: 28px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Bhirrana_Mobile_Card_Right {
+        font-size: 20px;
+        font-weight: 500;
+        color: #3a3c3e;
+    }
+}
+
+
+@media screen and (min-width:320px) and (max-width:480px) {
+
+    .BhirranaTableHeader_Container {
+        width: 98%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+    }
+
+
+    #Bhirrana_AppBar {
+        background-color: rgb(115, 140, 136);
+        width: 100%;
+    }
+
+    .Bhirrana_CardList_MobileDevice {
+        width: 100%;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .Bhirrana_TableList_LargeDevice {
+        display: none;
+    }
+
+    .Bhirrana_Card_Mobile {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .Bhirrana_Mobile_Card_Left {
+        font-size: 28px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Bhirrana_Mobile_Card_Right {
+        font-size: 20px;
+        font-weight: 500;
+        color: #3a3c3e;
+    }
+}

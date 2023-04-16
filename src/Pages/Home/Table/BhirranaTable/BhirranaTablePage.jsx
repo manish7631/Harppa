@@ -281,7 +281,7 @@ export default function BhirranaTablePage({ loading, countryList, query1 }) {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box className="TableList_LargeDevice">
+      <Box className="Bhirrana_TableList_LargeDevice">
         <Paper sx={{ width: "100%", mb: 2 }}>
           {/* ------------------------Table Container Start Here---------------------------------- */}
 
@@ -652,7 +652,7 @@ export default function BhirranaTablePage({ loading, countryList, query1 }) {
 
           let newArr = str1.split("', '");
           return (
-            <Card className="Eran_Card_Mobile">
+            <Card className="Bhirrana_Card_Mobile">
               <CardActionArea>
                 <CardContent
                   sx={{
@@ -660,9 +660,9 @@ export default function BhirranaTablePage({ loading, countryList, query1 }) {
                     justifyContent: "space-between",
                   }}
                 >
-                  <h3 className="Eran_Mobile_Card_Left">Seqid</h3>
+                  <h3 className="Bhirrana_Mobile_Card_Left">Seqid</h3>
 
-                  <h4 className="Eran_Mobile_Card_Right">
+                  <h4 className="Bhirrana_Mobile_Card_Right">
                     <span
                       style={{
                         width: "100px",
@@ -683,9 +683,9 @@ export default function BhirranaTablePage({ loading, countryList, query1 }) {
                     justifyContent: "space-between",
                   }}
                 >
-                  <h3 className="Eran_Mobile_Card_Left">Seq_In_Nums</h3>
+                  <h3 className="Bhirrana_Mobile_Card_Left">Seq_In_Nums</h3>
 
-                  <h4 className="Eran_Mobile_Card_Right">
+                  <h4 className="Bhirrana_Mobile_Card_Right">
                     <span
                       style={{
                         width: "100px",
@@ -706,9 +706,9 @@ export default function BhirranaTablePage({ loading, countryList, query1 }) {
                     justifyContent: "space-between",
                   }}
                 >
-                  <h3 className="Eran_Mobile_Card_Left">Site</h3>
+                  <h3 className="Bhirrana_Mobile_Card_Left">Site</h3>
 
-                  <h4 className="Eran_Mobile_Card_Right">
+                  <h4 className="Bhirrana_Mobile_Card_Right">
                     <span
                       style={{
                         width: "100px",
@@ -730,9 +730,9 @@ export default function BhirranaTablePage({ loading, countryList, query1 }) {
                     alignItems: "center",
                   }}
                 >
-                  <h3 className="Eran_Mobile_Card_Left">Links</h3>
+                  <h3 className="Bhirrana_Mobile_Card_Left">Links</h3>
 
-                  <h4 className="Eran_Mobile_Card_Right">
+                  <h4 className="Bhirrana_Mobile_Card_Right">
                     <Box
                       sx={{
                         display: "flex",
@@ -771,9 +771,9 @@ export default function BhirranaTablePage({ loading, countryList, query1 }) {
                     justifyContent: "space-between",
                   }}
                 >
-                  <h3 className="Eran_Mobile_Card_Left">Actions</h3>
+                  <h3 className="Bhirrana_Mobile_Card_Left">Actions</h3>
 
-                  <h4 className="Eran_Mobile_Card_Right">
+                  <h4 className="Bhirrana_Mobile_Card_Right">
                     <span
                       style={{
                         width: "100px",
@@ -811,10 +811,6 @@ export default function BhirranaTablePage({ loading, countryList, query1 }) {
           page={page}
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
-          sx={{
-            background: "black",
-            marginTop: "5px",
-          }}
         />
       </Box>
     </Box>
