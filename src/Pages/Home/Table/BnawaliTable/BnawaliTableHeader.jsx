@@ -4,33 +4,20 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import React, { useState } from "react";
 import BnawaliTablePage from "./BnawaliTablePage";
-import { tokens } from "../../../../theme"
- import './BnawaliTableHeader.css'
+
+import "./BnawaliTableHeader.css";
 
 export const BnawaliTableHeader = () => {
   const [query, setQuery] = useState("");
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
 
   return (
-    <div className="BanawaliTableHeader_Container"> 
+    <div className="BanawaliTableHeader_Container">
       <Box>
         <Box>
           <Box sx={{ flexGrow: 1 }}>
-            <AppBar
-                
-              position="static"
-            >
+            <AppBar id="Banawali_AppBar" position="static">
               <Toolbar>
-                <Typography
-                  variant="h4"
-                  noWrap
-                  component="div"
-                  sx={{ display: { xs: "block", sm: "block", color:"white", fontWeight:"bold" } }}
-                  color={colors.grey[100]}
-                >
-            Banawali
-                </Typography>
+                <h2 className="Banawali_Heading">Banawali</h2>
 
                 {/* -------------------------------Search Collaboration Div Here----------------------------------- */}
 

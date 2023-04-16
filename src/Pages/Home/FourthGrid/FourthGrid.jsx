@@ -97,7 +97,7 @@ const FourthGrid = () => {
                       Banawali
                     </h3>
                   </CardContent>
-                  <Link to="erantablepage">
+                  <Link to="/bnawalitablepage">
                     <CardMedia
                       component="img"
                       image={Risthal}

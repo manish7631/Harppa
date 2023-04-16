@@ -10,6 +10,8 @@ import Signup from "./Pages/Signup/Signup";
 import { GawaliorTableHeader } from "./Pages/Home/Table/GawaliorTableHeader";
 import { EranTableHeader } from "./Pages/Home/Table/EranTable/EranTableHeader";
 import EranTableDetails from "./Pages/Home/Table/EranTable/EranTableDetails";
+import { BnawaliTableHeader } from "./Pages/Home/Table/BnawaliTable/BnawaliTableHeader";
+import { BhirranaTableHeader } from "./Pages/Home/Table/BhirranaTable/BhirranaTableHeader";
 
 function App() {
   return (
@@ -28,9 +30,9 @@ function App() {
           path="/erantabledetails/:EranId"
           element={<EranTableDetails />}
         />
-        {/*  <Route path="/bnawalitablepage" element={<BnawaliTableHeader />} />
+        <Route path="/bnawalitablepage" element={<BnawaliTableHeader />} />
         <Route path="/bhirranatablepage" element={<BhirranaTableHeader />} />
-        <Route
+        {/*  <Route
           path="/chanhujotablepage"
           element={<ChanhujoDaroTableHeader />}
         />

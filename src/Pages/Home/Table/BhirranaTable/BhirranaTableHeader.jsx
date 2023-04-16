@@ -3,33 +3,33 @@ import Typography from "@mui/material/Typography";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import React, { useState } from "react";
-import BhirranaTablePage from "./ BhirranaTablePage";
-import { tokens } from "../../../../theme"
- import './ BhirranaTableHeader.css'
+import BhirranaTablePage from "./BhirranaTablePage";
+import "./BhirranaTableHeader.css";
 
 export const BhirranaTableHeader = () => {
   const [query, setQuery] = useState("");
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
 
   return (
-    <div className="BhirranaTableHeader_Container"> 
+    <div className="BhirranaTableHeader_Container">
       <Box>
         <Box>
           <Box sx={{ flexGrow: 1 }}>
-            <AppBar
-               
-              position="static"
-            >
+            <AppBar position="static">
               <Toolbar>
                 <Typography
                   variant="h4"
                   noWrap
                   component="div"
-                  sx={{ display: { xs: "block", sm: "block" , fontWeight:"bold", color:"white"} }}
-                 
+                  sx={{
+                    display: {
+                      xs: "block",
+                      sm: "block",
+                      fontWeight: "bold",
+                      color: "white",
+                    },
+                  }}
                 >
-           Bhirrana
+                  Bhirrana
                 </Typography>
 
                 {/* -------------------------------Search Collaboration Div Here----------------------------------- */}
