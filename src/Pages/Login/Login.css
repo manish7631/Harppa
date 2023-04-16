@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Login_Main {
+    margin: 125px 70px;
+}
+
+.Login_Container {
+    width: 40%;
+    height: auto;
+    margin: auto;
+    box-sizing: border-box;
+
+}
+
+.Login_Card_Container {
+    width: auto;
+    height: auto;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 40px 40px;
+    border: 1px solid rgb(207, 202, 202);
+}
+
+.Login_Heading {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #3a3c3e;
+}
+
+.Login_Sub_Heading {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 0px;
+    color: #3a3c3e;
+}
+
+.Login_Create {
+    font-size: 19px;
+    font-weight: 500;
+    padding: 20px 0px;
+
+}
+
+.Login_Forgot {
+    font-size: 19px;
+    font-weight: 500;
+    padding: 20px 0px;
+    color: #3a3c3e;
+}
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+    .Login_Main {
+        margin: 125px 70px;
+    }
+
+    .Login_Container {
+        width: 70%;
+        height: auto;
+        margin: auto;
+        box-sizing: border-box;
+
+    }
+
+    .Login_Card_Container {
+        width: auto;
+        height: auto;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 40px 40px;
+        border: 1px solid rgb(207, 202, 202);
+    }
+
+    .Login_Heading {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Login_Sub_Heading {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        padding: 20px 0px;
+        color: #3a3c3e;
+    }
+
+    .Login_Create {
+        font-size: 19px;
+        font-weight: 500;
+        padding: 20px 0px;
+
+    }
+
+    .Login_Forgot {
+        font-size: 19px;
+        font-weight: 500;
+        padding: 20px 0px;
+        color: #3a3c3e;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .Login_Main {
+        margin: 125px 70px;
+    }
+
+    .Login_Container {
+        width: 70%;
+        height: auto;
+        margin: auto;
+        box-sizing: border-box;
+
+    }
+
+    .Login_Card_Container {
+        width: auto;
+        height: auto;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 40px 40px;
+        border: 1px solid rgb(207, 202, 202);
+    }
+
+    .Login_Heading {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Login_Sub_Heading {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        padding: 20px 0px;
+        color: #3a3c3e;
+    }
+
+    .Login_Create {
+        font-size: 19px;
+        font-weight: 500;
+        padding: 20px 0px;
+
+    }
+
+    .Login_Forgot {
+        font-size: 19px;
+        font-weight: 500;
+        padding: 20px 0px;
+        color: #3a3c3e;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .Login_Main {
+        margin: 125px 20px;
+    }
+
+    .Login_Container {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        box-sizing: border-box;
+
+    }
+
+    .Login_Card_Container {
+        width: auto;
+        height: auto;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 30px 30px;
+        border: 1px solid rgb(207, 202, 202);
+    }
+
+    .Login_Heading {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Login_Sub_Heading {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        padding: 20px 0px;
+        color: #3a3c3e;
+    }
+
+    .Login_Create {
+        font-size: 19px;
+        font-weight: 500;
+        padding: 20px 0px;
+
+    }
+
+    .Login_Forgot {
+        font-size: 19px;
+        font-weight: 500;
+        padding: 20px 0px;
+        color: #3a3c3e;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .Login_Main {
+        margin: 125px 5px;
+    }
+
+    .Login_Container {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        box-sizing: border-box;
+
+    }
+
+    .Login_Card_Container {
+        width: auto;
+        height: auto;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 30px 30px;
+        border: 1px solid rgb(207, 202, 202);
+    }
+
+    .Login_Heading {
+        text-align: center;
+        font-size: 35px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Login_Sub_Heading {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+        padding: 20px 0px;
+        color: #3a3c3e;
+    }
+
+    .Login_Create {
+        font-size: 12px;
+        font-weight: 500;
+        padding: 20px 0px;
+
+    }
+
+    .Login_Forgot {
+        font-size: 12px;
+        font-weight: 500;
+        padding: 20px 0px;
+        color: #3a3c3e;
+    }
+}
