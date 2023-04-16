@@ -12,6 +12,7 @@ import { EranTableHeader } from "./Pages/Home/Table/EranTable/EranTableHeader";
 import EranTableDetails from "./Pages/Home/Table/EranTable/EranTableDetails";
 import { BnawaliTableHeader } from "./Pages/Home/Table/BnawaliTable/BnawaliTableHeader";
 import { BhirranaTableHeader } from "./Pages/Home/Table/BhirranaTable/BhirranaTableHeader";
+import AdvancedSearch from "./Pages/AdvancedSearch/AdvancedSearch";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           element={<ChanhujoDaroTableHeader />}
         />
         <Route path="/bngltablepage" element={<BnglTableHeader />} /> */}
+        <Route path="/search" element={<AdvancedSearch />} />
       </Routes>
       <Footer />
     </div>

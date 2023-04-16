@@ -1,0 +1,343 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.AdvacnedSearch_Container {
+    width: 100%;
+    height: auto;
+    padding-top: 110px;
+}
+
+.AdvancedSearch_Main {
+    width: 90%;
+    height: auto;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.AdvancedSearch_Select {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px 5px;
+}
+
+.AdvancedSearch_Button_Div {
+    display: flex;
+    justify-content: right;
+    width: 90%;
+    height: auto;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.AdvancedButton {
+    background-color: rgba(101, 155, 174, 0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 18px 5px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+.Advanced_CardList_MobileDevice {
+    display: none;
+}
+
+
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+    .AdvacnedSearch_Container {
+        width: 100%;
+        height: auto;
+        padding-top: 110px;
+    }
+
+    .AdvancedSearch_Main {
+        width: 90%;
+        height: auto;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    .AdvancedSearch_Select {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 10px 5px;
+    }
+
+    .AdvancedSearch_Button_Div {
+        display: flex;
+        justify-content: right;
+        width: 90%;
+        height: auto;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    .AdvancedButton {
+        background-color: rgba(101, 155, 174, 0.8);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+        width: auto;
+        height: auto;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px 18px 5px 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+
+    .Advanced_CardList_MobileDevice {
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (min-width: 769px) and (max-width:1024px) {
+    .AdvacnedSearch_Container {
+        width: 100%;
+        height: auto !important;
+        padding-top: 110px;
+    }
+
+    .AdvancedSearch_Main {
+        width: 99%;
+        height: auto !important;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    .AdvancedSearch_Select {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 10px 5px;
+        margin: auto;
+    }
+
+    .AdvancedSearch_Button_Div {
+        display: flex;
+        justify-content: right;
+        width: 90%;
+        height: auto;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    .AdvancedButton {
+        background-color: rgba(101, 155, 174, 0.8);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+        width: auto;
+        height: auto;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px 18px 5px 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+
+    .Advanced_CardList_MobileDevice {
+        display: none;
+    }
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width:768px) {
+    .AdvacnedSearch_Container {
+        width: 100%;
+        height: auto !important;
+        padding-top: 110px;
+    }
+
+    .AdvancedSearch_Main {
+        width: 99%;
+        height: auto !important;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    .AdvancedSearch_Select {
+        width: 70%;
+        height: auto;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 10px 5px;
+        margin: auto;
+    }
+
+    .AdvancedSearch_Button_Div {
+        display: flex;
+        justify-content: right;
+        width: 90%;
+        height: auto;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    .AdvancedButton {
+        background-color: rgba(101, 155, 174, 0.8);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+        width: auto;
+        height: auto;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px 18px 5px 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+
+    .Advanced_CardList_MobileDevice {
+        display: block;
+        margin: 5px;
+    }
+
+    .Advanced_TableList_LargeDevice {
+        display: none;
+    }
+
+    .Advanced_Card_Mobile {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .Advanced_Mobile_Card_Left {
+        font-size: 28px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Advanced_Mobile_Card_Right {
+        font-size: 20px;
+        font-weight: 500;
+        color: #3a3c3e;
+    }
+
+
+}
+
+
+@media screen and (min-width: 320px) and (max-width:480px) {
+    .AdvacnedSearch_Container {
+        width: 100%;
+        height: auto !important;
+        padding-top: 110px;
+    }
+
+    .AdvancedSearch_Main {
+        width: 99%;
+        height: auto !important;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    .AdvancedSearch_Select {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 10px 5px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    .AdvancedSearch_Button_Div {
+        display: flex;
+        justify-content: right;
+        width: 90%;
+        height: auto;
+        box-sizing: border-box;
+        margin: auto;
+    }
+
+    .AdvancedButton {
+        background-color: rgba(101, 155, 174, 0.8);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 10px;
+        width: auto;
+        height: auto;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px 18px 5px 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+
+    .Advanced_CardList_MobileDevice {
+        display: block;
+        margin: 5px;
+    }
+
+    .Advanced_TableList_LargeDevice {
+        display: none;
+    }
+
+    .Advanced_Card_Mobile {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .Advanced_Mobile_Card_Left {
+        font-size: 28px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Advanced_Mobile_Card_Right {
+        font-size: 20px;
+        font-weight: 500;
+        color: #3a3c3e;
+    }
+
+
+}
