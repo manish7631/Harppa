@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.BnglTableHeader_Container{
+    width: 98%;
+    height: auto;
+    padding: 2px;
+    margin:  110px auto;
+}
+.BnglTableHeader_Section_Left{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 10px 0px 5px 10px;
+    align-items: center;
+}
+ .BnglTableDetails_Container{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 70px auto;
+    box-sizing: border-box;
+ }
+ .BnglTableDetails_Main{
+    width: 80%;
+    height: auto;
+    padding: 30px 20px;
+    margin: auto;
+    box-sizing: border-box;
+ }
+ .BnglTableDetails_Heading{
+    text-align: center;
+ }
+ .BnglTableDetails_Data{
+    width: 70%;
+    height: auto;
+    align-items: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+    align-items: center;
+    margin: 20px auto;
+ }
+ .BnglTableDetails_Data_Image_Box{
+    display: flex;
+    align-items: center;
+ }
+ .BnglTableDetails_Data_Image_Box > .DetailsImage{
+   width:auto;
+   height:60px;
+   margin:4px;
+   padding:2px;
+ }
+
+ .CardList_MobileDevice{
+   display:none;
+ }
+
+ @media screen and (max-width:599px) {
+   .CardList_MobileDevice{
+       display: block;
+       margin: 5px;
+   }
+   .TableList_LargeDevice{
+       display: none;
+   }
+
+   .BnglTableDetails_Container{
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      margin: 70px auto;
+      box-sizing: border-box;
+   }
+   .BnglTableDetails_Main{
+      width: 99%;
+      height: auto;
+      padding: 30px 20px;
+      margin: auto;
+      box-sizing: border-box;
+   }
+   .BnglTableDetails_Heading{
+      text-align: center;
+   }
+   .BnglTableDetails_Data{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      margin: 20px auto;
+      
+   }
+   .BnglTableDetails_Data_Image_Box{
+      display: flex;
+      align-items: center;
+   }
+   .BnglTableDetails_Data_Image_Box > .DetailsImage{
+      width:auto;
+      height:40px;
+      margin:4px;
+      padding:2px;
+   }
+  
+}

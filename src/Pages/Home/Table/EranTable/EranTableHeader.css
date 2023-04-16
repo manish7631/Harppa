@@ -1,0 +1,605 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.EranTableHeader_Container {
+   width: 80%;
+   height: auto;
+   padding: 2px;
+   margin: 110px auto;
+}
+
+#Eran_AppBar {
+   background-color: rgb(115, 140, 136);
+   width: 100%;
+}
+
+.Eran_Heading {
+   font-size: 28px;
+   font-weight: 600;
+   color: white;
+}
+
+.EranTableHeader_Section_Left {
+   width: 300px;
+   display: flex;
+   justify-content: space-between;
+   border-radius: 10px;
+   margin: 10px 0px 5px 10px;
+   align-items: center;
+   background-color: white;
+}
+
+
+.EranTableDetails_Container {
+   width: 100%;
+   height: auto;
+   padding: 5px;
+   margin: 70px auto;
+   box-sizing: border-box;
+
+
+}
+
+.EranTableDetails_Main {
+   width: 80%;
+   height: auto;
+   padding: 40px 20px;
+   margin: auto;
+   box-sizing: border-box;
+}
+
+.EranTableDetails_Heading {
+   font-size: 28px;
+   font-weight: 600;
+   text-align: center;
+   color: black;
+   padding: 20px 0;
+}
+
+.EranTableDetails_Data {
+   width: 45%;
+   height: auto;
+   display: flex;
+   justify-content: space-between;
+   padding: 7px 10px;
+   align-items: center;
+   margin: 20px auto;
+
+
+
+}
+
+.Eran_Details_Left {
+   font-size: 28px;
+   font-weight: 600;
+   color: #3a3c3e;
+}
+
+.Eran_Details_Right {
+   font-size: 20px;
+   font-weight: 500;
+   color: #3a3c3e;
+}
+
+
+.EranTableDetails_Data_Image_Box {
+   display: flex;
+   align-items: center;
+}
+
+.EranTableDetails_Data_Image_Box>.DetailsImage {
+   width: auto;
+   height: 60px;
+   margin: 4px;
+   padding: 2px;
+}
+
+
+
+.CardList_MobileDevice {
+   display: none;
+}
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+   .EranTableHeader_Container {
+      width: 80%;
+      height: auto;
+      padding: 2px;
+      margin: 110px auto;
+   }
+
+   #Eran_AppBar {
+      background-color: rgb(115, 140, 136);
+      width: 100%;
+   }
+
+   .Eran_Heading {
+      font-size: 28px;
+      font-weight: 600;
+      color: white;
+   }
+
+   .EranTableHeader_Section_Left {
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      margin: 10px 0px 5px 10px;
+      align-items: center;
+      background-color: white;
+   }
+
+   .EranTableDetails_Container {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      margin: 70px auto;
+      box-sizing: border-box;
+
+
+   }
+
+   .EranTableDetails_Main {
+      width: 80%;
+      height: auto;
+      padding: 40px 20px;
+      margin: auto;
+      box-sizing: border-box;
+   }
+
+   .EranTableDetails_Heading {
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      color: black;
+      padding: 20px 0;
+   }
+
+   .EranTableDetails_Data {
+      width: 65%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 10px;
+      align-items: center;
+      margin: 20px auto;
+
+
+
+   }
+
+   .Eran_Details_Left {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3a3c3e;
+   }
+
+   .Eran_Details_Right {
+      font-size: 20px;
+      font-weight: 500;
+      color: #3a3c3e;
+   }
+
+
+   .EranTableDetails_Data_Image_Box {
+      display: flex;
+      align-items: center;
+   }
+
+   .EranTableDetails_Data_Image_Box>.DetailsImage {
+      width: auto;
+      height: 60px;
+      margin: 4px;
+      padding: 2px;
+   }
+
+
+   .CardList_MobileDevice {
+      display: none;
+   }
+
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+   .EranTableHeader_Container {
+      width: 98%;
+      height: auto;
+      padding: 2px;
+      margin: 110px auto;
+   }
+
+   #Eran_AppBar {
+      background-color: rgb(115, 140, 136);
+      width: 100%;
+   }
+
+   .Eran_Heading {
+      font-size: 28px;
+      font-weight: 600;
+      color: white;
+   }
+
+   .EranTableHeader_Section_Left {
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      margin: 10px 0px 5px 10px;
+      align-items: center;
+      background-color: white;
+   }
+
+   .EranTableDetails_Container {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      margin: 70px auto;
+      box-sizing: border-box;
+
+
+   }
+
+   .EranTableDetails_Main {
+      width: 80%;
+      height: auto;
+      padding: 40px 20px;
+      margin: auto;
+      box-sizing: border-box;
+   }
+
+   .EranTableDetails_Heading {
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      color: black;
+      padding: 20px 0;
+   }
+
+   .EranTableDetails_Data {
+      width: 75%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 10px;
+      align-items: center;
+      margin: 20px auto;
+
+
+
+   }
+
+   .Eran_Details_Left {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3a3c3e;
+   }
+
+   .Eran_Details_Right {
+      font-size: 20px;
+      font-weight: 500;
+      color: #3a3c3e;
+   }
+
+
+   .EranTableDetails_Data_Image_Box {
+      display: flex;
+      align-items: center;
+   }
+
+   .EranTableDetails_Data_Image_Box>.DetailsImage {
+      width: auto;
+      height: 60px;
+      margin: 4px;
+      padding: 2px;
+   }
+
+
+   .CardList_MobileDevice {
+      display: none;
+   }
+}
+
+
+@media screen and (min-width:481px) and (max-width:768px) {
+   .EranTableHeader_Container {
+      width: 90%;
+      height: auto;
+      padding: 2px;
+      margin: 110px auto;
+   }
+
+   .CardList_MobileDevice {
+      width: 80%;
+      display: block;
+      margin: 15px auto;
+   }
+
+   .TableList_LargeDevice {
+      display: none;
+   }
+
+   .Eran_Card_Mobile {
+      width: 100%;
+      margin: 10px auto 0 auto;
+   }
+
+   .Eran_Mobile_Card_Left {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3a3c3e;
+   }
+
+   .Eran_Mobile_Card_Right {
+      font-size: 20px;
+      font-weight: 500;
+      color: #3a3c3e;
+   }
+
+   .EranTableHeader_Section_Left {
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      margin: 10px 0px 5px 10px;
+      align-items: center;
+      background-color: white;
+   }
+
+   .EranTableDetails_Container {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      margin: 70px auto;
+      box-sizing: border-box;
+
+
+   }
+
+   .EranTableDetails_Main {
+      width: 80%;
+      height: auto;
+      padding: 40px 20px;
+      margin: auto;
+      box-sizing: border-box;
+   }
+
+   .EranTableDetails_Heading {
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      color: black;
+      padding: 20px 0;
+   }
+
+   .EranTableDetails_Data {
+      width: 85%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 10px;
+      align-items: center;
+      margin: 20px auto;
+
+
+
+   }
+
+   .Eran_Details_Left {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3a3c3e;
+   }
+
+   .Eran_Details_Right {
+      font-size: 20px;
+      font-weight: 500;
+      color: #3a3c3e;
+   }
+
+
+   .EranTableDetails_Data_Image_Box {
+      display: flex;
+      align-items: center;
+   }
+
+   .EranTableDetails_Data_Image_Box>.DetailsImage {
+      width: auto;
+      height: 60px;
+      margin: 4px;
+      padding: 2px;
+   }
+
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+   .EranTableHeader_Container {
+      width: 98%;
+      height: auto;
+      padding: 2px;
+      margin: 110px auto;
+   }
+
+   .Eran_Heading {
+      font-size: 18px !important;
+      font-weight: 600;
+      color: white;
+   }
+
+   .CardList_MobileDevice {
+      width: 100%;
+      display: block;
+      margin: 15px auto;
+   }
+
+   .TableList_LargeDevice {
+      display: none;
+   }
+
+   .Eran_Card_Mobile {
+      width: 100%;
+      margin: 10px auto 0 auto;
+   }
+
+   .Eran_Mobile_Card_Left {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3a3c3e;
+   }
+
+   .Eran_Mobile_Card_Right {
+      font-size: 20px;
+      font-weight: 500;
+      color: #3a3c3e;
+   }
+
+   .EranTableHeader_Section_Left {
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      margin: 10px 0px 5px 10px;
+      align-items: center;
+      background-color: white;
+   }
+
+   .EranTableDetails_Container {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      margin: 70px auto;
+      box-sizing: border-box;
+
+
+   }
+
+   .EranTableDetails_Main {
+      width: 100%;
+      height: auto;
+      padding: 40px 20px;
+      margin: auto;
+      box-sizing: border-box;
+   }
+
+   .EranTableDetails_Heading {
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      color: black;
+      padding: 20px 0;
+   }
+
+   .EranTableDetails_Data {
+      width: 98%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 10px;
+      align-items: center;
+      margin: 20px auto;
+
+
+
+   }
+
+   .Eran_Details_Left {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3a3c3e;
+   }
+
+   .Eran_Details_Right {
+      font-size: 20px;
+      font-weight: 500;
+      color: #3a3c3e;
+   }
+
+
+   .EranTableDetails_Data_Image_Box {
+      display: flex;
+      align-items: center;
+   }
+
+   .EranTableDetails_Data_Image_Box>.DetailsImage {
+      width: auto;
+      height: 60px;
+      margin: 4px;
+      padding: 2px;
+   }
+
+}
+
+
+/* 
+@media screen and (max-width:599px) {
+   .CardList_MobileDevice {
+      display: block;
+      margin: 5px;
+   }
+
+   .TableList_LargeDevice {
+      display: none;
+   }
+
+   .EranTableHeader_Section_Left {
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      margin: 10px 0px 5px 10px;
+      align-items: center;
+   }
+
+   .EranTableDetails_Container {
+      width: 100%;
+      height: auto;
+      padding: 5px;
+      margin: 70px auto;
+      box-sizing: border-box;
+      background-color: white;
+   }
+
+   .EranTableDetails_Main {
+      width: 99%;
+      height: auto;
+      padding: 30px 20px;
+      margin: auto;
+      box-sizing: border-box;
+   }
+
+   .EranTableDetails_Heading {
+      text-align: center;
+      color: black;
+   }
+
+   .EranTableDetails_Data {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      margin: 20px auto;
+
+   }
+
+   .EranTableDetails_Data_Image_Box {
+      display: flex;
+      align-items: center;
+   }
+
+   .EranTableDetails_Data_Image_Box>.DetailsImage {
+      width: auto;
+      height: 40px;
+      margin: 4px;
+      padding: 2px;
+   }
+
+   .Typography {
+      color: black;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: "Source Sans Pro", sans-serif;
+   }
+
+} */

@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.BhirranaTableHeader_Container{
+    width: 98%;
+    height: auto;
+    padding: 2px;
+    margin: 110px auto;
+}
+.BhirranaTableHeader_Section_Left{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 10px 0px 5px 10px;
+    align-items: center;
+}
+ 
