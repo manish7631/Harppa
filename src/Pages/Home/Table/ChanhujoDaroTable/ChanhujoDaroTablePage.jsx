@@ -735,16 +735,10 @@ export default function ChanhujoDaroTablePage({
 
                           let data1 = require(`../../../../static/ivcgraphemes/${n}`);
                           return (
-                            <Avatar
+                            <img
+                              className="Chanhu_Card_Img"
                               key={index}
-                              sx={{
-                                width: "auto",
-                                height: "30px",
-                                margin: "4px",
-                                padding: "2px",
-                              }}
                               src={data1}
-                              variant="square"
                             />
                           );
                         } catch (err) {

@@ -194,6 +194,7 @@
       height: 60px;
       margin: 4px;
       padding: 2px;
+      object-fit: contain;
    }
 
 
@@ -294,6 +295,7 @@
       height: 60px;
       margin: 4px;
       padding: 2px;
+      object-fit: contain;
    }
 
 
@@ -336,6 +338,14 @@
       font-size: 20px;
       font-weight: 500;
       color: #3a3c3e;
+   }
+
+   .Eran_Card_Img {
+      max-width: 40px;
+      max-height: 40px;
+      margin: 2px;
+      padding: 2px;
+      object-fit: contain;
    }
 
    .EranTableHeader_Section_Left {
@@ -410,7 +420,10 @@
       height: 60px;
       margin: 4px;
       padding: 2px;
+      object-fit: contain;
    }
+
+
 
 }
 

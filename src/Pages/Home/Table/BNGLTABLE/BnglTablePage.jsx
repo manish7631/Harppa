@@ -550,15 +550,10 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
 
                                   let data1 = require(`../../../../static/ivcgraphemes/${n}`);
                                   return (
-                                    <Avatar
-                                      sx={{
-                                        width: "auto",
-                                        height: "60px",
-                                        margin: "4px",
-                                        padding: "2px",
-                                      }}
+                                    <img
+                                      className="Bngl_Card_Img"
+                                      key={index}
                                       src={data1}
-                                      variant="square"
                                     />
                                   );
                                 } catch (err) {

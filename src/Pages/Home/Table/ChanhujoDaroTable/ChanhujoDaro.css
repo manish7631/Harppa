@@ -96,6 +96,15 @@
         font-weight: 500;
         color: #3a3c3e;
     }
+
+    .Chanhu_Card_Img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 2px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
 }
 
 
@@ -140,6 +149,15 @@
         font-weight: 500;
         color: #3a3c3e;
     }
+
+    .Chanhu_Card_Img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 2px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
 }
 
 
@@ -184,4 +202,13 @@
         font-weight: 500;
         color: #3a3c3e;
     }
+
+    .Chanhu_Card_Img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 2px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
 }

@@ -86,6 +86,15 @@
         font-weight: 500;
         color: #3a3c3e;
     }
+
+    .Bhirrana_Card_Img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 2px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
 }
 
 @media screen and (min-width:481px) and (max-width:768px) {
@@ -129,6 +138,15 @@
         font-weight: 500;
         color: #3a3c3e;
     }
+
+    .Bhirrana_Card_Img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 2px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
 }
 
 
@@ -173,4 +191,13 @@
         font-weight: 500;
         color: #3a3c3e;
     }
+
+    .Bhirrana_Card_Img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 2px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
 }

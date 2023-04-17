@@ -144,6 +144,14 @@
         font-weight: 500;
         color: #3a3c3e;
     }
+
+    .Gawalior_Card_Img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 2px;
+        padding: 2px;
+        object-fit: contain;
+    }
 }
 
 
@@ -184,6 +192,15 @@
         font-weight: 500;
         color: #3a3c3e;
     }
+
+    .Gawalior_Card_Img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 2px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
 
 
 }

@@ -476,15 +476,11 @@ export default function GawaliorTablePage({ loading, countryList, query1 }) {
                         padding: "2px",
                       }}
                     >
-                      <Avatar
-                        sx={{
-                          width: "auto",
-                          height: "60px",
-                          margin: "10px",
-                        }}
+                      <img
+                        className="Gawalior_Card_Img"
+                        key={index}
                         src={data1}
-                        variant="square"
-                      />{" "}
+                      />
                     </Box>
                   </h4>
                 </CardContent>
