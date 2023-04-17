@@ -213,6 +213,22 @@
 
 
 @media screen and (min-width:320px) and (max-width:480px) {
+    #ChanhuTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Chanhu_Grid_Left {
+        display: none;
+
+    }
+
+    .Chanhu_Grid_Right {
+        display: none;
+
+    }
 
     .ChanhujoDaroTableHeader_Container {
         width: 98%;

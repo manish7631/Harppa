@@ -228,6 +228,23 @@
 
 
 @media screen and (min-width:320px) and (max-width:480px) {
+    #GawaliorTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Gawalior_Grid_Left {
+        display: none;
+
+    }
+
+    .Gawalior_Grid_Right {
+        display: none;
+
+    }
+
     .GawaliorTableHeader_Container {
         width: 98%;
         height: auto;

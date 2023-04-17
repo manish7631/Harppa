@@ -200,6 +200,40 @@
 }
 
 @media screen and (min-width:320px) and (max-width:480px) {
+    #BhirranaTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Bhirrana_Grid_Left {
+        display: none;
+
+    }
+
+    .Bhirrana_Grid_Right {
+        display: none;
+
+    }
+
+    #BanawaliTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Banawali_Grid_Left {
+        display: none;
+
+    }
+
+    .Banawali_Grid_Right {
+        display: none;
+
+    }
+
     .BanawaliTableHeader_Container {
         width: 98%;
         height: auto;

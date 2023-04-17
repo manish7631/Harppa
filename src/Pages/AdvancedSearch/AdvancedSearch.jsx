@@ -44,113 +44,117 @@ const AdvancedSearch = () => {
   };
 
   return (
-    <div className="AdvacnedSearch_Container">
-      <Box className="AdvancedSearch_Main">
-        <Box className="AdvancedSearch_Select">
-          <Autocomplete
-            disablePortal
-            id="combo-box-demo"
-            options={ArtifactType}
-            sx={{ width: 300 }}
-            renderInput={(params) => (
-              <TextField {...params} label="ArtifactType" />
-            )}
-            inputValue={inputValueArtifactType}
-            onInputChange={(event, newInputValue) => {
-              setInputValueArtifactType(newInputValue);
-            }}
-            value={valueArtifactType}
-            onChange={(event, newValue) => {
-              setValueArtifactType(newValue);
-            }}
-          />
-          <Autocomplete
-            disablePortal
-            id="combo-box-demo"
-            options={MaterialType}
-            sx={{ width: 300 }}
-            renderInput={(params) => (
-              <TextField {...params} label="MaterialType" />
-            )}
-            inputValue={inputValueMaterialType}
-            onInputChange={(event, newInputValue) => {
-              setInputValueMaterialType(newInputValue);
-            }}
-            value={valueMaterialType}
-            onChange={(event, newValue) => {
-              setValueMaterialType(newValue);
-            }}
-          />
+    <div id="AdvancedTable_Grid">
+      <div className="Advanced_Grid_Left"></div>
+      <div className="AdvacnedSearch_Container">
+        <Box className="AdvancedSearch_Main">
+          <Box className="AdvancedSearch_Select">
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={ArtifactType}
+              sx={{ width: 300 }}
+              renderInput={(params) => (
+                <TextField {...params} label="ArtifactType" />
+              )}
+              inputValue={inputValueArtifactType}
+              onInputChange={(event, newInputValue) => {
+                setInputValueArtifactType(newInputValue);
+              }}
+              value={valueArtifactType}
+              onChange={(event, newValue) => {
+                setValueArtifactType(newValue);
+              }}
+            />
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={MaterialType}
+              sx={{ width: 300 }}
+              renderInput={(params) => (
+                <TextField {...params} label="MaterialType" />
+              )}
+              inputValue={inputValueMaterialType}
+              onInputChange={(event, newInputValue) => {
+                setInputValueMaterialType(newInputValue);
+              }}
+              value={valueMaterialType}
+              onChange={(event, newValue) => {
+                setValueMaterialType(newValue);
+              }}
+            />
 
-          <Autocomplete
-            disablePortal
-            id="combo-box-demo"
-            options={Condition}
-            sx={{ width: 300 }}
-            renderInput={(params) => (
-              <TextField {...params} label="Condition" />
-            )}
-          />
-          <Autocomplete
-            disablePortal
-            id="combo-box-demo"
-            options={FieldSymbol}
-            sx={{ width: 300 }}
-            renderInput={(params) => (
-              <TextField {...params} label="FieldSymbol" />
-            )}
-            inputValue={inputValueFieldSymbol}
-            onInputChange={(event, newInputValue) => {
-              setInputValueFieldSymbol(newInputValue);
-            }}
-            value={valueFieldSymbol}
-            onChange={(event, newValue) => {
-              setValueFieldSymbol(newValue);
-            }}
-          />
-          <Autocomplete
-            disablePortal
-            id="combo-box-demo"
-            options={Site}
-            sx={{ width: 300 }}
-            renderInput={(params) => <TextField {...params} label="Site" />}
-            inputValue={inputValueSite}
-            onInputChange={(event, newInputValue) => {
-              setInputValueSite(newInputValue);
-            }}
-            value={valueSite}
-            onChange={(event, newValue) => {
-              setValueSite(newValue);
-            }}
-          />
-        </Box>
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={Condition}
+              sx={{ width: 300 }}
+              renderInput={(params) => (
+                <TextField {...params} label="Condition" />
+              )}
+            />
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={FieldSymbol}
+              sx={{ width: 300 }}
+              renderInput={(params) => (
+                <TextField {...params} label="FieldSymbol" />
+              )}
+              inputValue={inputValueFieldSymbol}
+              onInputChange={(event, newInputValue) => {
+                setInputValueFieldSymbol(newInputValue);
+              }}
+              value={valueFieldSymbol}
+              onChange={(event, newValue) => {
+                setValueFieldSymbol(newValue);
+              }}
+            />
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={Site}
+              sx={{ width: 300 }}
+              renderInput={(params) => <TextField {...params} label="Site" />}
+              inputValue={inputValueSite}
+              onInputChange={(event, newInputValue) => {
+                setInputValueSite(newInputValue);
+              }}
+              value={valueSite}
+              onChange={(event, newValue) => {
+                setValueSite(newValue);
+              }}
+            />
+          </Box>
 
-        <Box className="AdvancedSearch_Button_Div">
-          <button
-            className="AdvancedButton"
-            onClick={() => {
-              handleSearch();
-            }}
-          >
-            Search
-          </button>
-          <button
-            className="AdvancedButton"
-            onClick={() => {
-              handleReset();
-            }}
-          >
-            Reset
-          </button>
+          <Box className="AdvancedSearch_Button_Div">
+            <button
+              className="AdvancedButton"
+              onClick={() => {
+                handleSearch();
+              }}
+            >
+              Search
+            </button>
+            <button
+              className="AdvancedButton"
+              onClick={() => {
+                handleReset();
+              }}
+            >
+              Reset
+            </button>
+          </Box>
+          <Box>
+            <AdvancedTable
+              AdvancedData={AdvancedSearchData}
+              loading={isLoading}
+              show={show}
+            />
+          </Box>
         </Box>
-        <Box>
-          <AdvancedTable
-            AdvancedData={AdvancedSearchData}
-            loading={isLoading}
-            show={show}
-          />
-        </Box>
-      </Box>
+      </div>
+      <div className="Advanced_Grid_Right"></div>
     </div>
   );
 };

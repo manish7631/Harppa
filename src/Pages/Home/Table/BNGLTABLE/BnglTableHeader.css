@@ -181,6 +181,22 @@
 
 
 @media screen and (min-width:320px) and (max-width:480px) {
+   #BnglTable_Grid {
+      width: 100% !important;
+      height: auto;
+      display: block !important;
+   }
+
+
+   .Bngl_Grid_Left {
+      display: none;
+
+   }
+
+   .Bngl_Grid_Right {
+      display: none;
+
+   }
 
    .BnglTableHeader_Container {
       width: 98%;

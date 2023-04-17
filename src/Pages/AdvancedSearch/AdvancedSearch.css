@@ -4,21 +4,38 @@
     box-sizing: border-box;
 }
 
+#AdvancedTable_Grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+}
+
+.Advanced_Grid_Left {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+}
+
 .AdvacnedSearch_Container {
+    grid-column-start: 4;
+    grid-column-end: 11;
     width: 100%;
     min-height: 70vh;
     padding-top: 110px;
 }
 
 .AdvancedSearch_Main {
-    width: 80%;
+    width: 100%;
     height: auto;
     box-sizing: border-box;
     margin: 20px auto;
 }
 
 .AdvancedSearch_Select {
-    width: 60%;
+    width: 90%;
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -54,6 +71,11 @@
     cursor: pointer;
 }
 
+.Advanced_Grid_Right {
+    grid-column-start: 11;
+    grid-column-end: 12;
+
+}
 
 .Advanced_CardList_MobileDevice {
     display: none;
@@ -185,11 +207,31 @@
 
 
 @media screen and (min-width: 481px) and (max-width:768px) {
+    #AdvancedTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Advanced_Grid_Left {
+        display: none;
+
+    }
+
+    .Advanced_Grid_Right {
+        display: none;
+
+    }
+
     .AdvacnedSearch_Container {
-        width: 100%;
+        width: 90%;
         height: auto !important;
         padding-top: 110px;
+        margin: auto;
     }
+
+
 
     .AdvancedSearch_Main {
         width: 80%;
@@ -273,30 +315,49 @@
 
 
 @media screen and (min-width: 320px) and (max-width:480px) {
+
+    #AdvancedTable_Grid {
+        width: 100% !important;
+        height: auto;
+
+    }
+
     .AdvacnedSearch_Container {
-        width: 100%;
+        width: 90%;
         height: auto !important;
         padding-top: 110px;
+        margin: auto;
+    }
+
+    .Advanced_Grid_Left {
+        display: none !important;
+
+    }
+
+    .Advanced_Grid_Right {
+        display: none !important;
+
     }
 
     .AdvancedSearch_Main {
         width: 99%;
         height: auto !important;
-        padding: 10px 10px;
+        padding: 10px 0px;
         box-sizing: border-box;
         margin: auto;
     }
 
     .AdvancedSearch_Select {
-        width: 90%;
+        width: 100%;
         height: auto;
-        padding: 10px;
+        padding: 10px 0px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: auto;
-        gap: 10px 5px;
+        gap: 10px 0px;
         margin: auto;
         box-sizing: border-box;
+
     }
 
     .AdvancedSearch_Button_Div {
