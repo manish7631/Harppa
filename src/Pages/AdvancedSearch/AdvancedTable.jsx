@@ -504,7 +504,7 @@ export default function AdvancedTable({ loading, AdvancedData, query1, show }) {
 
                             let data1 = require(`../../static/ivcgraphemes/${n}`);
                             return (
-                              <Avatar
+                              <img
                                 key={index}
                                 sx={{
                                   width: "auto",
@@ -513,7 +513,7 @@ export default function AdvancedTable({ loading, AdvancedData, query1, show }) {
                                   padding: "2px",
                                 }}
                                 src={data1}
-                                variant="square"
+                                className="Advanced_Card_Img"
                               />
                             );
                           } catch (err) {
