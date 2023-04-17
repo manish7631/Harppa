@@ -917,12 +917,6 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                                 <img
                                   className="Eran_Card_Img"
                                   key={index}
-                                  // sx={{
-                                  //   width: "auto",
-                                  //   height: "30px",
-                                  //   margin: "4px",
-                                  //   padding: "2px",
-                                  // }}
                                   src={data1}
                                 />
                               );
