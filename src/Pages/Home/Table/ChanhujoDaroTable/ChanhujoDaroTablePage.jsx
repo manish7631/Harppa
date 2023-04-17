@@ -15,17 +15,22 @@ import Tooltip from "@mui/material/Tooltip";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
-import { Box, Table, Typography, useTheme, Avatar, CardContent, CardActionArea, Card } from "@mui/material";
+import {
+  Box,
+  Table,
+  Typography,
+  useTheme,
+  Avatar,
+  CardContent,
+  CardActionArea,
+  Card,
+} from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  ChanhujoDaroImageGetFunction,
-  
-   
-} from "../../../../redux/Application/action";
-import { tokens } from "../../../../theme";
+import { ChanhujoDaroImageGetFunction } from "../../../../redux/Application/action";
+
 import { Link } from "react-router-dom";
-import "./ChanhujoDaro.css"
+import "./ChanhujoDaro.css";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -43,7 +48,6 @@ function getComparator(order, orderBy) {
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-
 function stableSort(array, comparator) {
   const stabilizedThis = array.map((el, index) => [el, index]);
   stabilizedThis.sort((a, b) => {
@@ -55,7 +59,6 @@ function stableSort(array, comparator) {
   });
   return stabilizedThis.map((el) => el[0]);
 }
-
 
 const headCells = [
   {
@@ -108,16 +111,16 @@ function EnhancedTableHead(props) {
   return (
     <TableHead>
       <TableRow>
-      {headCells.map((headCell) => (
+        {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
             align={headCell.numeric ? "right" : "center"}
             padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
             sx={{
-              fontSize:"17px",
-              color:"black",
-              fontWeight:"bold"
+              fontSize: "17px",
+              color: "black",
+              fontWeight: "bold",
             }}
           >
             <TableSortLabel
@@ -147,7 +150,6 @@ EnhancedTableHead.propTypes = {
   orderBy: PropTypes.string.isRequired,
   rowCount: PropTypes.number.isRequired,
 };
-
 
 function EnhancedTableToolbar(props) {
   const { numSelected } = props;
@@ -207,7 +209,11 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-export default function ChanhujoDaroTablePage({ loading, countryList, query1 }) {
+export default function ChanhujoDaroTablePage({
+  loading,
+  countryList,
+  query1,
+}) {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
   const [dense, setDense] = useState(false);
@@ -220,14 +226,11 @@ export default function ChanhujoDaroTablePage({ loading, countryList, query1 }) 
   const [perpage, setPerpage] = useState(5);
   const [query, setQuery] = useState("");
 
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-
   const dispatch = useDispatch();
 
   //---------------------UseSelector Redux Data Call --------------------------------------
 
-  const { isLoading,      ChanhujoDaroImageData  } = useSelector(
+  const { isLoading, ChanhujoDaroImageData } = useSelector(
     (state) => state.ApplicationReducer
   );
 
@@ -240,8 +243,6 @@ export default function ChanhujoDaroTablePage({ loading, countryList, query1 }) 
   useEffect(() => {
     dispatch(ChanhujoDaroImageGetFunction());
   }, []);
-
- 
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";
@@ -284,605 +285,524 @@ export default function ChanhujoDaroTablePage({ loading, countryList, query1 }) 
 
   return (
     <Box sx={{ width: "100%" }}>
-    <Box  className="TableList_LargeDevice">
-    <Paper sx={{ width: "100%", mb: 2 }}>
-      {/* ------------------------Table Container Start Here---------------------------------- */}
+      <Box className="Chanhu_TableList_LargeDevice">
+        <Paper sx={{ width: "100%", mb: 2 }}>
+          {/* ------------------------Table Container Start Here---------------------------------- */}
 
-      {query ? (
-        <TableContainer
-          
-        >
-          <Table
-            sx={{ minWidth: 750,  background:"white",}}
-            aria-labelledby="tableTitle"
-            size={dense ? "small" : "medium"}
-          >
-            <EnhancedTableHead 
-             order={order}
-             orderBy={orderBy}
-             onRequestSort={handleRequestSort}
-             rowCount={ChanhujoDaroImageData.length} />
-            <TableBody>
-              {/* -------------------Eran Search Data Maping Here------------------- */}
+          {query ? (
+            <TableContainer>
+              <Table
+                sx={{ minWidth: 750, background: "white" }}
+                aria-labelledby="tableTitle"
+                size={dense ? "small" : "medium"}
+              >
+                <EnhancedTableHead
+                  order={order}
+                  orderBy={orderBy}
+                  onRequestSort={handleRequestSort}
+                  rowCount={ChanhujoDaroImageData.length}
+                />
+                <TableBody>
+                  {/* -------------------Eran Search Data Maping Here------------------- */}
 
-              { ChanhujoDaroImageData.slice(
-                pageSearch * perpage,
-                pageSearch * perpage + perpage
-              ).map((row, index) => {
-                const labelId = `enhanced-table-checkbox-${index}`;
-                let b = row.links;
+                  {ChanhujoDaroImageData.slice(
+                    pageSearch * perpage,
+                    pageSearch * perpage + perpage
+                  ).map((row, index) => {
+                    const labelId = `enhanced-table-checkbox-${index}`;
+                    let b = row.links;
 
-                let len = b.length - 2;
+                    let len = b.length - 2;
 
-                let str1 = b.substring(2, len);
+                    let str1 = b.substring(2, len);
 
-                let newArr = str1.split("', '");
-                return (
-                  <TableRow
-                    hover
-                    role="checkbox"
-                    tabIndex={-1}
-                    key={row.seqid}
-                  >
-                    <TableCell
-                      align="left"
-                      sx={{
-                        fontSize: "17px",
-                        fontWeight: "500",
-                      }}
+                    let newArr = str1.split("', '");
+                    return (
+                      <TableRow
+                        hover
+                        role="checkbox"
+                        tabIndex={-1}
+                        key={row.seqid}
+                      >
+                        <TableCell
+                          align="left"
+                          sx={{
+                            fontSize: "17px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          <span
+                            style={{
+                              width: "100px",
+                              overflow: "hidden",
+                              display: "inline-block",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              textAlign: "right",
+                            }}
+                          >
+                            {" "}
+                            {row.seqid}
+                          </span>
+                        </TableCell>
+                        <TableCell
+                          align="right"
+                          sx={{
+                            fontSize: "17px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          <span
+                            style={{
+                              width: "100px",
+                              overflow: "hidden",
+                              display: "inline-block",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              textAlign: "right",
+                            }}
+                          >
+                            {" "}
+                            {row.seq_in_num}
+                          </span>
+                        </TableCell>
+                        <TableCell align="right">
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "right",
+                            }}
+                          >
+                            {newArr.map((e, index) => {
+                              try {
+                                let n = e.split("/").pop();
+
+                                let data1 = require(`../../../../static/ivcgraphemes/${n}`);
+                                return (
+                                  <Avatar
+                                    key={n}
+                                    sx={{
+                                      width: "auto",
+                                      height: "60px",
+                                      margin: "4px",
+                                      padding: "2px",
+                                    }}
+                                    src={data1}
+                                    variant="square"
+                                  />
+                                );
+                              } catch (err) {
+                                console.log("err", err);
+                              }
+                            })}
+                          </Box>
+                        </TableCell>
+
+                        <TableCell
+                          align="right"
+                          sx={{
+                            fontSize: "17px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          <span
+                            style={{
+                              width: "100px",
+                              overflow: "hidden",
+                              display: "inline-block",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              textAlign: "center",
+                            }}
+                          >
+                            {" "}
+                            {row.site}
+                          </span>
+                        </TableCell>
+
+                        <TableCell
+                          align="center"
+                          marginLeft="20px"
+                          sx={{
+                            fontSize: "17px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          <Link
+                            style={{
+                              textDecoration: "none",
+                              color: `black`,
+                            }}
+                            to={`/erantabledetails/${row.id}`}
+                          >
+                            {" "}
+                            See Details
+                          </Link>
+                        </TableCell>
+                      </TableRow>
+                    );
+                  })}
+                  {emptyRows > 0 && (
+                    <TableRow
+                    // style={{
+                    //   height: (dense ? 33 : 53) * emptyRows,
+                    // }}
                     >
-                      <span
-                        style={{
-                          width: "100px",
-                          overflow: "hidden",
-                          display: "inline-block",
-                          textOverflow: "ellipsis",
-                          whiteSpace: "nowrap",
-                          textAlign: "right",
-                        }}
-                      >
-                        {" "}
-                        {row.seqid}
-                      </span>
-                    </TableCell>
-                    <TableCell
-                      align="right"
-                      sx={{
-                        fontSize: "17px",
-                        fontWeight: "500",
-                      }}
-                    >
-                      <span
-                        style={{
-                          width: "100px",
-                          overflow: "hidden",
-                          display: "inline-block",
-                          textOverflow: "ellipsis",
-                          whiteSpace: "nowrap",
-                          textAlign: "right",
-                        }}
-                      >
-                        {" "}
-                        {row.seq_in_num}
-                      </span>
-                    </TableCell>
-                    <TableCell align="right">
-                      <Box
-                        sx={{
-                          display: "flex",
-                          justifyContent: "right",
-                        }}
-                      >
-                        {newArr.map((e, index) => {
-                          try {
-                            let n = e.split("/").pop();
+                      {/* <TableCell colSpan={6} /> */}
+                    </TableRow>
+                  )}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          ) : (
+            <TableContainer>
+              <Table
+                sx={{ minWidth: 750, background: "white" }}
+                aria-labelledby="tableTitle"
+                size={dense ? "small" : "medium"}
+              >
+                <EnhancedTableHead
+                  order={order}
+                  orderBy={orderBy}
+                  onRequestSort={handleRequestSort}
+                  rowCount={ChanhujoDaroImageData.length}
+                />
+                <TableBody>
+                  {/* ----------------Eran Data Maping Here-------------------------- */}
 
-                            let data1 = require(`../../../../static/ivcgraphemes/${n}`);
-                            return (
-                              // <img
-                              //   style={{
-                              //     width: "60px",
-                              //     aspectRatio: 1 / 1,
-                              //     objectFit: "contain",
-                              //     margin:"0px"
-                              //   }}
-                              //   key={index}
-                              //   alt="Remy Sharp"
-                              //   src={data1}
-                              // />
-                                <Avatar key={n} sx={{
-                                width:"auto",
-                                height:"60px",
-                                margin:"4px",
-                                padding:"2px"
-                              }} src={data1} variant="square"/>
-                            );
-                          } catch (err) {
-                            console.log("err", err);
-                          }
-                        })}
-                      </Box>
-                    </TableCell>
+                  {stableSort(
+                    ChanhujoDaroImageData,
+                    getComparator(order, orderBy)
+                  )
+                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                    .map((row, index) => {
+                      const labelId = `enhanced-table-checkbox-${index}`;
+                      let b = row.links;
 
-                    <TableCell
-                      align="right"
-                      sx={{
-                        fontSize: "17px",
-                        fontWeight: "500",
-                      }}
-                    >
-                      <span
-                        style={{
-                          width: "100px",
-                          overflow: "hidden",
-                          display: "inline-block",
-                          textOverflow: "ellipsis",
-                          whiteSpace: "nowrap",
-                          textAlign: "center",
-                        }}
-                      >
-                        {" "}
-                        {row.site}
-                      </span>
-                    </TableCell>
+                      let len = b.length - 2;
 
-                    <TableCell
-                      align="center"
-                      marginLeft="20px"
-                      sx={{
-                        fontSize: "17px",
-                        fontWeight: "500",
-                      }}
-                    >
-                      <Link
-                        style={{
-                          textDecoration: "none",
-                          color: `${colors.grey[100]}`,
-                        }}
-                        to={`/erantabledetails/${row.id}`}
-                      >
-                        {" "}
-                        See Details
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                );
-              })}
-              {emptyRows > 0 && (
-                <TableRow
-                // style={{
-                //   height: (dense ? 33 : 53) * emptyRows,
-                // }}
-                >
-                  {/* <TableCell colSpan={6} /> */}
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      ) : (
-        <TableContainer>
-          <Table
-            sx={{ minWidth: 750, background:"white", }}
-            aria-labelledby="tableTitle"
-            size={dense ? "small" : "medium"}
-          >
-            <EnhancedTableHead
-            order={order}
-            orderBy={orderBy}
-            onRequestSort={handleRequestSort}
-            rowCount={ChanhujoDaroImageData.length} />
-            <TableBody>
-              {/* ----------------Eran Data Maping Here-------------------------- */}
+                      let str1 = b.substring(2, len);
 
-              { stableSort(ChanhujoDaroImageData, getComparator(order, orderBy))
-              .slice(
-                page * rowsPerPage,
-                page * rowsPerPage + rowsPerPage
-              ).map((row, index) => {
-                const labelId = `enhanced-table-checkbox-${index}`;
-                let b = row.links;
+                      let newArr = str1.split("', '");
+                      return (
+                        <TableRow
+                          hover
+                          role="checkbox"
+                          tabIndex={-1}
+                          key={row.seqid}
+                        >
+                          <TableCell align="left">
+                            <span
+                              style={{
+                                width: "100px",
+                                overflow: "hidden",
+                                display: "inline-block",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                                textAlign: "right",
+                                color: "black",
+                                fontSize: "17px",
+                                fontWeight: "600",
+                              }}
+                            >
+                              {" "}
+                              {row.seqid}
+                            </span>
+                          </TableCell>
+                          <TableCell align="right">
+                            <span
+                              style={{
+                                width: "100px",
+                                overflow: "hidden",
+                                display: "inline-block",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                                textAlign: "right",
+                                color: "black",
+                                fontSize: "17px",
+                                fontWeight: "600",
+                              }}
+                            >
+                              {" "}
+                              {row.seq_in_num}
+                            </span>
+                          </TableCell>
+                          <TableCell align="right">
+                            <Box
+                              sx={{
+                                display: "flex",
+                                justifyContent: "right",
+                              }}
+                            >
+                              {newArr.map((e, index) => {
+                                try {
+                                  let n = e.split("/").pop();
 
-                let len = b.length - 2;
+                                  let data1 = require(`../../../../static/ivcgraphemes/${n}`);
+                                  return (
+                                    <Avatar
+                                      sx={{
+                                        width: "auto",
+                                        height: "60px",
+                                        margin: "4px",
+                                        padding: "2px",
+                                      }}
+                                      src={data1}
+                                      variant="square"
+                                    />
+                                  );
+                                } catch (err) {
+                                  console.log("err", err);
+                                }
+                              })}
+                            </Box>
+                          </TableCell>
 
-                let str1 = b.substring(2, len);
+                          <TableCell align="right">
+                            <span
+                              style={{
+                                width: "100px",
+                                overflow: "hidden",
+                                display: "inline-block",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                                textAlign: "center",
+                                color: "black",
+                                fontSize: "17px",
+                                fontWeight: "600",
+                              }}
+                            >
+                              {" "}
+                              {row.site}
+                            </span>
+                          </TableCell>
 
-                let newArr = str1.split("', '");
-                return (
-                  <TableRow
-                    hover
-                    role="checkbox"
-                    tabIndex={-1}
-                    key={row.seqid}
-                  >
-                    <TableCell
-                      align="left"
-                       
-                    >
-                      <span
-                        style={{
-                          width: "100px",
-                          overflow: "hidden",
-                          display: "inline-block",
-                          textOverflow: "ellipsis",
-                          whiteSpace: "nowrap",
-                          textAlign: "right",
-                          color:"black",
-                          fontSize: "17px",
-                          fontWeight: "600",
-                        }}
-                      >
-                        {" "}
-                        {row.seqid}
-                      </span>
-                    </TableCell>
-                    <TableCell
-                      align="right"
-                     
-                    >
-                      <span
-                        style={{
-                          width: "100px",
-                          overflow: "hidden",
-                          display: "inline-block",
-                          textOverflow: "ellipsis",
-                          whiteSpace: "nowrap",
-                          textAlign: "right",
-                          color:"black",
-                          fontSize: "17px",
-                          fontWeight: "600",
-                        }}
-                      >
-                        {" "}
-                        {row.seq_in_num}
-                      </span>
-                    </TableCell>
-                    <TableCell align="right">
-                      <Box
-                        sx={{
-                          display: "flex",
-                          justifyContent: "right",
-                        }}
-                      >
-                        {newArr.map((e, index) => {
-                          try {
-                            let n = e.split("/").pop();
+                          <TableCell align="center" marginLeft="20px">
+                            <Link
+                              style={{
+                                textDecoration: "none",
+                                color: "black",
+                                fontSize: "17px",
+                                fontWeight: "600",
+                              }}
+                              to={`/erantabledetails/${row.id}`}
+                            >
+                              {" "}
+                              See Details
+                            </Link>
+                          </TableCell>
+                        </TableRow>
+                      );
+                    })}
+                  {emptyRows > 0 && (
+                    <TableRow>{/* <TableCell colSpan={6} /> */}</TableRow>
+                  )}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          )}
+          {/* ----------------------Pagination Start Here ----------------------- */}
+          {query ? (
+            // ---------------------Pagination For Search Here-----------------------
+            <TablePagination
+              rowsPerPageOptions={[5, 10, 25]}
+              component="div"
+              count={ChanhujoDaroImageData.length}
+              rowsPerPage={perpage}
+              page={pageSearch}
+              onPageChange={handleChangePageSearch}
+              onRowsPerPageChange={handleChangeRowsPerPageSearch}
+            />
+          ) : (
+            // ---------------------Pagination For Normal Data Here-----------------
+            <TablePagination
+              rowsPerPageOptions={[5, 10, 25]}
+              component="div"
+              count={ChanhujoDaroImageData.length}
+              rowsPerPage={rowsPerPage}
+              page={page}
+              onPageChange={handleChangePage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
+            />
+          )}
+        </Paper>
+      </Box>
+      <Box className="Chanhu_CardList_MobileDevice">
+        {ChanhujoDaroImageData.slice(
+          page * rowsPerPage,
+          page * rowsPerPage + rowsPerPage
+        ).map((row, index) => {
+          const labelId = `enhanced-table-checkbox-${index}`;
 
-                            let data1 = require(`../../../../static/ivcgraphemes/${n}`);
-                            return (
-                              
-                              <Avatar sx={{
-                                width:"auto",
-                                height:"60px",
-                                margin:"4px",
-                                padding:"2px"
-                              }} src={data1} variant="square"/>
-                            );
-                          } catch (err) {
-                            console.log("err", err);
-                          }
-                        })}
-                      </Box>
-                    </TableCell>
-
-                    <TableCell
-                      align="right"
-                      
-                    >
-                      <span
-                        style={{
-                          width: "100px",
-                          overflow: "hidden",
-                          display: "inline-block",
-                          textOverflow: "ellipsis",
-                          whiteSpace: "nowrap",
-                          textAlign: "center",
-                          color:"black",
-                          fontSize: "17px",
-                          fontWeight: "600",
-                        }}
-                      >
-                        {" "}
-                        {row.site}
-                      </span>
-                    </TableCell>
-
-                    <TableCell
-                      align="center"
-                      marginLeft="20px"
-                      
-                    >
-                      <Link
-                        style={{
-                          textDecoration: "none",
-                          color:"black",
-                          fontSize: "17px",
-                          fontWeight: "600",
-                        }}
-                        to={`/erantabledetails/${row.id}`}
-                      >
-                        {" "}
-                        See Details
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                );
-              })}
-              {emptyRows > 0 && (
-                <TableRow>{/* <TableCell colSpan={6} /> */}</TableRow>
-              )}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      )}
-      {/* ----------------------Pagination Start Here ----------------------- */}
-      {query ? (
-        // ---------------------Pagination For Search Here-----------------------
-        <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
-          component="div"
-          count={ ChanhujoDaroImageData.length}
-          rowsPerPage={perpage}
-          page={pageSearch}
-          onPageChange={handleChangePageSearch}
-          onRowsPerPageChange={handleChangeRowsPerPageSearch}
-        />
-      ) : (
-        // ---------------------Pagination For Normal Data Here-----------------
-        <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
-          component="div"
-          count={  ChanhujoDaroImageData.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
-      )}
-    </Paper>
-
-    </Box>
-    <Box className="CardList_MobileDevice">
-
-
-{ChanhujoDaroImageData.slice(
-  page * rowsPerPage,
-  page * rowsPerPage + rowsPerPage
-).map((row, index) => {
-  const labelId = `enhanced-table-checkbox-${index}`;
-
-  let b = row.links;
+          let b = row.links;
 
           let len = b.length - 2;
 
           let str1 = b.substring(2, len);
 
           let newArr = str1.split("', '");
-  return (
-    <Card
-      sx={{
-        maxWidth: 345,
-        margin: " 10px auto 0 auto",
-        background: `linear-gradient(to bottom, ${colors.primary[600]}, ${colors.primary[800]})`,
-      }}
-    >
-      <CardActionArea>
-        <CardContent
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <Typography
-            variant="h3"
-            color={colors.grey[100]}
-            className="FirstBlock_Section_Item_Text"
-          >
-            Seqid
-          </Typography>
-
-          <Typography
-            variant="h4"
-            color={colors.grey[100]}
-            className="FirstBlock_Section_Item_Text"
-          >
-            <span
-                  style={{
-                    width: "100px",
-                    overflow: "hidden",
-                    display: "inline-block",
-                    textOverflow: "ellipsis",
-                    whiteSpace: "nowrap",
-                    textAlign: "right",
-                  }}
-                > 
-            {row.seqid}
-            </span>
-          </Typography>
-        </CardContent>
-        <CardContent
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <Typography
-            variant="h3"
-            color={colors.grey[100]}
-            className="FirstBlock_Section_Item_Text"
-          >
-            Seq_In_Nums
-          </Typography>
-
-          <Typography
-            variant="h4"
-            color={colors.grey[100]}
-            className="FirstBlock_Section_Item_Text"
-          >
-            <span
-                  style={{
-                    width: "100px",
-                    overflow: "hidden",
-                    display: "inline-block",
-                    textOverflow: "ellipsis",
-                    whiteSpace: "nowrap",
-                    textAlign: "right",
-                  }}
-                > 
-            {row.seq_in_num}
-            </span>
-          </Typography>
-        </CardContent>
-        <CardContent
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <Typography
-            variant="h3"
-            color={colors.grey[100]}
-            className="FirstBlock_Section_Item_Text"
-          >
-            Site
-          </Typography>
-
-          <Typography
-            variant="h4"
-            color={colors.grey[100]}
-            className="FirstBlock_Section_Item_Text"
-          >
-            <span
-                  style={{
-                    width: "100px",
-                    overflow: "hidden",
-                    display: "inline-block",
-                    textOverflow: "ellipsis",
-                    whiteSpace: "nowrap",
-                    textAlign: "right",
-                  }}
-                > 
-            {row.site}
-            </span>
-          </Typography>
-        </CardContent>
-        <CardContent
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Typography
-            variant="h3"
-            color={colors.grey[100]}
-            className="FirstBlock_Section_Item_Text"
-          >
-            Links
-          </Typography>
-
-          <Typography
-            variant="h4"
-            color={colors.grey[100]}
-            className="FirstBlock_Section_Item_Text"
-          >
-             
-            <Box
+          return (
+            <Card className="Chanhu_Card_Mobile">
+              <CardActionArea>
+                <CardContent
                   sx={{
                     display: "flex",
-                    justifyContent: "right",
+                    justifyContent: "space-between",
                   }}
                 >
-                  {newArr.map((e, index) => {
-                    try {
-                      let n = e.split("/").pop();
+                  <h3 className="Chanhu_Mobile_Card_Left">Seqid</h3>
 
-                      let data1 = require(`../../../../static/ivcgraphemes/${n}`);
-                      return (
-                        
-                        <Avatar key={index} sx={{
-                          width:"auto",
-                          minHeight:"30px",
-                          margin:"4px",
-                          padding:"2px"
-                        }} src={data1} variant="square"/>
-                      );
-                    } catch (err) {
-                      console.log("err", err);
-                    }
-                  })}
-                </Box>
-                {/* </span> */}
-          </Typography>
-        </CardContent>
-        <CardContent
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <Typography
-            variant="h3"
-            color={colors.grey[100]}
-            className="FirstBlock_Section_Item_Text"
-          >
-            Actions
-          </Typography>
-
-          <Typography
-            variant="h4"
-            color={colors.grey[100]}
-            className="FirstBlock_Section_Item_Text"
-          >
-            <span
-                  style={{
-                    width: "100px",
-                    overflow: "hidden",
-                    display: "inline-block",
-                    textOverflow: "ellipsis",
-                    whiteSpace: "nowrap",
-                    textAlign: "right",
+                  <h4 className="Chanhu_Mobile_Card_Right">
+                    <span
+                      style={{
+                        width: "100px",
+                        overflow: "hidden",
+                        display: "inline-block",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        textAlign: "right",
+                      }}
+                    >
+                      {row.seqid}
+                    </span>
+                  </h4>
+                </CardContent>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
                   }}
-                > 
-          <Link
-                style={{
-                  textDecoration: "none",
-                  color: `${colors.grey[100]}`,
-                }}
-                to={`/erantabledetails/${row.id}`}
-              >
-                {" "}
-                See Details
-              </Link>
-            </span>
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+                >
+                  <h3 className="Chanhu_Mobile_Card_Left">Seq_In_Nums</h3>
+
+                  <h4 className="Chanhu_Mobile_Card_Right">
+                    <span
+                      style={{
+                        width: "100px",
+                        overflow: "hidden",
+                        display: "inline-block",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        textAlign: "right",
+                      }}
+                    >
+                      {row.seq_in_num}
+                    </span>
+                  </h4>
+                </CardContent>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <h3 className="Chanhu_Mobile_Card_Left">Site</h3>
+
+                  <h4 className="Chanhu_Mobile_Card_Right">
+                    <span
+                      style={{
+                        width: "100px",
+                        overflow: "hidden",
+                        display: "inline-block",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        textAlign: "right",
+                      }}
+                    >
+                      {row.site}
+                    </span>
+                  </h4>
+                </CardContent>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <h3 className="Chanhu_Mobile_Card_Left">Links</h3>
+
+                  <h4 className="Chanhu_Mobile_Card_Right">
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "right",
+                      }}
+                    >
+                      {newArr.map((e, index) => {
+                        try {
+                          let n = e.split("/").pop();
+
+                          let data1 = require(`../../../../static/ivcgraphemes/${n}`);
+                          return (
+                            <Avatar
+                              key={index}
+                              sx={{
+                                width: "auto",
+                                height: "30px",
+                                margin: "4px",
+                                padding: "2px",
+                              }}
+                              src={data1}
+                              variant="square"
+                            />
+                          );
+                        } catch (err) {
+                          console.log("err", err);
+                        }
+                      })}
+                    </Box>
+                    {/* </span> */}
+                  </h4>
+                </CardContent>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <h3 className="Chanhu_Mobile_Card_Left">Actions</h3>
+
+                  <h4 className="Chanhu_Mobile_Card_Right">
+                    <span
+                      style={{
+                        width: "100px",
+                        overflow: "hidden",
+                        display: "inline-block",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        textAlign: "right",
+                      }}
+                    >
+                      <Link
+                        style={{
+                          textDecoration: "none",
+                          color: `black`,
+                        }}
+                        to={`/erantabledetails/${row.id}`}
+                      >
+                        {" "}
+                        See Details
+                      </Link>
+                    </span>
+                  </h4>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          );
+        })}
+
+        {/*  ---------------------Pagination For Normal Data Here----------------- */}
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25]}
+          component="div"
+          count={ChanhujoDaroImageData.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+        />
+      </Box>
+    </Box>
   );
-})}
-
-
-
-
-{/*  ---------------------Pagination For Normal Data Here----------------- */}
-<TablePagination
-  rowsPerPageOptions={[5, 10, 25]}
-  component="div"
-  count={ChanhujoDaroImageData.length}
-  rowsPerPage={rowsPerPage}
-  page={page}
-  onPageChange={handleChangePage}
-  onRowsPerPageChange={handleChangeRowsPerPage}
-  sx={{
-    background:"black",
-    marginTop:"5px"
-  }}
-/>
-
-
-
-</Box>
-  </Box>
-);
 }

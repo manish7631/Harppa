@@ -15,16 +15,22 @@ import Tooltip from "@mui/material/Tooltip";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
-import { Box, Table, Typography, useTheme, Avatar, CardContent, CardActionArea, Card } from "@mui/material";
+import {
+  Box,
+  Table,
+  Typography,
+  useTheme,
+  Avatar,
+  CardContent,
+  CardActionArea,
+  Card,
+} from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  BNGLImageGetFunction
-  
-} from "../../../../redux/Application/action";
-import { tokens } from "../../../../theme";
+import { BNGLImageGetFunction } from "../../../../redux/Application/action";
+
 import { Link } from "react-router-dom";
-import "./BnglTableHeader.css"
+import "./BnglTableHeader.css";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -42,7 +48,6 @@ function getComparator(order, orderBy) {
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-
 function stableSort(array, comparator) {
   const stabilizedThis = array.map((el, index) => [el, index]);
   stabilizedThis.sort((a, b) => {
@@ -54,7 +59,6 @@ function stableSort(array, comparator) {
   });
   return stabilizedThis.map((el) => el[0]);
 }
-
 
 const headCells = [
   {
@@ -107,16 +111,16 @@ function EnhancedTableHead(props) {
   return (
     <TableHead>
       <TableRow>
-      {headCells.map((headCell) => (
+        {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
             align={headCell.numeric ? "right" : "center"}
             padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
             sx={{
-              fontSize:"17px",
-              fontWeight:"bold",
-              color:"black"
+              fontSize: "17px",
+              fontWeight: "bold",
+              color: "black",
             }}
           >
             <TableSortLabel
@@ -146,7 +150,6 @@ EnhancedTableHead.propTypes = {
   orderBy: PropTypes.string.isRequired,
   rowCount: PropTypes.number.isRequired,
 };
-
 
 function EnhancedTableToolbar(props) {
   const { numSelected } = props;
@@ -219,14 +222,11 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
   const [perpage, setPerpage] = useState(5);
   const [query, setQuery] = useState("");
 
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-
   const dispatch = useDispatch();
 
   //---------------------UseSelector Redux Data Call --------------------------------------
 
-  const { isLoading,  BNGLImageData } = useSelector(
+  const { isLoading, BNGLImageData } = useSelector(
     (state) => state.ApplicationReducer
   );
 
@@ -240,9 +240,7 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
     dispatch(BNGLImageGetFunction());
   }, []);
 
-
-  console.log("data", BNGLImageData)
-  
+  console.log("data", BNGLImageData);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";
@@ -269,9 +267,7 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
 
   // // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
-    page > 0
-      ? Math.max(0, (1 + page) * rowsPerPage - BNGLImageData.length)
-      : 0;
+    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - BNGLImageData.length) : 0;
 
   // ----------------------------Loading Function Start Here-------------------------------
 
@@ -285,821 +281,698 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box className="TableList_LargeDevice">
-      <Paper sx={{ width: "100%", mb: 2 }}>
-        {/* ------------------------Table Container Start Here---------------------------------- */}
+      <Box className="Bngl_TableList_LargeDevice">
+        <Paper sx={{ width: "100%", mb: 2 }}>
+          {/* ------------------------Table Container Start Here---------------------------------- */}
 
-        {query ? (
-          <TableContainer
-            sx={
-              {
-                // padding:"10px"
+          {query ? (
+            <TableContainer
+              sx={
+                {
+                  // padding:"10px"
+                }
               }
-            }
-          >
-            <Table
-              sx={{ minWidth: 750 }}
-              aria-labelledby="tableTitle"
-              size={dense ? "small" : "medium"}
             >
-              <EnhancedTableHead 
-               order={order}
-               orderBy={orderBy}
-               onRequestSort={handleRequestSort}
-               rowCount={BNGLImageData.length} />
-              <TableBody>
-                {/* -------------------Eran Search Data Maping Here------------------- */}
+              <Table
+                sx={{ minWidth: 750 }}
+                aria-labelledby="tableTitle"
+                size={dense ? "small" : "medium"}
+              >
+                <EnhancedTableHead
+                  order={order}
+                  orderBy={orderBy}
+                  onRequestSort={handleRequestSort}
+                  rowCount={BNGLImageData.length}
+                />
+                <TableBody>
+                  {/* -------------------Eran Search Data Maping Here------------------- */}
 
-                {BNGLImageData.slice(
-                  pageSearch * perpage,
-                  pageSearch * perpage + perpage
-                ).map((row, index) => {
-                  const labelId = `enhanced-table-checkbox-${index}`;
-                  let b = row.links;
+                  {BNGLImageData.slice(
+                    pageSearch * perpage,
+                    pageSearch * perpage + perpage
+                  ).map((row, index) => {
+                    const labelId = `enhanced-table-checkbox-${index}`;
+                    let b = row.links;
 
-                  let len = b.length - 2;
+                    let len = b.length - 2;
 
-                  let str1 = b.substring(2, len);
+                    let str1 = b.substring(2, len);
 
-                  let newArr = str1.split("', '");
-                  return (
-                    <TableRow
-                      hover
-                      role="checkbox"
-                      tabIndex={-1}
-                      key={row.seqid}
-                    >
-                      <TableCell
-                        align="left"
-                        sx={{
-                          fontSize: "17px",
-                          fontWeight: "500",
-                        }}
+                    let newArr = str1.split("', '");
+                    return (
+                      <TableRow
+                        hover
+                        role="checkbox"
+                        tabIndex={-1}
+                        key={row.seqid}
                       >
-                        <span
-                          style={{
-                            width: "100px",
-                            overflow: "hidden",
-                            display: "inline-block",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
-                            textAlign: "right",
-                          }}
-                        >
-                          {" "}
-                          {row.seqid}
-                        </span>
-                      </TableCell>
-                      <TableCell
-                        align="right"
-                        sx={{
-                          fontSize: "17px",
-                          fontWeight: "500",
-                        }}
-                      >
-                        <span
-                          style={{
-                            width: "100px",
-                            overflow: "hidden",
-                            display: "inline-block",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
-                            textAlign: "right",
-                          }}
-                        >
-                          {" "}
-                          {row.seq_in_num}
-                        </span>
-                      </TableCell>
-                      <TableCell align="right">
-                        <Box
+                        <TableCell
+                          align="left"
                           sx={{
-                            display: "flex",
-                            justifyContent: "right",
-                          }}
-                        >
-                          {newArr.map((e, index) => {
-                            try {
-                              let n = e.split("/").pop();
-
-                              let data1 = require(`../../../../static/ivcgraphemes/${n}`);
-                              return (
-                                // <img
-                                //   style={{
-                                //     width: "60px",
-                                //     aspectRatio: 1 / 1,
-                                //     objectFit: "contain",
-                                //     margin:"0px"
-                                //   }}
-                                //   key={index}
-                                //   alt="Remy Sharp"
-                                //   src={data1}
-                                // />
-                                  <Avatar key={n} sx={{
-                                  width:"auto",
-                                  height:"60px",
-                                  margin:"4px",
-                                  padding:"2px"
-                                }} src={data1} variant="square"/>
-                              );
-                            } catch (err) {
-                              console.log("err", err);
-                            }
-                          })}
-                        </Box>
-                      </TableCell>
-
-                      <TableCell
-                        align="right"
-                        sx={{
-                          fontSize: "17px",
-                          fontWeight: "500",
-                        }}
-                      >
-                        <span
-                          style={{
-                            width: "100px",
-                            overflow: "hidden",
-                            display: "inline-block",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
-                            textAlign: "center",
-                          }}
-                        >
-                          {" "}
-                          {row.site}
-                        </span>
-                      </TableCell>
-
-                      <TableCell
-                        align="center"
-                        marginLeft="20px"
-                        sx={{
-                          fontSize: "17px",
-                          fontWeight: "500",
-                        }}
-                      >
-                        <Link
-                          style={{
-                            textDecoration: "none",
-                            color: `${colors.grey[100]}`,
-                          }}
-                          to={`/erantabledetails/${row.id}`}
-                        >
-                          {" "}
-                          See Details
-                        </Link>
-                      </TableCell>
-                    </TableRow>
-                  );
-                })}
-                {emptyRows > 0 && (
-                  <TableRow
-                  // style={{
-                  //   height: (dense ? 33 : 53) * emptyRows,
-                  // }}
-                  >
-                    {/* <TableCell colSpan={6} /> */}
-                  </TableRow>
-                )}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        ) : (
-          <TableContainer>
-            <Table
-              sx={{ minWidth: 750, background:"white"}}
-              aria-labelledby="tableTitle"
-              size={dense ? "small" : "medium"}
-            >
-              <EnhancedTableHead
-              order={order}
-              orderBy={orderBy}
-              onRequestSort={handleRequestSort}
-              rowCount={BNGLImageData.length} />
-              <TableBody>
-                {/* ----------------Eran Data Maping Here-------------------------- */}
-
-                { stableSort(BNGLImageData, getComparator(order, orderBy))
-                .slice(
-                  page * rowsPerPage,
-                  page * rowsPerPage + rowsPerPage
-                ).map((row, index) => {
-                  const labelId = `enhanced-table-checkbox-${index}`;
-                  let b = row.links;
-
-                  let len = b.length - 2;
-
-                  let str1 = b.substring(2, len);
-
-                  let newArr = str1.split("', '");
-                  return (
-                    <TableRow
-                      hover
-                      role="checkbox"
-                      tabIndex={-1}
-                      key={row.seqid}
-                    >
-                      <TableCell
-                        align="left"
-                        
-                      >
-                        <span
-                          style={{
-                            width: "100px",
-                            overflow: "hidden",
-                            display: "inline-block",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
-                            textAlign: "right",
-                            color:"black",
                             fontSize: "17px",
-                            fontWeight: "600",
+                            fontWeight: "500",
                           }}
                         >
-                          {" "}
-                          {row.seqid}
-                        </span>
-                      </TableCell>
-                      <TableCell
-                        align="right"
-                        
-                      >
-                        <span
-                          style={{
-                            width: "100px",
-                            overflow: "hidden",
-                            display: "inline-block",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
-                            textAlign: "right",
-                            color:"black",
-                            fontSize: "17px",
-                            fontWeight: "600",
-                          }}
-                        >
-                          {" "}
-                          {row.seq_in_num}
-                        </span>
-                      </TableCell>
-                      <TableCell align="right">
-                        <Box
+                          <span
+                            style={{
+                              width: "100px",
+                              overflow: "hidden",
+                              display: "inline-block",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              textAlign: "right",
+                            }}
+                          >
+                            {" "}
+                            {row.seqid}
+                          </span>
+                        </TableCell>
+                        <TableCell
+                          align="right"
                           sx={{
-                            display: "flex",
-                            justifyContent: "right",
-                          }}
-                        >
-                          {newArr.map((e, index) => {
-                            try {
-                              let n = e.split("/").pop();
-
-                              let data1 = require(`../../../../static/ivcgraphemes/${n}`);
-                              return (
-                                
-                                <Avatar sx={{
-                                  width:"auto",
-                                  height:"60px",
-                                  margin:"4px",
-                                  padding:"2px"
-                                }} src={data1} variant="square"/>
-                              );
-                            } catch (err) {
-                              console.log("err", err);
-                            }
-                          })}
-                        </Box>
-                      </TableCell>
-
-                      <TableCell
-                        align="right"
-                        
-                      >
-                        <span
-                          style={{
-                            width: "100px",
-                            overflow: "hidden",
-                            display: "inline-block",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
-                            textAlign: "center",
-                            color:"black",
                             fontSize: "17px",
-                            fontWeight: "600",
+                            fontWeight: "500",
                           }}
                         >
-                          {" "}
-                          {row.site}
-                        </span>
-                      </TableCell>
+                          <span
+                            style={{
+                              width: "100px",
+                              overflow: "hidden",
+                              display: "inline-block",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              textAlign: "right",
+                            }}
+                          >
+                            {" "}
+                            {row.seq_in_num}
+                          </span>
+                        </TableCell>
+                        <TableCell align="right">
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "right",
+                            }}
+                          >
+                            {newArr.map((e, index) => {
+                              try {
+                                let n = e.split("/").pop();
 
-                      <TableCell
-                        align="center"
-                        marginLeft="20px"
-                        
-                      >
-                        <Link
-                          style={{
-                            textDecoration: "none",
-                            color:"black",
+                                let data1 = require(`../../../../static/ivcgraphemes/${n}`);
+                                return (
+                                  // <img
+                                  //   style={{
+                                  //     width: "60px",
+                                  //     aspectRatio: 1 / 1,
+                                  //     objectFit: "contain",
+                                  //     margin:"0px"
+                                  //   }}
+                                  //   key={index}
+                                  //   alt="Remy Sharp"
+                                  //   src={data1}
+                                  // />
+                                  <Avatar
+                                    key={n}
+                                    sx={{
+                                      width: "auto",
+                                      height: "60px",
+                                      margin: "4px",
+                                      padding: "2px",
+                                    }}
+                                    src={data1}
+                                    variant="square"
+                                  />
+                                );
+                              } catch (err) {
+                                console.log("err", err);
+                              }
+                            })}
+                          </Box>
+                        </TableCell>
+
+                        <TableCell
+                          align="right"
+                          sx={{
                             fontSize: "17px",
-                            fontWeight: "600",
+                            fontWeight: "500",
                           }}
-                          to={`/erantabledetails/${row.id}`}
                         >
-                          {" "}
-                          See Details
-                        </Link>
-                      </TableCell>
+                          <span
+                            style={{
+                              width: "100px",
+                              overflow: "hidden",
+                              display: "inline-block",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              textAlign: "center",
+                            }}
+                          >
+                            {" "}
+                            {row.site}
+                          </span>
+                        </TableCell>
+
+                        <TableCell
+                          align="center"
+                          marginLeft="20px"
+                          sx={{
+                            fontSize: "17px",
+                            fontWeight: "500",
+                          }}
+                        >
+                          <Link
+                            style={{
+                              textDecoration: "none",
+                              color: `black`,
+                            }}
+                            to={`/erantabledetails/${row.id}`}
+                          >
+                            {" "}
+                            See Details
+                          </Link>
+                        </TableCell>
+                      </TableRow>
+                    );
+                  })}
+                  {emptyRows > 0 && (
+                    <TableRow
+                    // style={{
+                    //   height: (dense ? 33 : 53) * emptyRows,
+                    // }}
+                    >
+                      {/* <TableCell colSpan={6} /> */}
                     </TableRow>
-                  );
-                })}
-                {emptyRows > 0 && (
-                  <TableRow>{/* <TableCell colSpan={6} /> */}</TableRow>
-                )}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        )}
-        {/* ----------------------Pagination Start Here ----------------------- */}
-        {query ? (
-          // ---------------------Pagination For Search Here-----------------------
-          <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
-            component="div"
-            count={BNGLImageData.length}
-            rowsPerPage={perpage}
-            page={pageSearch}
-            onPageChange={handleChangePageSearch}
-            onRowsPerPageChange={handleChangeRowsPerPageSearch}
-          />
-        ) : (
-          // ---------------------Pagination For Normal Data Here-----------------
-          <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
-            component="div"
-            count={BNGLImageData.length}
-            rowsPerPage={rowsPerPage}
-            page={page}
-            onPageChange={handleChangePage}
-            onRowsPerPageChange={handleChangeRowsPerPage}
-          />
-        )}
-      </Paper>
+                  )}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          ) : (
+            <TableContainer>
+              <Table
+                sx={{ minWidth: 750, background: "white" }}
+                aria-labelledby="tableTitle"
+                size={dense ? "small" : "medium"}
+              >
+                <EnhancedTableHead
+                  order={order}
+                  orderBy={orderBy}
+                  onRequestSort={handleRequestSort}
+                  rowCount={BNGLImageData.length}
+                />
+                <TableBody>
+                  {/* ----------------Eran Data Maping Here-------------------------- */}
 
+                  {stableSort(BNGLImageData, getComparator(order, orderBy))
+                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                    .map((row, index) => {
+                      const labelId = `enhanced-table-checkbox-${index}`;
+                      let b = row.links;
+
+                      let len = b.length - 2;
+
+                      let str1 = b.substring(2, len);
+
+                      let newArr = str1.split("', '");
+                      return (
+                        <TableRow
+                          hover
+                          role="checkbox"
+                          tabIndex={-1}
+                          key={row.seqid}
+                        >
+                          <TableCell align="left">
+                            <span
+                              style={{
+                                width: "100px",
+                                overflow: "hidden",
+                                display: "inline-block",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                                textAlign: "right",
+                                color: "black",
+                                fontSize: "17px",
+                                fontWeight: "600",
+                              }}
+                            >
+                              {" "}
+                              {row.seqid}
+                            </span>
+                          </TableCell>
+                          <TableCell align="right">
+                            <span
+                              style={{
+                                width: "100px",
+                                overflow: "hidden",
+                                display: "inline-block",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                                textAlign: "right",
+                                color: "black",
+                                fontSize: "17px",
+                                fontWeight: "600",
+                              }}
+                            >
+                              {" "}
+                              {row.seq_in_num}
+                            </span>
+                          </TableCell>
+                          <TableCell align="right">
+                            <Box
+                              sx={{
+                                display: "flex",
+                                justifyContent: "right",
+                              }}
+                            >
+                              {newArr.map((e, index) => {
+                                try {
+                                  let n = e.split("/").pop();
+
+                                  let data1 = require(`../../../../static/ivcgraphemes/${n}`);
+                                  return (
+                                    <Avatar
+                                      sx={{
+                                        width: "auto",
+                                        height: "60px",
+                                        margin: "4px",
+                                        padding: "2px",
+                                      }}
+                                      src={data1}
+                                      variant="square"
+                                    />
+                                  );
+                                } catch (err) {
+                                  console.log("err", err);
+                                }
+                              })}
+                            </Box>
+                          </TableCell>
+
+                          <TableCell align="right">
+                            <span
+                              style={{
+                                width: "100px",
+                                overflow: "hidden",
+                                display: "inline-block",
+                                textOverflow: "ellipsis",
+                                whiteSpace: "nowrap",
+                                textAlign: "center",
+                                color: "black",
+                                fontSize: "17px",
+                                fontWeight: "600",
+                              }}
+                            >
+                              {" "}
+                              {row.site}
+                            </span>
+                          </TableCell>
+
+                          <TableCell align="center" marginLeft="20px">
+                            <Link
+                              style={{
+                                textDecoration: "none",
+                                color: "black",
+                                fontSize: "17px",
+                                fontWeight: "600",
+                              }}
+                              to={`/erantabledetails/${row.id}`}
+                            >
+                              {" "}
+                              See Details
+                            </Link>
+                          </TableCell>
+                        </TableRow>
+                      );
+                    })}
+                  {emptyRows > 0 && (
+                    <TableRow>{/* <TableCell colSpan={6} /> */}</TableRow>
+                  )}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          )}
+          {/* ----------------------Pagination Start Here ----------------------- */}
+          {query ? (
+            // ---------------------Pagination For Search Here-----------------------
+            <TablePagination
+              rowsPerPageOptions={[5, 10, 25]}
+              component="div"
+              count={BNGLImageData.length}
+              rowsPerPage={perpage}
+              page={pageSearch}
+              onPageChange={handleChangePageSearch}
+              onRowsPerPageChange={handleChangeRowsPerPageSearch}
+            />
+          ) : (
+            // ---------------------Pagination For Normal Data Here-----------------
+            <TablePagination
+              rowsPerPageOptions={[5, 10, 25]}
+              component="div"
+              count={BNGLImageData.length}
+              rowsPerPage={rowsPerPage}
+              page={page}
+              onPageChange={handleChangePage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
+            />
+          )}
+        </Paper>
       </Box>
-      <Box className="CardList_MobileDevice">
+      <Box className="Bngl_CardList_MobileDevice">
+        {query ? (
+          <>
+            {BNGLImageData.slice(
+              pageSearch * perpage,
+              pageSearch * perpage + perpage
+            ).map((row, index) => {
+              const labelId = `enhanced-table-checkbox-${index}`;
+
+              let b = row.links;
+
+              let len = b.length - 2;
+
+              let str1 = b.substring(2, len);
+
+              let newArr = str1.split("', '");
+              return (
+                <Card className="Bngl_Card_Mobile">
+                  <CardActionArea>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h3 className="Bngl_Mobile_Card_Left">Seqid</h3>
+
+                      <h4 className="Bngl_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          {row.seqid}
+                        </span>
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h3 className="Bngl_Mobile_Card_Left">Seq_In_Nums</h3>
+
+                      <h4 className="Bngl_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          {row.seq_in_num}
+                        </span>
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h3 className="Bngl_Mobile_Card_Left">Site</h3>
+
+                      <h4 className="Bngl_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          {row.site}
+                        </span>
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
+                    >
+                      <h3 className="Bngl_Mobile_Card_Left">Links</h3>
+
+                      <h4 className="Bngl_Mobile_Card_Right">
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "right",
+                          }}
+                        >
+                          {newArr.map((e, index) => {
+                            try {
+                              let n = e.split("/").pop();
+
+                              let data1 = require(`../../../../static/ivcgraphemes/${n}`);
+                              return (
+                                <Avatar
+                                  key={index}
+                                  sx={{
+                                    width: "auto",
+                                    height: "30px",
+                                    margin: "4px",
+                                    padding: "2px",
+                                  }}
+                                  src={data1}
+                                  variant="square"
+                                />
+                              );
+                            } catch (err) {
+                              console.log("err", err);
+                            }
+                          })}
+                        </Box>
+                        {/* </span> */}
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h3 className="Bngl_Mobile_Card_Left">Actions</h3>
+
+                      <h4 className="Bngl_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          <Link
+                            style={{
+                              textDecoration: "none",
+                              color: `black`,
+                            }}
+                            to={`/erantabledetails/${row.id}`}
+                          >
+                            {" "}
+                            See Details
+                          </Link>
+                        </span>
+                      </h4>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              );
+            })}
+          </>
+        ) : (
+          <>
+            {BNGLImageData.slice(
+              page * rowsPerPage,
+              page * rowsPerPage + rowsPerPage
+            ).map((row, index) => {
+              const labelId = `enhanced-table-checkbox-${index}`;
+
+              let b = row.links;
+
+              let len = b.length - 2;
+
+              let str1 = b.substring(2, len);
+
+              let newArr = str1.split("', '");
+              return (
+                <Card className="Bngl_Card_Mobile">
+                  <CardActionArea>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h3 className="Bngl_Mobile_Card_Left">Seqid</h3>
+
+                      <h4 className="Bngl_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          {row.seqid}
+                        </span>
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h3 className="Bngl_Mobile_Card_Left">Seq_In_Nums</h3>
+
+                      <h4 className="Bngl_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          {row.seq_in_num}
+                        </span>
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h3 className="Bngl_Mobile_Card_Left">Site</h3>
+
+                      <h4 className="Bngl_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          {row.site}
+                        </span>
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
+                    >
+                      <h3 className="Bngl_Mobile_Card_Left">Links</h3>
+
+                      <h4 className="Bngl_Mobile_Card_Right">
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "right",
+                          }}
+                        >
+                          {newArr.map((e, index) => {
+                            try {
+                              let n = e.split("/").pop();
+
+                              let data1 = require(`../../../../static/ivcgraphemes/${n}`);
+                              return (
+                                <Avatar
+                                  key={index}
+                                  sx={{
+                                    width: "auto",
+                                    height: "30px",
+                                    margin: "4px",
+                                    padding: "2px",
+                                  }}
+                                  src={data1}
+                                  variant="square"
+                                />
+                              );
+                            } catch (err) {
+                              console.log("err", err);
+                            }
+                          })}
+                        </Box>
+                        {/* </span> */}
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h3 className="Bngl_Mobile_Card_Left">Actions</h3>
+
+                      <h4 className="Bngl_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          <Link
+                            style={{
+                              textDecoration: "none",
+                              color: `black`,
+                            }}
+                            to={`/erantabledetails/${row.id}`}
+                          >
+                            {" "}
+                            See Details
+                          </Link>
+                        </span>
+                      </h4>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              );
+            })}
+          </>
+        )}
 
         {query ? (
-           <>
-           {BNGLImageData.slice(
-            pageSearch * perpage,
-            pageSearch * perpage + perpage
-          ).map((row, index) => {
-            const labelId = `enhanced-table-checkbox-${index}`;
-  
-            let b = row.links;
-  
-                    let len = b.length - 2;
-  
-                    let str1 = b.substring(2, len);
-  
-                    let newArr = str1.split("', '");
-            return (
-              <Card
-                sx={{
-                  maxWidth: 345,
-                  margin: " 10px auto 0 auto",
-                  background: `linear-gradient(to bottom, ${colors.primary[600]}, ${colors.primary[800]})`,
-                }}
-              >
-                <CardActionArea>
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Typography
-                      variant="h3"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      Seqid
-                    </Typography>
-  
-                    <Typography
-                      variant="h4"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      <span
-                            style={{
-                              width: "100px",
-                              overflow: "hidden",
-                              display: "inline-block",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
-                              textAlign: "right",
-                            }}
-                          > 
-                      {row.seqid}
-                      </span>
-                    </Typography>
-                  </CardContent>
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Typography
-                      variant="h3"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      Seq_In_Nums
-                    </Typography>
-  
-                    <Typography
-                      variant="h4"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      <span
-                            style={{
-                              width: "100px",
-                              overflow: "hidden",
-                              display: "inline-block",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
-                              textAlign: "right",
-                            }}
-                          > 
-                      {row.seq_in_num}
-                      </span>
-                    </Typography>
-                  </CardContent>
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Typography
-                      variant="h3"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      Site
-                    </Typography>
-  
-                    <Typography
-                      variant="h4"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      <span
-                            style={{
-                              width: "100px",
-                              overflow: "hidden",
-                              display: "inline-block",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
-                              textAlign: "right",
-                            }}
-                          > 
-                      {row.site}
-                      </span>
-                    </Typography>
-                  </CardContent>
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Typography
-                      variant="h3"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      Links
-                    </Typography>
-  
-                    <Typography
-                      variant="h4"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                       
-                      <Box
-                            sx={{
-                              display: "flex",
-                              justifyContent: "right",
-                            }}
-                          >
-                            {newArr.map((e, index) => {
-                              try {
-                                let n = e.split("/").pop();
-  
-                                let data1 = require(`../../../../static/ivcgraphemes/${n}`);
-                                return (
-                                  
-                                  <Avatar key={index} sx={{
-                                    width:"auto",
-                                    height:"30px",
-                                    margin:"4px",
-                                    padding:"2px"
-                                  }} src={data1} variant="square"/>
-                                );
-                              } catch (err) {
-                                console.log("err", err);
-                              }
-                            })}
-                          </Box>
-                          {/* </span> */}
-                    </Typography>
-                  </CardContent>
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Typography
-                      variant="h3"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      Actions
-                    </Typography>
-  
-                    <Typography
-                      variant="h4"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      <span
-                            style={{
-                              width: "100px",
-                              overflow: "hidden",
-                              display: "inline-block",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
-                              textAlign: "right",
-                            }}
-                          > 
-                        <Link
-                          style={{
-                            textDecoration: "none",
-                            color: `${colors.grey[100]}`,
-                          }}
-                          to={`/erantabledetails/${row.id}`}
-                        >
-                          {" "}
-                          See Details
-                        </Link>
-                      </span>
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            );
-          })}
-  </>
-        ) : (
-          <> 
-          {BNGLImageData.slice(
-            page * rowsPerPage,
-            page * rowsPerPage + rowsPerPage
-          ).map((row, index) => {
-            const labelId = `enhanced-table-checkbox-${index}`;
-  
-            let b = row.links;
-  
-                    let len = b.length - 2;
-  
-                    let str1 = b.substring(2, len);
-  
-                    let newArr = str1.split("', '");
-            return (
-              <Card
-                sx={{
-                  maxWidth: 345,
-                  margin: " 10px auto 0 auto",
-                  background: `linear-gradient(to bottom, ${colors.primary[600]}, ${colors.primary[800]})`,
-                }}
-              >
-                <CardActionArea>
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Typography
-                      variant="h3"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      Seqid
-                    </Typography>
-  
-                    <Typography
-                      variant="h4"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      <span
-                            style={{
-                              width: "100px",
-                              overflow: "hidden",
-                              display: "inline-block",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
-                              textAlign: "right",
-                            }}
-                          > 
-                      {row.seqid}
-                      </span>
-                    </Typography>
-                  </CardContent>
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Typography
-                      variant="h3"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      Seq_In_Nums
-                    </Typography>
-  
-                    <Typography
-                      variant="h4"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      <span
-                            style={{
-                              width: "100px",
-                              overflow: "hidden",
-                              display: "inline-block",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
-                              textAlign: "right",
-                            }}
-                          > 
-                      {row.seq_in_num}
-                      </span>
-                    </Typography>
-                  </CardContent>
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Typography
-                      variant="h3"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      Site
-                    </Typography>
-  
-                    <Typography
-                      variant="h4"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      <span
-                            style={{
-                              width: "100px",
-                              overflow: "hidden",
-                              display: "inline-block",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
-                              textAlign: "right",
-                            }}
-                          > 
-                      {row.site}
-                      </span>
-                    </Typography>
-                  </CardContent>
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Typography
-                      variant="h3"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      Links
-                    </Typography>
-  
-                    <Typography
-                      variant="h4"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      {/* <span
-                            style={{
-                              width: "100px",
-                              overflow: "hidden",
-                              display: "inline-block",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
-                              textAlign: "right",
-                            }}
-                          >  */}
-                      <Box
-                            sx={{
-                              display: "flex",
-                              justifyContent: "right",
-                            }}
-                          >
-                            {newArr.map((e, index) => {
-                              try {
-                                let n = e.split("/").pop();
-  
-                                let data1 = require(`../../../../static/ivcgraphemes/${n}`);
-                                return (
-                                  
-                                  <Avatar key={index} sx={{
-                                    width:"auto",
-                                    minHeight:"30px",
-                                    margin:"4px",
-                                    padding:"2px"
-                                  }} src={data1} variant="square"/>
-                                );
-                              } catch (err) {
-                                console.log("err", err);
-                              }
-                            })}
-                          </Box>
-                          {/* </span> */}
-                    </Typography>
-                  </CardContent>
-                  <CardContent
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <Typography
-                      variant="h3"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      Actions
-                    </Typography>
-  
-                    <Typography
-                      variant="h4"
-                      color={colors.grey[100]}
-                      className="FirstBlock_Section_Item_Text"
-                    >
-                      <span
-                            style={{
-                              width: "100px",
-                              overflow: "hidden",
-                              display: "inline-block",
-                              textOverflow: "ellipsis",
-                              whiteSpace: "nowrap",
-                              textAlign: "right",
-                            }}
-                          > 
-                    <Link
-                          style={{
-                            textDecoration: "none",
-                            color: `${colors.grey[100]}`,
-                          }}
-                          to={`/erantabledetails/${row.id}`}
-                        >
-                          {" "}
-                          See Details
-                        </Link>
-                      </span>
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            );
-          })}
-  </>
-        ) }
-
-
-{query ? (
           // ---------------------Pagination For Search Here-----------------------
           <TablePagination
             rowsPerPageOptions={[5, 10, 25]}
@@ -1109,10 +982,6 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
             page={pageSearch}
             onPageChange={handleChangePageSearch}
             onRowsPerPageChange={handleChangeRowsPerPageSearch}
-            sx={{
-              background:"black",
-              marginTop:"5px"
-            }}
           />
         ) : (
           // ---------------------Pagination For Normal Data Here-----------------
@@ -1124,14 +993,8 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
             page={page}
             onPageChange={handleChangePage}
             onRowsPerPageChange={handleChangeRowsPerPage}
-            sx={{
-              background:"black",
-              marginTop:"5px"
-            }}
           />
         )}
-
-        
       </Box>
     </Box>
   );

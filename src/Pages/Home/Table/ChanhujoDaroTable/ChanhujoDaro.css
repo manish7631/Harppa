@@ -1,19 +1,187 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.ChanhujoDaroTableHeader_Container{
-    width: 98%;
+
+.ChanhujoDaroTableHeader_Container {
+    width: 80%;
     height: auto;
     padding: 2px;
     margin: 110px auto;
 }
-.ChanhujoDaroTableHeader_Section_Left{
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    margin: 10px 0px 5px 10px;
-    align-items: center;
+
+#Chanhu_AppBar {
+    background-color: rgb(115, 140, 136);
+    width: 100%;
 }
- 
+
+.Chanhu_Heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: white;
+}
+
+.Chanhu_CardList_MobileDevice {
+    display: none;
+}
+
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+    .ChanhujoDaroTableHeader_Container {
+        width: 90%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+    }
+
+    #Chanhu_AppBar {
+        background-color: rgb(115, 140, 136);
+        width: 100%;
+    }
+
+    .Chanhu_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .Chanhu_CardList_MobileDevice {
+        display: none;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .ChanhujoDaroTableHeader_Container {
+        width: 80%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+    }
+
+    #Chanhu_AppBar {
+        background-color: rgb(115, 140, 136);
+        width: 100%;
+    }
+
+    .Chanhu_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .Chanhu_CardList_MobileDevice {
+        width: 80%;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .Chanhu_TableList_LargeDevice {
+        display: none;
+    }
+
+    .Chanhu_Card_Mobile {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .Chanhu_Mobile_Card_Left {
+        font-size: 28px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Chanhu_Mobile_Card_Right {
+        font-size: 20px;
+        font-weight: 500;
+        color: #3a3c3e;
+    }
+}
+
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    .ChanhujoDaroTableHeader_Container {
+        width: 90%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+    }
+
+
+    #Chanhu_AppBar {
+        background-color: rgb(115, 140, 136);
+        width: 100%;
+    }
+
+    .Chanhu_CardList_MobileDevice {
+        width: 90%;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .Chanhu_TableList_LargeDevice {
+        display: none;
+    }
+
+    .Chanhu_Card_Mobile {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .Chanhu_Mobile_Card_Left {
+        font-size: 28px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Chanhu_Mobile_Card_Right {
+        font-size: 20px;
+        font-weight: 500;
+        color: #3a3c3e;
+    }
+}
+
+
+@media screen and (min-width:320px) and (max-width:480px) {
+
+    .ChanhujoDaroTableHeader_Container {
+        width: 98%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+    }
+
+
+    #Chanhu_AppBar {
+        background-color: rgb(115, 140, 136);
+        width: 100%;
+    }
+
+    .Chanhu_CardList_MobileDevice {
+        width: 100%;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .Chanhu_TableList_LargeDevice {
+        display: none;
+    }
+
+    .Chanhu_Card_Mobile {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .Chanhu_Mobile_Card_Left {
+        font-size: 28px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Chanhu_Mobile_Card_Right {
+        font-size: 20px;
+        font-weight: 500;
+        color: #3a3c3e;
+    }
+}

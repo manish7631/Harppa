@@ -3,34 +3,21 @@ import Typography from "@mui/material/Typography";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import React, { useState } from "react";
- import ChanhujoDaroTablePage from "./ChanhujoDaroTablePage"
-import { tokens } from "../../../../theme"
- import "./ChanhujoDaro.css"
+import ChanhujoDaroTablePage from "./ChanhujoDaroTablePage";
+
+import "./ChanhujoDaro.css";
 
 export const ChanhujoDaroTableHeader = () => {
   const [query, setQuery] = useState("");
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
 
   return (
-    <div className="ChanhujoDaroTableHeader_Container"> 
-      <Box  >
+    <div className="ChanhujoDaroTableHeader_Container">
+      <Box>
         <Box>
           <Box sx={{ flexGrow: 1 }}>
-            <AppBar
-              
-              position="static"
-            >
+            <AppBar id="Chanhu_AppBar" position="static">
               <Toolbar>
-                <Typography
-                  variant="h4"
-                  noWrap
-                  component="div"
-                  sx={{ display: { xs: "block", sm: "block", color:"white", fontWeight:"bold" } }}
-                
-                >
-         Chanhujo-daro
-                </Typography>
+                <h2 className="Chanhu_Heading">Chanhujo-daro</h2>
 
                 {/* -------------------------------Search Collaboration Div Here----------------------------------- */}
 

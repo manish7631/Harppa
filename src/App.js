@@ -13,6 +13,8 @@ import EranTableDetails from "./Pages/Home/Table/EranTable/EranTableDetails";
 import { BnawaliTableHeader } from "./Pages/Home/Table/BnawaliTable/BnawaliTableHeader";
 import { BhirranaTableHeader } from "./Pages/Home/Table/BhirranaTable/BhirranaTableHeader";
 import AdvancedSearch from "./Pages/AdvancedSearch/AdvancedSearch";
+import { ChanhujoDaroTableHeader } from "./Pages/Home/Table/ChanhujoDaroTable/ChanhujoDaroHeader";
+import { BnglTableHeader } from "./Pages/Home/Table/BNGLTABLE/BnglTableHeader";
 
 function App() {
   return (
@@ -33,11 +35,11 @@ function App() {
         />
         <Route path="/bnawalitablepage" element={<BnawaliTableHeader />} />
         <Route path="/bhirranatablepage" element={<BhirranaTableHeader />} />
-        {/*  <Route
+        <Route
           path="/chanhujotablepage"
           element={<ChanhujoDaroTableHeader />}
         />
-        <Route path="/bngltablepage" element={<BnglTableHeader />} /> */}
+        <Route path="/bngltablepage" element={<BnglTableHeader />} />
         <Route path="/search" element={<AdvancedSearch />} />
       </Routes>
       <Footer />

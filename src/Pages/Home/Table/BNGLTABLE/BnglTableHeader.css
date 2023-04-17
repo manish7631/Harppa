@@ -1,107 +1,181 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
-.BnglTableHeader_Container{
-    width: 98%;
-    height: auto;
-    padding: 2px;
-    margin:  110px auto;
-}
-.BnglTableHeader_Section_Left{
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    margin: 10px 0px 5px 10px;
-    align-items: center;
-}
- .BnglTableDetails_Container{
-    width: 100%;
-    height: auto;
-    padding: 5px;
-    margin: 70px auto;
-    box-sizing: border-box;
- }
- .BnglTableDetails_Main{
-    width: 80%;
-    height: auto;
-    padding: 30px 20px;
-    margin: auto;
-    box-sizing: border-box;
- }
- .BnglTableDetails_Heading{
-    text-align: center;
- }
- .BnglTableDetails_Data{
-    width: 70%;
-    height: auto;
-    align-items: start;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 10px;
-    align-items: center;
-    margin: 20px auto;
- }
- .BnglTableDetails_Data_Image_Box{
-    display: flex;
-    align-items: center;
- }
- .BnglTableDetails_Data_Image_Box > .DetailsImage{
-   width:auto;
-   height:60px;
-   margin:4px;
-   padding:2px;
- }
 
- .CardList_MobileDevice{
-   display:none;
- }
+.BnglTableHeader_Container {
+   width: 80%;
+   height: auto;
+   padding: 2px;
+   margin: 110px auto;
+}
 
- @media screen and (max-width:599px) {
-   .CardList_MobileDevice{
-       display: block;
-       margin: 5px;
-   }
-   .TableList_LargeDevice{
-       display: none;
+#Bngl_AppBar {
+   background-color: rgb(115, 140, 136);
+   width: 100%;
+}
+
+.Bngl_Heading {
+   font-size: 28px;
+   font-weight: 600;
+   color: white;
+}
+
+.Bngl_CardList_MobileDevice {
+   display: none;
+}
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+   .BnglTableHeader_Container {
+      width: 90%;
+      height: auto;
+      padding: 2px;
+      margin: 110px auto;
    }
 
-   .BnglTableDetails_Container{
+   #Bngl_AppBar {
+      background-color: rgb(115, 140, 136);
       width: 100%;
+   }
+
+   .Bngl_Heading {
+      font-size: 28px;
+      font-weight: 600;
+      color: white;
+   }
+
+   .Bngl_CardList_MobileDevice {
+      display: none;
+   }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+   .BnglTableHeader_Container {
+      width: 80%;
       height: auto;
-      padding: 5px;
-      margin: 70px auto;
-      box-sizing: border-box;
+      padding: 2px;
+      margin: 110px auto;
    }
-   .BnglTableDetails_Main{
-      width: 99%;
-      height: auto;
-      padding: 30px 20px;
-      margin: auto;
-      box-sizing: border-box;
-   }
-   .BnglTableDetails_Heading{
-      text-align: center;
-   }
-   .BnglTableDetails_Data{
+
+
+   #Bngl_AppBar {
+      background-color: rgb(115, 140, 136);
       width: 100%;
+   }
+
+   .Bngl_CardList_MobileDevice {
+      width: 80%;
+      display: block;
+      margin: 15px auto;
+   }
+
+   .Bngl_TableList_LargeDevice {
+      display: none;
+   }
+
+   .Bngl_Card_Mobile {
+      width: 100%;
+      margin: 10px auto 0 auto;
+   }
+
+   .Bngl_Mobile_Card_Left {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3a3c3e;
+   }
+
+   .Bngl_Mobile_Card_Right {
+      font-size: 20px;
+      font-weight: 500;
+      color: #3a3c3e;
+   }
+}
+
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+   .BnglTableHeader_Container {
+      width: 90%;
       height: auto;
-      display: flex;
-      justify-content: space-between;
-      margin: 20px auto;
-      
+      padding: 2px;
+      margin: 110px auto;
    }
-   .BnglTableDetails_Data_Image_Box{
-      display: flex;
-      align-items: center;
+
+
+   #Bngl_AppBar {
+      background-color: rgb(115, 140, 136);
+      width: 100%;
    }
-   .BnglTableDetails_Data_Image_Box > .DetailsImage{
-      width:auto;
-      height:40px;
-      margin:4px;
-      padding:2px;
+
+   .Bngl_CardList_MobileDevice {
+      width: 90%;
+      display: block;
+      margin: 15px auto;
    }
-  
+
+   .Bngl_TableList_LargeDevice {
+      display: none;
+   }
+
+   .Bngl_Card_Mobile {
+      width: 100%;
+      margin: 10px auto 0 auto;
+   }
+
+   .Bngl_Mobile_Card_Left {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3a3c3e;
+   }
+
+   .Bngl_Mobile_Card_Right {
+      font-size: 20px;
+      font-weight: 500;
+      color: #3a3c3e;
+   }
+}
+
+
+@media screen and (min-width:320px) and (max-width:480px) {
+
+   .BnglTableHeader_Container {
+      width: 98%;
+      height: auto;
+      padding: 2px;
+      margin: 110px auto;
+   }
+
+
+   #Bngl_AppBar {
+      background-color: rgb(115, 140, 136);
+      width: 100%;
+   }
+
+   .Bngl_CardList_MobileDevice {
+      width: 100%;
+      display: block;
+      margin: 15px auto;
+   }
+
+   .Bngl_TableList_LargeDevice {
+      display: none;
+   }
+
+   .Bngl_Card_Mobile {
+      width: 100%;
+      margin: 10px auto 0 auto;
+   }
+
+   .Bngl_Mobile_Card_Left {
+      font-size: 28px;
+      font-weight: 600;
+      color: #3a3c3e;
+   }
+
+   .Bngl_Mobile_Card_Right {
+      font-size: 20px;
+      font-weight: 500;
+      color: #3a3c3e;
+   }
 }

@@ -637,7 +637,7 @@ export default function BhirranaTablePage({ loading, countryList, query1 }) {
           )}
         </Paper>
       </Box>
-      <Box className="CardList_MobileDevice">
+      <Box className="Bhirrana_CardList_MobileDevice">
         {BhirranaImageData.slice(
           page * rowsPerPage,
           page * rowsPerPage + rowsPerPage
