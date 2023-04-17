@@ -455,6 +455,14 @@
       color: #3a3c3e;
    }
 
+   .Eran_Card_Img {
+      max-width: 40px;
+      max-height: 40px;
+      margin: 2px;
+      padding: 2px;
+      object-fit: contain;
+   }
+
    .EranTableHeader_Section_Left {
       width: 250px;
       display: flex;
@@ -530,76 +538,3 @@
    }
 
 }
-
-
-/* 
-@media screen and (max-width:599px) {
-   .CardList_MobileDevice {
-      display: block;
-      margin: 5px;
-   }
-
-   .TableList_LargeDevice {
-      display: none;
-   }
-
-   .EranTableHeader_Section_Left {
-      width: 250px;
-      display: flex;
-      justify-content: space-between;
-      border-radius: 10px;
-      margin: 10px 0px 5px 10px;
-      align-items: center;
-   }
-
-   .EranTableDetails_Container {
-      width: 100%;
-      height: auto;
-      padding: 5px;
-      margin: 70px auto;
-      box-sizing: border-box;
-      background-color: white;
-   }
-
-   .EranTableDetails_Main {
-      width: 99%;
-      height: auto;
-      padding: 30px 20px;
-      margin: auto;
-      box-sizing: border-box;
-   }
-
-   .EranTableDetails_Heading {
-      text-align: center;
-      color: black;
-   }
-
-   .EranTableDetails_Data {
-      width: 100%;
-      height: auto;
-      display: flex;
-      justify-content: space-between;
-      margin: 20px auto;
-
-   }
-
-   .EranTableDetails_Data_Image_Box {
-      display: flex;
-      align-items: center;
-   }
-
-   .EranTableDetails_Data_Image_Box>.DetailsImage {
-      width: auto;
-      height: 40px;
-      margin: 4px;
-      padding: 2px;
-   }
-
-   .Typography {
-      color: black;
-      font-size: 15px;
-      font-weight: 600;
-      font-family: "Source Sans Pro", sans-serif;
-   }
-
-} */
