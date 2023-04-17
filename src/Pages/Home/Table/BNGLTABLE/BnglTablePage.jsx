@@ -213,13 +213,13 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
   const [dense, setDense] = useState(false);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rowsPerPage, setRowsPerPage] = useState(25);
 
   //---------------------Pagination  -----------------------------
 
   const [page, setPage] = useState(0);
   const [pageSearch, setPageSearch] = useState(0);
-  const [perpage, setPerpage] = useState(5);
+  const [perpage, setPerpage] = useState(25);
   const [query, setQuery] = useState("");
 
   const dispatch = useDispatch();
@@ -381,17 +381,6 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
 
                                 let data1 = require(`../../../../static/ivcgraphemes/${n}`);
                                 return (
-                                  // <img
-                                  //   style={{
-                                  //     width: "60px",
-                                  //     aspectRatio: 1 / 1,
-                                  //     objectFit: "contain",
-                                  //     margin:"0px"
-                                  //   }}
-                                  //   key={index}
-                                  //   alt="Remy Sharp"
-                                  //   src={data1}
-                                  // />
                                   <Avatar
                                     key={n}
                                     sx={{

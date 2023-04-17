@@ -69,11 +69,11 @@ const NavbarRoutes = [
     path: "/howtouse",
   },
   {
-    title: "Login",
-    path: "/login",
-  },
-  {
     title: "Contact",
     path: "/contact",
+  },
+  {
+    title: "Login",
+    path: "/login",
   },
 ];
