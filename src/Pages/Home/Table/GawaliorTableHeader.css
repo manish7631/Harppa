@@ -4,12 +4,29 @@
     box-sizing: border-box;
 }
 
+#GawaliorTable_Grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: auto;
+    grid-column-gap: 10px;
+}
+
+.Gawalior_Grid_Left {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 110px;
+
+}
+
 .GawaliorTableHeader_Container {
-    width: 80%;
+    grid-column-start: 4;
+    grid-column-end: 11;
     height: auto;
     padding: 2px;
     margin: 110px auto;
-
+    width: 100%;
 }
 
 
@@ -33,18 +50,42 @@
     align-items: center;
 }
 
-.CardList_MobileDevice {
+.Gawalior_Grid_Right {
+    grid-column-start: 11;
+    grid-column-end: 12;
+    margin-top: 110px;
+}
+
+.Gawalior_CardList_MobileDevice {
     display: none;
 }
 
 
 @media screen and (min-width:1025px) and (max-width:1200px) {
+
+    #GawaliorTable_Grid {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row: auto;
+        grid-column-gap: 10px;
+    }
+
+    .Gawalior_Grid_Left {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-top: 110px;
+
+    }
+
     .GawaliorTableHeader_Container {
-        width: 80%;
+        grid-column-start: 4;
+        grid-column-end: 11;
         height: auto;
         padding: 2px;
         margin: 110px auto;
-
+        width: 100%;
     }
 
 
@@ -68,18 +109,43 @@
         align-items: center;
     }
 
-    .CardList_MobileDevice {
+    .Gawalior_Grid_Right {
+        grid-column-start: 11;
+        grid-column-end: 12;
+        margin-top: 110px;
+    }
+
+    .Gawalior_CardList_MobileDevice {
         display: none;
     }
 }
 
+
 @media screen and (min-width:769px) and (max-width:1024px) {
+
+    #GawaliorTable_Grid {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row: auto;
+        grid-column-gap: 10px;
+    }
+
+    .Gawalior_Grid_Left {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-top: 110px;
+
+    }
+
     .GawaliorTableHeader_Container {
-        width: 98%;
+        grid-column-start: 4;
+        grid-column-end: 11;
         height: auto;
         padding: 2px;
         margin: 110px auto;
-
+        width: 100%;
     }
 
 
@@ -103,8 +169,14 @@
         align-items: center;
     }
 
-    .CardList_MobileDevice {
-        display: none;
+    .Gawalior_Grid_Right {
+        grid-column-start: 11;
+        grid-column-end: 12;
+        margin-top: 110px;
+    }
+
+    .Gawalior_CardList_MobileDevice {
+        display: none !important;
     }
 }
 
@@ -118,13 +190,13 @@
 
     }
 
-    .CardList_MobileDevice {
-        width: 80%;
+    .Gawalior_CardList_MobileDevice {
+        width: 90%;
         display: block;
         margin: 15px auto;
     }
 
-    .TableList_LargeDevice {
+    .Gawalior_TableList_LargeDevice {
         display: none;
     }
 
@@ -165,14 +237,14 @@
 
     }
 
-    .CardList_MobileDevice {
+    .Gawalior_CardList_MobileDevice {
         width: 100%;
         display: block;
         margin: 0px;
         box-sizing: border-box;
     }
 
-    .TableList_LargeDevice {
+    .Gawalior_TableList_LargeDevice {
         display: none;
     }
 

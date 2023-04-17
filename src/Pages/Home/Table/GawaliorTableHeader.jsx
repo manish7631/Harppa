@@ -12,17 +12,19 @@ export const GawaliorTableHeader = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="GawaliorTableHeader_Container">
-      <Box>
+    <div id="GawaliorTable_Grid">
+      <div className="Gawalior_Grid_Left"></div>
+      <div className="GawaliorTableHeader_Container">
         <Box>
-          <Box sx={{ flexGrow: 1 }}>
-            <AppBar id="Signary_AppBar" position="static">
-              <Toolbar>
-                <h2 className="Signary_Heading"> Gwalior Stone</h2>
+          <Box>
+            <Box sx={{ flexGrow: 1 }}>
+              <AppBar id="Signary_AppBar" position="static">
+                <Toolbar>
+                  <h2 className="Signary_Heading"> Gwalior Stone</h2>
 
-                {/* -------------------------------Search Collaboration Div Here----------------------------------- */}
+                  {/* -------------------------------Search Collaboration Div Here----------------------------------- */}
 
-                {/* <Box
+                  {/* <Box
                   backgroundColor={colors.primary[400]}
                   className="GawaliorTableHeader_Section_Left"
                 >
@@ -32,19 +34,21 @@ export const GawaliorTableHeader = () => {
                   </IconButton>
                 </Box> */}
 
-                {/* ----------------------------Right Side All Button Here------------------------------- */}
+                  {/* ----------------------------Right Side All Button Here------------------------------- */}
 
-                <Box sx={{ flexGrow: 1 }} />
-                <Box sx={{ display: { xs: "none", md: "flex" } }}></Box>
-              </Toolbar>
-            </AppBar>
+                  <Box sx={{ flexGrow: 1 }} />
+                  <Box sx={{ display: { xs: "none", md: "flex" } }}></Box>
+                </Toolbar>
+              </AppBar>
+            </Box>
+          </Box>
+          <Box>
+            {/* --------------------------------- Table Call Here---------------------------------- */}
+            <GawaliorTablePage query1={query} />
           </Box>
         </Box>
-        <Box>
-          {/* --------------------------------- Table Call Here---------------------------------- */}
-          <GawaliorTablePage query1={query} />
-        </Box>
-      </Box>
+      </div>
+      <div className="Gawalior_Grid_Right"></div>
     </div>
   );
 };

@@ -251,7 +251,7 @@ export default function GawaliorTablePage({ loading, countryList, query1 }) {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box className="TableList_LargeDevice">
+      <Box className="Gawalior_TableList_LargeDevice">
         <Paper sx={{ width: "100%", mb: 2 }}>
           {/* ------------------------Table Container Start Here---------------------------------- */}
 
@@ -407,7 +407,7 @@ export default function GawaliorTablePage({ loading, countryList, query1 }) {
         </Paper>
       </Box>
 
-      <Box className="CardList_MobileDevice">
+      <Box className="Gawalior_CardList_MobileDevice">
         {GawaliorImageData.slice(
           page * rowsPerPage,
           page * rowsPerPage + rowsPerPage

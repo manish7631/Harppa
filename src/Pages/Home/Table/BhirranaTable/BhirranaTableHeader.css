@@ -4,8 +4,26 @@
     box-sizing: border-box;
 }
 
+#BhirranaTable_Grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: auto;
+    grid-column-gap: 10px;
+}
+
+.Bhirrana_Grid_Left {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 110px;
+
+}
+
 .BhirranaTableHeader_Container {
-    width: 80%;
+    grid-column-start: 4;
+    grid-column-end: 11;
+    width: 100%;
     height: auto;
     padding: 2px;
     margin: 110px auto;
@@ -23,18 +41,45 @@
     color: white;
 }
 
+.Bhirrana_Grid_Right {
+    grid-column-start: 11;
+    grid-column-end: 12;
+    margin-top: 110px;
+
+}
+
 .Bhirrana_CardList_MobileDevice {
     display: none;
 }
 
 @media screen and (min-width:1025px) and (max-width:1200px) {
 
+    #BhirranaTable_Grid {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row: auto;
+        grid-column-gap: 10px;
+    }
+
+    .Bhirrana_Grid_Left {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-top: 110px;
+
+    }
+
     .BhirranaTableHeader_Container {
-        width: 90%;
+        grid-column-start: 4;
+        grid-column-end: 11;
+        width: 100%;
         height: auto;
         padding: 2px;
         margin: 110px auto;
     }
+
+
 
 
     #Bhirrana_AppBar {
@@ -51,6 +96,14 @@
     .Bhirrana_CardList_MobileDevice {
         display: none;
     }
+
+    .Bhirrana_Grid_Right {
+        grid-column-start: 11;
+        grid-column-end: 12;
+        margin-top: 110px;
+
+    }
+
 }
 
 @media screen and (min-width:769px) and (max-width:1024px) {

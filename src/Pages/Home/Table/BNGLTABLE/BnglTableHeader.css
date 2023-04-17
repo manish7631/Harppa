@@ -4,8 +4,26 @@
    box-sizing: border-box;
 }
 
+#BnglTable_Grid {
+   width: 100%;
+   height: auto;
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-row: auto;
+   grid-column-gap: 10px;
+}
+
+.Bngl_Grid_Left {
+   grid-column-start: 1;
+   grid-column-end: 4;
+   margin-top: 110px;
+
+}
+
 .BnglTableHeader_Container {
-   width: 80%;
+   grid-column-start: 4;
+   grid-column-end: 11;
+   width: 100%;
    height: auto;
    padding: 2px;
    margin: 110px auto;
@@ -20,6 +38,13 @@
    font-size: 28px;
    font-weight: 600;
    color: white;
+}
+
+.Bngl_Grid_Right {
+   grid-column-start: 11;
+   grid-column-end: 12;
+   margin-top: 110px;
+
 }
 
 .Bngl_CardList_MobileDevice {

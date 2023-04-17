@@ -11,27 +11,31 @@ export const BnglTableHeader = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="BnglTableHeader_Container">
-      <Box>
+    <div id="BnglTable_Grid">
+      <div className="Bngl_Grid_Left"></div>
+      <div className="BnglTableHeader_Container">
         <Box>
-          <Box sx={{ flexGrow: 1 }}>
-            <AppBar id="Bngl_AppBar" position="static">
-              <Toolbar>
-                <h2 className="Bngl_Heading">BNGL</h2>
+          <Box>
+            <Box sx={{ flexGrow: 1 }}>
+              <AppBar id="Bngl_AppBar" position="static">
+                <Toolbar>
+                  <h2 className="Bngl_Heading">BNGL</h2>
 
-                {/* ----------------------------Right Side All Button Here------------------------------- */}
+                  {/* ----------------------------Right Side All Button Here------------------------------- */}
 
-                <Box sx={{ flexGrow: 1 }} />
-                <Box sx={{ display: { xs: "none", md: "flex" } }}></Box>
-              </Toolbar>
-            </AppBar>
+                  <Box sx={{ flexGrow: 1 }} />
+                  <Box sx={{ display: { xs: "none", md: "flex" } }}></Box>
+                </Toolbar>
+              </AppBar>
+            </Box>
+          </Box>
+          <Box>
+            {/* --------------------------------- Table Call Here---------------------------------- */}
+            <BnglTablePage query1={query} />
           </Box>
         </Box>
-        <Box>
-          {/* --------------------------------- Table Call Here---------------------------------- */}
-          <BnglTablePage query1={query} />
-        </Box>
-      </Box>
+      </div>
+      <div className="Bngl_Grid_Right"></div>
     </div>
   );
 };

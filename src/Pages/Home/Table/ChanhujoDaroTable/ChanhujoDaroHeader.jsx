@@ -11,17 +11,19 @@ export const ChanhujoDaroTableHeader = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="ChanhujoDaroTableHeader_Container">
-      <Box>
+    <div id="ChanhuTable_Grid">
+      <div className="Chanhu_Grid_Left"></div>
+      <div className="ChanhujoDaroTableHeader_Container">
         <Box>
-          <Box sx={{ flexGrow: 1 }}>
-            <AppBar id="Chanhu_AppBar" position="static">
-              <Toolbar>
-                <h2 className="Chanhu_Heading">Chanhujo-daro</h2>
+          <Box>
+            <Box sx={{ flexGrow: 1 }}>
+              <AppBar id="Chanhu_AppBar" position="static">
+                <Toolbar>
+                  <h2 className="Chanhu_Heading">Chanhujo-daro</h2>
 
-                {/* -------------------------------Search Collaboration Div Here----------------------------------- */}
+                  {/* -------------------------------Search Collaboration Div Here----------------------------------- */}
 
-                {/* <Box
+                  {/* <Box
                   backgroundColor={colors.primary[400]}
                   className="GawaliorTableHeader_Section_Left"
                 >
@@ -31,19 +33,21 @@ export const ChanhujoDaroTableHeader = () => {
                   </IconButton>
                 </Box> */}
 
-                {/* ----------------------------Right Side All Button Here------------------------------- */}
+                  {/* ----------------------------Right Side All Button Here------------------------------- */}
 
-                <Box sx={{ flexGrow: 1 }} />
-                <Box sx={{ display: { xs: "none", md: "flex" } }}></Box>
-              </Toolbar>
-            </AppBar>
+                  <Box sx={{ flexGrow: 1 }} />
+                  <Box sx={{ display: { xs: "none", md: "flex" } }}></Box>
+                </Toolbar>
+              </AppBar>
+            </Box>
+          </Box>
+          <Box>
+            {/* --------------------------------- Table Call Here---------------------------------- */}
+            <ChanhujoDaroTablePage query1={query} />
           </Box>
         </Box>
-        <Box>
-          {/* --------------------------------- Table Call Here---------------------------------- */}
-          <ChanhujoDaroTablePage query1={query} />
-        </Box>
-      </Box>
+      </div>
+      <div className="Chanhu_Grid_Right"></div>
     </div>
   );
 };

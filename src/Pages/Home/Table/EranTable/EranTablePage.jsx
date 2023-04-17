@@ -288,7 +288,7 @@ export default function EranTablePage({ loading, countryList, query1 }) {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box className="TableList_LargeDevice">
+      <Box className="Eran_TableList_LargeDevice">
         <Paper sx={{ width: "100%", mb: 2 }}>
           {/* ------------------------Table Container Start Here---------------------------------- */}
 
@@ -638,7 +638,7 @@ export default function EranTablePage({ loading, countryList, query1 }) {
           )}
         </Paper>
       </Box>
-      <Box className="CardList_MobileDevice">
+      <Box className="Eran_CardList_MobileDevice">
         {query ? (
           <>
             {EranImageSearchData.slice(
