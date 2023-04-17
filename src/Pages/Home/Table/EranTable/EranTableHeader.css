@@ -505,13 +505,13 @@
    }
 
    .Eran_Details_Left {
-      font-size: 28px;
+      font-size: 17px;
       font-weight: 600;
       color: #3a3c3e;
    }
 
    .Eran_Details_Right {
-      font-size: 20px;
+      font-size: 15px;
       font-weight: 500;
       color: #3a3c3e;
    }
@@ -524,7 +524,7 @@
 
    .EranTableDetails_Data_Image_Box>.DetailsImage {
       width: auto;
-      height: 60px;
+      height: 40px;
       margin: 2px;
       padding: 2px;
    }
