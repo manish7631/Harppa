@@ -189,7 +189,7 @@
       align-items: center;
    }
 
-   .EranTableDetails_Data_Image_Box>.DetailsImage {
+   .DetailsImage {
       width: auto;
       height: 60px;
       margin: 4px;
@@ -290,7 +290,7 @@
       align-items: center;
    }
 
-   .EranTableDetails_Data_Image_Box>.DetailsImage {
+   .DetailsImage {
       width: auto;
       height: 60px;
       margin: 4px;
@@ -415,7 +415,7 @@
       align-items: center;
    }
 
-   .EranTableDetails_Data_Image_Box>.DetailsImage {
+   .DetailsImage {
       width: auto;
       height: 60px;
       margin: 4px;
@@ -543,7 +543,7 @@
       align-items: center;
    }
 
-   .EranTableDetails_Data_Image_Box>.DetailsImage {
+   .DetailsImage {
       width: auto;
       height: 40px;
       margin: 2px;

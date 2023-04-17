@@ -66,13 +66,7 @@ const EranTableDetails = () => {
                           let n = e.split("/").pop();
 
                           let data1 = require(`../../../../static/ivcgraphemes/${n}`);
-                          return (
-                            <Avatar
-                              className="DetailsImage"
-                              src={data1}
-                              variant="square"
-                            />
-                          );
+                          return <img className="DetailsImage" src={data1} />;
                         } catch (err) {
                           console.log("err", err);
                         }

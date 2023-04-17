@@ -550,10 +550,15 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
 
                                   let data1 = require(`../../../../static/ivcgraphemes/${n}`);
                                   return (
-                                    <img
-                                      className="Bngl_Card_Img"
-                                      key={index}
+                                    <Avatar
+                                      sx={{
+                                        width: "auto",
+                                        height: "60px",
+                                        margin: "4px",
+                                        padding: "2px",
+                                      }}
                                       src={data1}
+                                      variant="square"
                                     />
                                   );
                                 } catch (err) {
@@ -742,16 +747,10 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
 
                               let data1 = require(`../../../../static/ivcgraphemes/${n}`);
                               return (
-                                <Avatar
+                                <img
+                                  className="Bngl_Card_Img"
                                   key={index}
-                                  sx={{
-                                    width: "auto",
-                                    height: "30px",
-                                    margin: "4px",
-                                    padding: "2px",
-                                  }}
                                   src={data1}
-                                  variant="square"
                                 />
                               );
                             } catch (err) {
@@ -908,16 +907,10 @@ export default function BnglTablePage({ loading, countryList, query1 }) {
 
                               let data1 = require(`../../../../static/ivcgraphemes/${n}`);
                               return (
-                                <Avatar
+                                <img
+                                  className="Bngl_Card_Img"
                                   key={index}
-                                  sx={{
-                                    width: "auto",
-                                    height: "30px",
-                                    margin: "4px",
-                                    padding: "2px",
-                                  }}
                                   src={data1}
-                                  variant="square"
                                 />
                               );
                             } catch (err) {
