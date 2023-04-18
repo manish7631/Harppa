@@ -8,18 +8,20 @@ const About = () => {
       <div className="About_Grid_Left"></div>
       <div className="About_Container">
         <div className="About_Main">
-          <Card className="About_img_Card">
-            <CardMedia
-              component="img"
-              height="100%"
-              width="100%"
-              image="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          <div className="About_img_Card">
+            <img
+              style={{
+                width: "100%",
+                height: "100%",
+                borderRadius: "8px",
+              }}
+              src="https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Paella dish"
             />
-          </Card>
+          </div>
 
-          <Card
-            sx={{
+          <div
+            style={{
               backgroundColor: "rgba(101,155,174,0.8)",
             }}
             className="About_img_Text"
@@ -55,7 +57,7 @@ const About = () => {
             <div>
               <button className="ReadMore">Read More</button>
             </div>
-          </Card>
+          </div>
         </div>
       </div>
       <div className="About_Grid_Right"></div>

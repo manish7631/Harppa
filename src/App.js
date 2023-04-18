@@ -15,10 +15,12 @@ import { BhirranaTableHeader } from "./Pages/Home/Table/BhirranaTable/BhirranaTa
 import AdvancedSearch from "./Pages/AdvancedSearch/AdvancedSearch";
 import { ChanhujoDaroTableHeader } from "./Pages/Home/Table/ChanhujoDaroTable/ChanhujoDaroHeader";
 import { BnglTableHeader } from "./Pages/Home/Table/BNGLTABLE/BnglTableHeader";
+import ScrollToTop from "./Hoc/ScrollToTop";
 
 function App() {
   return (
     <div className="app">
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

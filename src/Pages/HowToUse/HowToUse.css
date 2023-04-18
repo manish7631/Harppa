@@ -4,12 +4,32 @@
     box-sizing: border-box;
 }
 
+#HowToUseTable_Grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto !important;
+    grid-row: auto;
+    grid-column-gap: 10px;
+    box-sizing: border-box;
+}
+
+.HowToUse_Grid_Left {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 110px;
+
+}
+
 .HowToUse_Container {
+    grid-column-start: 4;
+    grid-column-end: 11;
     width: 100%;
     height: auto;
     margin: 110px 0px 0px 0px;
     padding-top: 10px;
     box-sizing: border-box;
+
 
 }
 
@@ -53,6 +73,16 @@
     text-align: left;
     line-height: 29px;
 }
+
+.HowToUse_Grid_Right {
+    grid-column-start: 11 !important;
+    grid-column-end: 12 !important;
+    margin-top: 110px !important;
+
+    width: 100%;
+    height: 400px;
+}
+
 
 @media screen and (min-width:1025px) and (max-width:1200px) {
 
@@ -216,6 +246,23 @@
 }
 
 @media screen and (min-width:320px) and (max-width:480px) {
+    #HowToUseTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .HowToUse_Grid_Left {
+        display: none;
+
+    }
+
+    .HowToUse_Grid_Right {
+        display: none;
+
+    }
+
     .HowToUse_Container {
         width: 100%;
         height: auto;
