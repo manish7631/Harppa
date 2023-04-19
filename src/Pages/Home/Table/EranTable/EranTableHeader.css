@@ -8,16 +8,15 @@
    width: 100%;
    height: auto;
    display: grid;
-   grid-template-columns: auto auto auto;
-   grid-row: auto;
+   grid-template-columns: 3fr 8fr 1fr;
+   grid-template-rows: auto;
    grid-column-gap: 10px;
 }
 
 .Eran_Grid_Left {
-   grid-column-start: 1;
-   grid-column-end: 4;
    margin-top: 110px;
 
+   height: auto;
 }
 
 .EranTableHeader_Container {
@@ -25,8 +24,6 @@
    height: auto;
    padding: 2px;
    margin: 110px auto;
-   grid-column-start: 4;
-   grid-column-end: 11;
 }
 
 #Eran_AppBar {
@@ -51,9 +48,8 @@
 }
 
 .Eran_Grid_Right {
-   grid-column-start: 11;
-   grid-column-end: 12;
    margin-top: 110px;
+   height: auto;
 
 }
 
@@ -259,12 +255,30 @@
 
 @media screen and (min-width:769px) and (max-width:1024px) {
    #EranTable_Grid {
+      width: 100% !important;
+      height: auto;
+      display: block !important;
+   }
+
+
+   .Eran_Grid_Left {
+      display: none;
+
+   }
+
+   .Eran_Grid_Right {
+      display: none;
+
+   }
+
+   #EranTable_Grid {
       width: 100%;
       height: auto;
       display: grid;
       grid-template-columns: auto auto auto;
       grid-row: auto;
       grid-column-gap: 10px;
+      padding: 10px;
    }
 
    .Eran_Grid_Left {
@@ -385,6 +399,23 @@
 
 
 @media screen and (min-width:481px) and (max-width:768px) {
+   #EranTable_Grid {
+      width: 100% !important;
+      height: auto;
+      display: block !important;
+   }
+
+
+   .Eran_Grid_Left {
+      display: none;
+
+   }
+
+   .Eran_Grid_Right {
+      display: none;
+
+   }
+
    .EranTableHeader_Container {
       width: 90%;
       height: auto;

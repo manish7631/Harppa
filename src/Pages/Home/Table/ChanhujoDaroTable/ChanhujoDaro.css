@@ -8,21 +8,19 @@
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 3fr 8fr 1fr;
     grid-row: auto;
     grid-column-gap: 10px;
 }
 
 .Chanhu_Grid_Left {
-    grid-column-start: 1;
-    grid-column-end: 4;
+
     margin-top: 110px;
 
 }
 
 .ChanhujoDaroTableHeader_Container {
-    grid-column-start: 4;
-    grid-column-end: 11;
+
     width: 100%;
     height: auto;
     padding: 2px;
@@ -103,10 +101,27 @@
 }
 
 @media screen and (min-width:769px) and (max-width:1024px) {
-    .ChanhujoDaroTableHeader_Container {
-        width: 80%;
+    #ChanhuTable_Grid {
+        width: 100% !important;
         height: auto;
-        padding: 2px;
+        display: block !important;
+    }
+
+
+    .Chanhu_Grid_Left {
+        display: none;
+
+    }
+
+    .Chanhu_Grid_Right {
+        display: none;
+
+    }
+
+    .ChanhujoDaroTableHeader_Container {
+        width: 100%;
+        height: auto;
+        padding: 10px;
         margin: 110px auto;
     }
 
@@ -123,12 +138,12 @@
 
     .Chanhu_CardList_MobileDevice {
         width: 80%;
-        display: block;
+        display: none;
         margin: 15px auto;
     }
 
     .Chanhu_TableList_LargeDevice {
-        display: none;
+        display: block;
     }
 
     .Chanhu_Card_Mobile {
@@ -160,6 +175,22 @@
 
 
 @media screen and (min-width:481px) and (max-width:768px) {
+    #ChanhuTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Chanhu_Grid_Left {
+        display: none;
+
+    }
+
+    .Chanhu_Grid_Right {
+        display: none;
+
+    }
 
     .ChanhujoDaroTableHeader_Container {
         width: 90%;

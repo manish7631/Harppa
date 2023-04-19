@@ -9,14 +9,14 @@
     height: auto;
     padding: 2px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 3fr 8fr 1fr;
     grid-template-rows: auto;
     grid-column-gap: 10px;
 }
 
 .Contact_Grid_Left {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    height: 500px;
+    width: 100%;
 
 }
 
@@ -26,8 +26,7 @@
     margin: 110px 0px 0px 0px;
     padding-top: 10px;
     box-sizing: border-box;
-    grid-column-start: 4;
-    grid-column-end: 11;
+
 }
 
 .Contact_Main {
@@ -75,8 +74,8 @@
 }
 
 .Contact_Grid_Right {
-    grid-column-start: 11;
-    grid-column-end: 12;
+    height: 500px;
+    width: 100%;
 
 }
 
@@ -136,6 +135,23 @@
 }
 
 @media screen and (min-width:769px) and (max-width:1024px) {
+    #ContactTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Contact_Grid_Left {
+        display: none;
+
+    }
+
+    .Contact_Grid_Right {
+        display: none;
+
+    }
+
     .Contact_Container {
         width: 100%;
         height: 400px;
@@ -191,6 +207,23 @@
 }
 
 @media screen and (min-width:481px) and (max-width:768px) {
+    #ContactTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Contact_Grid_Left {
+        display: none;
+
+    }
+
+    .Contact_Grid_Right {
+        display: none;
+
+    }
+
     .Contact_Container {
         width: 100%;
         height: auto !important;

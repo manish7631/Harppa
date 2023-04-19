@@ -8,14 +8,13 @@
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 3fr 8fr 1fr;
     grid-row: auto;
     grid-column-gap: 10px;
 }
 
 .Banawali_Grid_Left {
-    grid-column-start: 1;
-    grid-column-end: 4;
+
     margin-top: 110px;
 
     width: 100%;
@@ -23,8 +22,7 @@
 
 
 .BanawaliTableHeader_Container {
-    grid-column-start: 4;
-    grid-column-end: 11;
+
     width: 100%;
     height: auto;
     padding: 2px;
@@ -43,8 +41,7 @@
 }
 
 .Banawali_Grid_Right {
-    grid-column-start: 11;
-    grid-column-end: 12;
+
     margin-top: 110px;
 
 }
@@ -108,52 +105,62 @@
 }
 
 @media screen and (min-width:769px) and (max-width:1024px) {
-    .BanawaliTableHeader_Container {
-        width: 80%;
+    #BanawaliTable_Grid {
+        width: 100% !important;
         height: auto;
-        padding: 2px;
+        display: block !important;
+    }
+
+
+    .Banawali_Grid_Left {
+        display: none;
+
+    }
+
+    .Banawali_Grid_Right {
+        display: none;
+
+    }
+
+    .BanawaliTableHeader_Container {
+        width: 100% !important;
+        height: auto;
+        padding: 10px;
         margin: 110px auto;
 
     }
 
     .CardList_MobileDevice {
-        width: 80%;
-        display: block;
+
+        display: none;
         margin: 15px auto;
     }
 
     .TableList_LargeDevice {
-        display: none;
+        display: block;
     }
 
-    .Banawali_Card_Mobile {
-        width: 100%;
-        margin: 10px auto 0 auto;
-    }
-
-    .Banawali_Mobile_Card_Left {
-        font-size: 28px;
-        font-weight: 600;
-        color: #3a3c3e;
-    }
-
-    .Banawali_Mobile_Card_Right {
-        font-size: 20px;
-        font-weight: 500;
-        color: #3a3c3e;
-    }
-
-    .Banawali_Card_Img {
-        max-width: 40px;
-        max-height: 40px;
-        margin: 2px;
-        padding: 2px;
-        object-fit: contain;
-    }
 
 }
 
 @media screen and (min-width:481px) and (max-width:768px) {
+    #BhirranaTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Bhirrana_Grid_Left {
+        display: none;
+
+    }
+
+    .Bhirrana_Grid_Right {
+        display: none;
+
+    }
+
     .BanawaliTableHeader_Container {
         width: 90%;
         height: auto;

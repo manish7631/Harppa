@@ -8,21 +8,18 @@
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 3fr 8fr 3fr;
     grid-template-rows: auto;
     grid-column-gap: 10px;
 }
 
 .Advanced_Grid_Left {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    width: 100%;
+    height: 500px;
 
 }
 
 .AdvacnedSearch_Container {
-    grid-column-start: 4;
-    grid-column-end: 11;
-    width: 100%;
     min-height: 70vh;
     padding-top: 110px;
 }
@@ -44,6 +41,7 @@
     column-gap: 10px;
     margin: auto;
     padding-left: 10px;
+
 }
 
 .AdvancedSearch_Button_Div {
@@ -53,6 +51,7 @@
     height: auto;
     box-sizing: border-box;
     margin: auto;
+    padding-right: 50px;
 }
 
 .AdvancedButton {
@@ -72,8 +71,8 @@
 }
 
 .Advanced_Grid_Right {
-    grid-column-start: 11;
-    grid-column-end: 12;
+    height: 500px;
+    width: 100%;
 
 }
 
@@ -91,7 +90,7 @@
     }
 
     .AdvancedSearch_Main {
-        width: 90%;
+        width: 100%;
         height: auto;
         padding: 10px 10px;
         box-sizing: border-box;
@@ -99,7 +98,7 @@
     }
 
     .AdvancedSearch_Select {
-        width: 80%;
+        width: 100%;
         height: auto;
         padding: 10px;
         display: grid;
@@ -109,15 +108,19 @@
         column-gap: 10px;
         margin: auto;
         padding-left: 10px;
+
+
     }
 
     .AdvancedSearch_Button_Div {
         display: flex;
         justify-content: right;
-        width: 90%;
+        width: 100%;
         height: auto;
         box-sizing: border-box;
         margin: auto;
+
+        padding-right: 0px;
     }
 
     .AdvancedButton {
@@ -131,7 +134,7 @@
         border: none;
         font-size: 16px;
         font-weight: bold;
-        margin: 5px 18px 5px 5px;
+        margin: 5px 10px 5px 5px;
         box-sizing: border-box;
         cursor: pointer;
     }
@@ -161,7 +164,7 @@
     }
 
     .AdvancedSearch_Select {
-        width: 80%;
+        width: 100%;
         height: auto;
         padding: 10px;
         display: grid;
@@ -176,10 +179,11 @@
     .AdvancedSearch_Button_Div {
         display: flex;
         justify-content: right;
-        width: 90%;
+        width: 100%;
         height: auto;
         box-sizing: border-box;
         margin: auto;
+        padding-right: 2px;
     }
 
     .AdvancedButton {
@@ -193,7 +197,7 @@
         border: none;
         font-size: 16px;
         font-weight: bold;
-        margin: 5px 18px 5px 5px;
+        margin: 5px 2px 5px 5px;
         box-sizing: border-box;
         cursor: pointer;
     }
@@ -319,14 +323,15 @@
     #AdvancedTable_Grid {
         width: 100% !important;
         height: auto;
-
+        display: block;
     }
 
     .AdvacnedSearch_Container {
-        width: 90%;
+        width: 100%;
         height: auto !important;
         padding-top: 110px;
         margin: auto;
+
     }
 
     .Advanced_Grid_Left {
@@ -340,7 +345,7 @@
     }
 
     .AdvancedSearch_Main {
-        width: 99%;
+        width: 100%;
         height: auto !important;
         padding: 10px 0px;
         box-sizing: border-box;
@@ -348,15 +353,16 @@
     }
 
     .AdvancedSearch_Select {
-        width: 100%;
+        width: 90%;
         height: auto;
         padding: 10px 0px;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: auto;
-        gap: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         margin: auto;
         box-sizing: border-box;
+
+        align-items: center;
 
     }
 
@@ -367,6 +373,8 @@
         height: auto;
         box-sizing: border-box;
         margin: auto;
+        padding-right: 20px;
+
     }
 
     .AdvancedButton {
@@ -380,7 +388,7 @@
         border: none;
         font-size: 16px;
         font-weight: bold;
-        margin: 5px 18px 5px 5px;
+        margin: 5px 1px 5px 5px;
         box-sizing: border-box;
         cursor: pointer;
     }
