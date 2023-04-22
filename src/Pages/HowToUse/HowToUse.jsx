@@ -18,12 +18,12 @@ const HowToUse = () => {
         <div className="HowToUse_Accordion">
           <h2 className="HowToUseAccordion_Heading">Search bar</h2>
 
-          <h3 className="HowToUseAccordion_SubHeading">
+          <h4 className="HowToUseAccordion_SubHeading">
             Typing a term in the search bar and clicking the SEARCH button or
             pressing return searches the entire corpus of objects and
             inscriptions. Alternatively, clicking SHOW ALL allows all the
             inscriptions and objects in the database to be browsed.
-          </h3>
+          </h4>
         </div>
         <div className="HowToUse_Accordion">
           <h2 className="HowToUseAccordion_Heading">Search results</h2>

@@ -22,7 +22,11 @@ const FourthGrid = () => {
               }}
               className="FourthGrid_Section_Main_First_Card"
             >
-              <CardActionArea>
+              <CardActionArea
+                sx={{
+                  cursor: "auto",
+                }}
+              >
                 <CardContent>
                   <h3 className="FourthGrid_Section_Main_First_Card_Heading">
                     {" "}
@@ -53,7 +57,11 @@ const FourthGrid = () => {
               }}
               className="FourthGrid_Section_Main_First_Card"
             >
-              <CardActionArea>
+              <CardActionArea
+                sx={{
+                  cursor: "auto",
+                }}
+              >
                 <CardContent>
                   <h3 className="FourthGrid_Section_Main_First_Card_Heading">
                     All Data
@@ -91,7 +99,11 @@ const FourthGrid = () => {
                 }}
                 className="FourthGrid_Section_Main_Second_Card_Card"
               >
-                <CardActionArea>
+                <CardActionArea
+                  sx={{
+                    cursor: "auto",
+                  }}
+                >
                   <CardContent>
                     <h3 className="FourthGrid_Section_Main_First_Card_Card_Heading">
                       Banawali
@@ -121,7 +133,11 @@ const FourthGrid = () => {
                 }}
                 className="FourthGrid_Section_Main_Second_Card_Card"
               >
-                <CardActionArea>
+                <CardActionArea
+                  sx={{
+                    cursor: "auto",
+                  }}
+                >
                   <CardContent>
                     <h3 className="FourthGrid_Section_Main_First_Card_Card_Heading">
                       Bhirrana
@@ -151,7 +167,11 @@ const FourthGrid = () => {
                 }}
                 className="FourthGrid_Section_Main_Second_Card_Card"
               >
-                <CardActionArea>
+                <CardActionArea
+                  sx={{
+                    cursor: "auto",
+                  }}
+                >
                   <CardContent>
                     <h3 className="FourthGrid_Section_Main_First_Card_Card_Heading">
                       Chanhujo-daro
@@ -219,7 +239,11 @@ const FourthGrid = () => {
                 }}
                 className="FourthGrid_Section_Main_Second_Card_Card"
               >
-                <CardActionArea>
+                <CardActionArea
+                  sx={{
+                    cursor: "auto",
+                  }}
+                >
                   <CardContent>
                     <h3 className="FourthGrid_Section_Main_First_Card_Card_Heading">
                       BNGL
@@ -248,7 +272,11 @@ const FourthGrid = () => {
                 }}
                 className="FourthGrid_Section_Main_Second_Card_Card"
               >
-                <CardActionArea>
+                <CardActionArea
+                  sx={{
+                    cursor: "auto",
+                  }}
+                >
                   <CardContent>
                     <h3 className="FourthGrid_Section_Main_First_Card_Card_Heading">
                       IMPL
@@ -278,7 +306,11 @@ const FourthGrid = () => {
                 }}
                 className="FourthGrid_Section_Main_Second_Card_Card"
               >
-                <CardActionArea>
+                <CardActionArea
+                  sx={{
+                    cursor: "auto",
+                  }}
+                >
                   <CardContent>
                     <h3 className="FourthGrid_Section_Main_First_Card_Card_Heading">
                       MISC

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 .Login_Main {
@@ -41,16 +42,17 @@
 }
 
 .Login_Create {
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 500;
     padding: 20px 0px;
-
+    font-family: sans-serif;
 }
 
 .Login_Forgot {
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 500;
     padding: 20px 0px;
+    font-family: sans-serif;
     color: #3a3c3e;
 }
 

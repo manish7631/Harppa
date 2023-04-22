@@ -11,7 +11,7 @@
 }
 
 .SecondImage_Section {
-    width: 80%;
+    width: 95%;
     height: auto;
     margin: auto;
     display: grid;
@@ -40,16 +40,16 @@
 }
 
 .SecondImage_Section_Right {
-    width: 90%;
+    width: 100%;
     height: auto;
-    padding: 2px;
+    padding: 18px 5px;
     box-sizing: border-box;
     margin: auto;
 }
 
 .SecondImage_Section_Right>p {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
     margin: 10px;
     text-align: left;
     color: #3a3c3e;
@@ -58,17 +58,23 @@
 .SecondImage_Section_Right_Button {
     margin: 10px 10px 10px 0px;
     padding: 10px 15px;
-    width: auto;
+    width: 100%;
     height: auto;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 400;
     color: white;
     border-radius: 5px;
     box-sizing: border-box;
     border: none;
     outline: none;
-    background-color: rgba(101, 155, 174, 0.8);
-    float: right;
+    background-color: transparent;
+    font-variant: small-caps;
+    text-align: right;
+    cursor: pointer;
+}
+
+.SecondImage_Section_Right_Button:hover {
+    background-color: rgb(177, 176, 176);
 }
 
 @media screen and (min-width:1025px) and (max-width:1200px) {
@@ -81,7 +87,7 @@
     }
 
     .SecondImage_Section {
-        width: 80%;
+        width: 95%;
         height: auto;
         margin: auto;
         display: grid;
@@ -110,16 +116,16 @@
     }
 
     .SecondImage_Section_Right {
-        width: 90%;
+        width: 100%;
         height: auto;
-        padding: 2px;
+        padding: 20px 5px;
         box-sizing: border-box;
         margin: auto;
     }
 
     .SecondImage_Section_Right>p {
         font-size: 18px;
-        font-weight: 600;
+        font-weight: 400;
         margin: 10px;
         text-align: left;
         color: #3a3c3e;
@@ -128,7 +134,8 @@
     .SecondImage_Section_Right_Button {
         margin: 10px 10px 10px 0px;
         padding: 10px 15px;
-        width: auto;
+        width: 100%;
+        text-align: right;
         height: auto;
         font-size: 17px;
         font-weight: 600;
@@ -137,9 +144,15 @@
         box-sizing: border-box;
         border: none;
         outline: none;
-        background-color: rgba(101, 155, 174, 0.8);
-        float: right;
+        background-color: transparent;
+        font-variant: small-caps;
+        cursor: pointer;
     }
+
+    .SecondImage_Section_Right_Button:hover {
+        background-color: rgb(177, 176, 176);
+    }
+
 
 }
 
@@ -163,7 +176,7 @@
     }
 
     .SecondImage_Section_Left {
-        width: 90%;
+        width: 95%;
         height: auto;
         padding: 2px;
         box-sizing: border-box;
@@ -183,16 +196,16 @@
     }
 
     .SecondImage_Section_Right {
-        width: 90%;
+        width: 100%;
         height: auto;
-        padding: 2px;
+        padding: 20px 5px;
         box-sizing: border-box;
         margin: auto;
     }
 
     .SecondImage_Section_Right>p {
         font-size: 22px;
-        font-weight: 600;
+        font-weight: 400;
         margin: 10px;
         text-align: left;
         color: #3a3c3e;
@@ -201,7 +214,7 @@
     .SecondImage_Section_Right_Button {
         margin: 10px 10px 10px 0px;
         padding: 10px 15px;
-        width: auto;
+        width: 100%;
         height: auto;
         font-size: 17px;
         font-weight: 600;
@@ -210,8 +223,14 @@
         box-sizing: border-box;
         border: none;
         outline: none;
-        background-color: rgba(101, 155, 174, 0.8);
-        float: right;
+        background-color: transparent;
+        text-align: right;
+        cursor: pointer;
+        font-variant: small-caps;
+    }
+
+    .SecondImage_Section_Right_Button:hover {
+        background-color: rgb(177, 176, 176);
     }
 }
 
@@ -225,7 +244,7 @@
     }
 
     .SecondImage_Section {
-        width: 90%;
+        width: 95%;
         height: auto;
         margin: auto;
         display: grid;
@@ -254,16 +273,16 @@
     }
 
     .SecondImage_Section_Right {
-        width: 90%;
+        width: 99%;
         height: auto;
-        padding: 2px;
+        padding: 20px 5px;
         box-sizing: border-box;
         margin: auto;
     }
 
     .SecondImage_Section_Right>p {
         font-size: 22px;
-        font-weight: 600;
+        font-weight: 400;
         margin: 10px;
         text-align: left;
         color: #3a3c3e;
@@ -272,7 +291,7 @@
     .SecondImage_Section_Right_Button {
         margin: 10px 10px 10px 0px;
         padding: 10px 15px;
-        width: auto;
+        width: 100%;
         height: auto;
         font-size: 17px;
         font-weight: 600;
@@ -281,8 +300,14 @@
         box-sizing: border-box;
         border: none;
         outline: none;
-        background-color: rgba(101, 155, 174, 0.8);
-        float: right;
+        background-color: transparent;
+        cursor: pointer;
+        font-variant: small-caps;
+
+    }
+
+    .SecondImage_Section_Right_Button:hover {
+        background-color: rgb(177, 176, 176);
     }
 }
 
@@ -334,7 +359,7 @@
 
     .SecondImage_Section_Right>p {
         font-size: 22px;
-        font-weight: 600;
+        font-weight: 400;
         margin: 10px;
         text-align: left;
         color: #3a3c3e;
@@ -343,7 +368,7 @@
     .SecondImage_Section_Right_Button {
         margin: 10px 10px 10px 0px;
         padding: 10px 15px;
-        width: auto;
+        width: 100%;
         height: auto;
         font-size: 17px;
         font-weight: 600;
@@ -352,7 +377,13 @@
         box-sizing: border-box;
         border: none;
         outline: none;
-        background-color: rgba(101, 155, 174, 0.8);
-        float: right;
+        background-color: transparent;
+        text-align: right;
+        cursor: pointer;
+        font-variant: small-caps;
+    }
+
+    .SecondImage_Section_Right_Button:hover {
+        background-color: rgb(177, 176, 176);
     }
 }

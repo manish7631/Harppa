@@ -17,15 +17,19 @@
 }
 
 .ThirdImage_Section>p {
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 400;
     padding: 10px;
     text-align: center;
+    line-height: 1.7em;
+    font-variant: small-caps;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: .1em;
 }
 
 .ThirdImage_Section>p>span {
     color: #e14b2c;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 @media screen and (min-width:1025px) and (max-width:1200px) {
@@ -42,15 +46,19 @@
     }
 
     .ThirdImage_Section>p {
-        font-size: 32px;
-        font-weight: 600;
+        font-size: 28px;
+        font-weight: 400;
         padding: 20px 0px 20px 0px;
         text-align: center;
+        line-height: 1.7em;
+        font-variant: small-caps;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: .1em;
     }
 
     .ThirdImage_Section>p>span {
         color: #e14b2c;
-        font-weight: 900;
+        font-weight: 700;
     }
 
 }
@@ -69,15 +77,19 @@
     }
 
     .ThirdImage_Section>p {
-        font-size: 32px;
-        font-weight: 600;
+        font-size: 28px;
+        font-weight: 400;
         padding: 20px 0px 20px 0px;
         text-align: center;
+        line-height: 1.7em;
+        font-variant: small-caps;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: .1em;
     }
 
     .ThirdImage_Section>p>span {
         color: #e14b2c;
-        font-weight: 900;
+        font-weight: 700;
     }
 
 }
@@ -96,15 +108,19 @@
     }
 
     .ThirdImage_Section>p {
-        font-size: 32px;
-        font-weight: 600;
+        font-size: 22px;
+        font-weight: 400;
         padding: 20px 0px 20px 0px;
         text-align: center;
+        line-height: 1.7em;
+        font-variant: small-caps;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: .1em;
     }
 
     .ThirdImage_Section>p>span {
         color: #e14b2c;
-        font-weight: 900;
+        font-weight: 700;
     }
 }
 
@@ -122,14 +138,18 @@
     }
 
     .ThirdImage_Section>p {
-        font-size: 32px;
-        font-weight: 600;
+        font-size: 22px;
+        font-weight: 400;
         padding: 20px 0px 20px 0px;
         text-align: center;
+        line-height: 1.7em;
+        font-variant: small-caps;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: .1em;
     }
 
     .ThirdImage_Section>p>span {
         color: #e14b2c;
-        font-weight: 900;
+        font-weight: 700;
     }
 }
