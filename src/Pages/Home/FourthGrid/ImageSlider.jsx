@@ -27,7 +27,12 @@ const ImageSlider = ({ slides }) => {
   };
   return (
     <div>
-      <Carousel responsive={responsive} itemClass="carousel-item-padding-40-px">
+      <Carousel
+        showDots={true}
+        infinite={true}
+        responsive={responsive}
+        itemClass="carousel-item-padding-40-px"
+      >
         {slides.map((e, index) => {
           return (
             <Card
