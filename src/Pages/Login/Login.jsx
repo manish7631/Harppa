@@ -53,9 +53,9 @@ const Login = ({ history, location }) => {
         {loading ? <Loader /> : ""}
 
         <Card className="Login_Card_Container">
-          <h1 className="Login_Heading"> Siddham</h1>
+          {/* <h1 className="Login_Heading"> Welcome to CEL</h1> */}
 
-          <h3 className="Login_Sub_Heading">Login To Siddham</h3>
+          <h3 className="Login_Sub_Heading">Please Login</h3>
           <Formik
             onSubmit={handleFormSubmit}
             initialValues={initialValues}

@@ -8,6 +8,7 @@ import Risthal from "../../../Image/Risthal.png";
 import Bihar from "../../../Image/Bihar.png";
 import Budha from "../../../Image/Budha.png";
 import Allabhad from "../../../Image/Allabhad.png";
+import ImageSlider from "./ImageSlider";
 
 const FourthGrid = () => {
   return (
@@ -92,7 +93,7 @@ const FourthGrid = () => {
             <h3 className="FourthGrid_Section_Main_Second_Card_Heading">
               Search By Site
             </h3>
-            <div className="FourthGrid_Section_Main_Second_Card">
+            {/* <div className="FourthGrid_Section_Main_Second_Card">
               <Card
                 sx={{
                   backgroundColor: "transparent",
@@ -194,9 +195,9 @@ const FourthGrid = () => {
                     </p>
                   </CardContent>
                 </CardActionArea>
-              </Card>
+              </Card> */}
 
-              {/* <Card
+            {/* <Card
                 sx={{
                   backgroundColor: "transparent",
                 }}
@@ -224,7 +225,8 @@ const FourthGrid = () => {
                   </CardContent>
                 </CardActionArea>
               </Card> */}
-            </div>
+            {/* </div> */}
+            <ImageSlider slides={siteSlides} />
           </div>
 
           {/* ------------------Search By Artifac Type------------------- */}
@@ -232,7 +234,7 @@ const FourthGrid = () => {
             <h3 className="FourthGrid_Section_Main_Second_Card_Heading">
               Search By Artifact Type
             </h3>
-            <div className="FourthGrid_Section_Main_Second_Card">
+            {/* <div className="FourthGrid_Section_Main_Second_Card">
               <Card
                 sx={{
                   backgroundColor: "transparent",
@@ -282,14 +284,14 @@ const FourthGrid = () => {
                       IMPL
                     </h3>
                   </CardContent>
-                  {/* <Link to="/bhirranatablepage"> */}
+                 <Link to="/bhirranatablepage">  
                   <CardMedia
                     component="img"
                     className="FourthGrid_Section_Main_Second_Card_Image"
                     image={Bihar}
                     alt="green iguana"
                   />
-                  {/* </Link> */}
+                   </Link> 
                   <CardContent>
                     <p className="FourthGrid_Section_Main_First_Card_Paragraph">
                       No detailed description of the column is available; the
@@ -316,14 +318,14 @@ const FourthGrid = () => {
                       MISC
                     </h3>
                   </CardContent>
-                  {/* <Link to="/chanhujotablepage"> */}
+                <Link to="/chanhujotablepage"> 
                   <CardMedia
                     component="img"
                     className="FourthGrid_Section_Main_Second_Card_Image"
                     image={Budha}
                     alt="green iguana"
                   />
-                  {/* </Link> */}
+                 </Link>  
                   <CardContent>
                     <p className="FourthGrid_Section_Main_First_Card_Paragraph">
                       An image of a seated Buddha, "very perfect … with a
@@ -334,7 +336,8 @@ const FourthGrid = () => {
                   </CardContent>
                 </CardActionArea>
               </Card>
-            </div>
+            </div> */}
+            <ImageSlider slides={slides} />
           </div>
         </div>
       </div>
@@ -343,3 +346,93 @@ const FourthGrid = () => {
 };
 
 export default FourthGrid;
+
+const slides = [
+  {
+    title: "BNGL",
+    url: Risthal,
+    link: "/bngltablepage",
+    content:
+      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
+  },
+  {
+    title: "IMPL",
+    url: Bihar,
+    link: "",
+    content:
+      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
+  },
+  {
+    title: "MISC",
+    url: Budha,
+    link: "",
+    content:
+      "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
+  },
+  {
+    title: "BNGL",
+    url: Risthal,
+    link: "/bngltablepage",
+    content:
+      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
+  },
+  {
+    title: "IMPL",
+    url: Bihar,
+    link: "",
+    content:
+      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
+  },
+  {
+    title: "MISC",
+    url: Budha,
+    link: "",
+    content:
+      "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
+  },
+];
+
+const siteSlides = [
+  {
+    title: "Banawali",
+    url: Risthal,
+    link: "/bnawalitablepage",
+    content:
+      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
+  },
+  {
+    title: "Bhirrana",
+    url: Bihar,
+    link: "/bhirranatablepage",
+    content:
+      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
+  },
+  {
+    title: "Chanhujo-daro",
+    url: Budha,
+    link: "/chanhujotablepage",
+    content:
+      "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
+  },
+  {
+    title: "Banawali",
+    url: Risthal,
+    link: "/bnawalitablepage",
+    content:
+      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
+  },
+  {
+    title: "Bhirrana",
+    url: Bihar,
+    link: "/bhirranatablepage",
+    content:
+      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
+  },
+  {
+    title: "Chanhujo-daro",
+    url: Budha,
+    link: "/chanhujotablepage",
+    content:
+      "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
+  },
+];

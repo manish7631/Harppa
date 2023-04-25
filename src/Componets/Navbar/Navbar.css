@@ -33,16 +33,17 @@
 }
 
 .Navbar_Logo {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     margin-right: 8px;
 }
 
 .Navbar_Left_Side>h3 {
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 24px;
     color: #eb846f;
+    letter-spacing: .05em;
 }
 
 .Navbar_Right_Side {
@@ -64,6 +65,7 @@
     color: #eb846f;
     font-size: 18px;
     font-weight: 500;
+    font-variant: small-caps;
 }
 
 .Navbar_Menu,
@@ -94,8 +96,8 @@
     }
 
     .Navbar_Left_Side>h3 {
-        font-weight: 500;
-        font-size: 22px;
+        font-weight: 700;
+        font-size: 18px;
         color: #eb846f;
     }
 
@@ -116,7 +118,7 @@
         padding-left: 15px;
         padding-right: 5px;
         color: #eb846f;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 500;
     }
 

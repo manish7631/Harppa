@@ -43,8 +43,8 @@ const Signup = () => {
           <Loader />
         ) : (
           <Card className="Signup_Card_Container">
-            <h1 className="Signup_Heading"> Siddham</h1>
-            <h3 className="Signup_Sub_Heading">Register To Siddham</h3>
+            {/* <h1 className="Signup_Heading"> Siddham</h1> */}
+            <h3 className="Signup_Sub_Heading"> Please Register </h3>
             <Formik
               onSubmit={handleFormSubmit}
               initialValues={initialValues}
