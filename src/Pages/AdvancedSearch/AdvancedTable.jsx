@@ -74,17 +74,7 @@ function EnhancedTableHead(props) {
   return (
     <TableHead>
       <TableRow>
-        <TableCell padding="checkbox">
-          {/* <Checkbox
-            color="primary"
-            indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={rowCount > 0 && numSelected === rowCount}
-            onChange={onSelectAllClick}
-            inputProps={{
-              "aria-label": "select all desserts",
-            }}
-          /> */}
-        </TableCell>
+        <TableCell padding="checkbox"></TableCell>
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
@@ -92,9 +82,9 @@ function EnhancedTableHead(props) {
             padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
             sx={{
-              fontSize: "17px",
-              fontWeight: "bold",
-              color: "black",
+              fontsize: "15px",
+              fontWeight: "900",
+              color: "#3a3c3e",
             }}
           >
             <TableSortLabel
@@ -249,15 +239,7 @@ export default function AdvancedTable({ loading, AdvancedData, query1, show }) {
                         tabIndex={-1}
                         key={row.signid}
                       >
-                        <TableCell padding="checkbox">
-                          {/* <Checkbox
-                                 color="primary"
-                                 checked={isItemSelected}
-                                 inputProps={{
-                                   "aria-labelledby": labelId,
-                                 }}
-                               /> */}
-                        </TableCell>
+                        <TableCell padding="checkbox"></TableCell>
                         <TableCell
                           component="th"
                           id={labelId}
@@ -271,9 +253,9 @@ export default function AdvancedTable({ loading, AdvancedData, query1, show }) {
                               display: "inline-block",
                               textOverflow: "ellipsis",
                               whiteSpace: "nowrap",
-                              fontSize: "17px",
-                              fontWeight: "600",
-                              color: "black",
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                           >
                             {" "}
@@ -293,9 +275,9 @@ export default function AdvancedTable({ loading, AdvancedData, query1, show }) {
                               display: "inline-block",
                               textOverflow: "ellipsis",
                               whiteSpace: "nowrap",
-                              fontSize: "17px",
-                              fontWeight: "600",
-                              color: "black",
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                           >
                             {" "}
@@ -319,7 +301,7 @@ export default function AdvancedTable({ loading, AdvancedData, query1, show }) {
                                     key={n}
                                     sx={{
                                       width: "auto",
-                                      height: "60px",
+                                      height: "40px",
                                       margin: "4px",
                                       padding: "2px",
                                     }}
@@ -340,9 +322,9 @@ export default function AdvancedTable({ loading, AdvancedData, query1, show }) {
                           scope="row"
                           padding="1"
                           sx={{
-                            fontSize: "17px",
-                            fontWeight: "600",
-                            color: "black",
+                            color: "#3a3c3e",
+                            fontSize: "14px",
+                            fontWeight: "500",
                           }}
                         >
                           {row.site}
@@ -356,9 +338,9 @@ export default function AdvancedTable({ loading, AdvancedData, query1, show }) {
                           <Link
                             style={{
                               textDecoration: "none",
-                              fontSize: "17px",
-                              fontWeight: "600",
-                              color: "black",
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                             to={`/erantabledetails/${row.id}`}
                           >
@@ -369,15 +351,7 @@ export default function AdvancedTable({ loading, AdvancedData, query1, show }) {
                       </TableRow>
                     );
                   })}
-                  {emptyRows > 0 && (
-                    <TableRow
-                    // style={{
-                    //   height: (dense ? 33 : 53) * emptyRows,
-                    // }}
-                    >
-                      {/* <TableCell colSpan={6} /> */}
-                    </TableRow>
-                  )}
+                  {emptyRows > 0 && <TableRow></TableRow>}
                 </TableBody>
               </Table>
             </TableContainer>
@@ -535,7 +509,7 @@ export default function AdvancedTable({ loading, AdvancedData, query1, show }) {
                     <h4 className="Advanced_Mobile_Card_Right">
                       <span
                         style={{
-                          width: "100px",
+                          width: "150px",
                           overflow: "hidden",
                           display: "inline-block",
                           textOverflow: "ellipsis",

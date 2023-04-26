@@ -118,9 +118,9 @@ function EnhancedTableHead(props) {
             padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
             sx={{
-              fontSize: "17px",
-              color: "black",
-              fontWeight: "bold",
+              fontsize: "15px",
+              fontWeight: "900",
+              color: "#3a3c3e",
             }}
           >
             <TableSortLabel
@@ -324,13 +324,7 @@ export default function ChanhujoDaroTablePage({
                         tabIndex={-1}
                         key={row.seqid}
                       >
-                        <TableCell
-                          align="left"
-                          sx={{
-                            fontSize: "17px",
-                            fontWeight: "500",
-                          }}
-                        >
+                        <TableCell align="left">
                           <span
                             style={{
                               width: "100px",
@@ -339,19 +333,16 @@ export default function ChanhujoDaroTablePage({
                               textOverflow: "ellipsis",
                               whiteSpace: "nowrap",
                               textAlign: "right",
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                           >
                             {" "}
                             {row.seqid}
                           </span>
                         </TableCell>
-                        <TableCell
-                          align="right"
-                          sx={{
-                            fontSize: "17px",
-                            fontWeight: "500",
-                          }}
-                        >
+                        <TableCell align="right">
                           <span
                             style={{
                               width: "100px",
@@ -360,6 +351,9 @@ export default function ChanhujoDaroTablePage({
                               textOverflow: "ellipsis",
                               whiteSpace: "nowrap",
                               textAlign: "right",
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                           >
                             {" "}
@@ -383,7 +377,7 @@ export default function ChanhujoDaroTablePage({
                                     key={n}
                                     sx={{
                                       width: "auto",
-                                      height: "60px",
+                                      height: "40px",
                                       margin: "4px",
                                       padding: "2px",
                                     }}
@@ -398,13 +392,7 @@ export default function ChanhujoDaroTablePage({
                           </Box>
                         </TableCell>
 
-                        <TableCell
-                          align="right"
-                          sx={{
-                            fontSize: "17px",
-                            fontWeight: "500",
-                          }}
-                        >
+                        <TableCell align="right">
                           <span
                             style={{
                               width: "100px",
@@ -413,6 +401,9 @@ export default function ChanhujoDaroTablePage({
                               textOverflow: "ellipsis",
                               whiteSpace: "nowrap",
                               textAlign: "center",
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                           >
                             {" "}
@@ -424,7 +415,8 @@ export default function ChanhujoDaroTablePage({
                           align="center"
                           marginLeft="20px"
                           sx={{
-                            fontSize: "17px",
+                            color: "#3a3c3e",
+                            fontSize: "14px",
                             fontWeight: "500",
                           }}
                         >
@@ -442,15 +434,7 @@ export default function ChanhujoDaroTablePage({
                       </TableRow>
                     );
                   })}
-                  {emptyRows > 0 && (
-                    <TableRow
-                    // style={{
-                    //   height: (dense ? 33 : 53) * emptyRows,
-                    // }}
-                    >
-                      {/* <TableCell colSpan={6} /> */}
-                    </TableRow>
-                  )}
+                  {emptyRows > 0 && <TableRow></TableRow>}
                 </TableBody>
               </Table>
             </TableContainer>
@@ -500,9 +484,9 @@ export default function ChanhujoDaroTablePage({
                                 textOverflow: "ellipsis",
                                 whiteSpace: "nowrap",
                                 textAlign: "right",
-                                color: "black",
-                                fontSize: "17px",
-                                fontWeight: "600",
+                                color: "#3a3c3e",
+                                fontSize: "14px",
+                                fontWeight: "500",
                               }}
                             >
                               {" "}
@@ -518,9 +502,9 @@ export default function ChanhujoDaroTablePage({
                                 textOverflow: "ellipsis",
                                 whiteSpace: "nowrap",
                                 textAlign: "right",
-                                color: "black",
-                                fontSize: "17px",
-                                fontWeight: "600",
+                                color: "#3a3c3e",
+                                fontSize: "14px",
+                                fontWeight: "500",
                               }}
                             >
                               {" "}
@@ -543,7 +527,7 @@ export default function ChanhujoDaroTablePage({
                                     <Avatar
                                       sx={{
                                         width: "auto",
-                                        height: "60px",
+                                        height: "40px",
                                         margin: "4px",
                                         padding: "2px",
                                       }}
@@ -567,9 +551,9 @@ export default function ChanhujoDaroTablePage({
                                 textOverflow: "ellipsis",
                                 whiteSpace: "nowrap",
                                 textAlign: "center",
-                                color: "black",
-                                fontSize: "17px",
-                                fontWeight: "600",
+                                color: "#3a3c3e",
+                                fontSize: "14px",
+                                fontWeight: "500",
                               }}
                             >
                               {" "}
@@ -581,9 +565,9 @@ export default function ChanhujoDaroTablePage({
                             <Link
                               style={{
                                 textDecoration: "none",
-                                color: "black",
-                                fontSize: "17px",
-                                fontWeight: "600",
+                                color: "#3a3c3e",
+                                fontSize: "14px",
+                                fontWeight: "500",
                               }}
                               to={`/erantabledetails/${row.id}`}
                             >
@@ -594,9 +578,7 @@ export default function ChanhujoDaroTablePage({
                         </TableRow>
                       );
                     })}
-                  {emptyRows > 0 && (
-                    <TableRow>{/* <TableCell colSpan={6} /> */}</TableRow>
-                  )}
+                  {emptyRows > 0 && <TableRow> </TableRow>}
                 </TableBody>
               </Table>
             </TableContainer>
@@ -760,7 +742,7 @@ export default function ChanhujoDaroTablePage({
                   <h4 className="Chanhu_Mobile_Card_Right">
                     <span
                       style={{
-                        width: "100px",
+                        width: "150px",
                         overflow: "hidden",
                         display: "inline-block",
                         textOverflow: "ellipsis",
