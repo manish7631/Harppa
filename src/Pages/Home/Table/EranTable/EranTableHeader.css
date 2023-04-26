@@ -32,7 +32,7 @@
 }
 
 .Eran_Heading {
-   font-size: 28px;
+   font-size: 20px;
    font-weight: 600;
    color: white;
 }
@@ -95,14 +95,14 @@
 }
 
 .Eran_Details_Left {
-   font-size: 28px;
+   font-size: 20px;
    font-weight: 600;
    color: #3a3c3e;
 }
 
 .Eran_Details_Right {
    font-size: 20px;
-   font-weight: 500;
+   font-weight: 400;
    color: #3a3c3e;
 }
 
@@ -114,7 +114,7 @@
 
 .EranTableDetails_Data_Image_Box>.DetailsImage {
    width: auto;
-   height: 60px;
+   max-height: 40px;
    margin: 4px;
    padding: 2px;
 }
@@ -158,7 +158,7 @@
    }
 
    .Eran_Heading {
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 600;
       color: white;
    }
@@ -221,14 +221,14 @@
    }
 
    .Eran_Details_Left {
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 600;
       color: #3a3c3e;
    }
 
    .Eran_Details_Right {
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 400;
       color: #3a3c3e;
    }
 
@@ -240,7 +240,7 @@
 
    .DetailsImage {
       width: auto;
-      height: 60px;
+      height: 40px;
       margin: 4px;
       padding: 2px;
       object-fit: contain;
@@ -304,7 +304,7 @@
    }
 
    .Eran_Heading {
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 600;
       color: white;
    }
@@ -366,14 +366,14 @@
    }
 
    .Eran_Details_Left {
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 600;
       color: #3a3c3e;
    }
 
    .Eran_Details_Right {
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 400;
       color: #3a3c3e;
    }
 
@@ -385,7 +385,7 @@
 
    .DetailsImage {
       width: auto;
-      height: 60px;
+      height: 40px;
       margin: 4px;
       padding: 2px;
       object-fit: contain;
@@ -439,7 +439,7 @@
    }
 
    .Eran_Mobile_Card_Left {
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 600;
       color: #3a3c3e;
    }
@@ -508,14 +508,14 @@
    }
 
    .Eran_Details_Left {
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 600;
       color: #3a3c3e;
    }
 
    .Eran_Details_Right {
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 400;
       color: #3a3c3e;
    }
 
@@ -527,7 +527,7 @@
 
    .DetailsImage {
       width: auto;
-      height: 60px;
+      height: 40px;
       margin: 4px;
       padding: 2px;
       object-fit: contain;
@@ -584,20 +584,20 @@
    }
 
    .Eran_Mobile_Card_Left {
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 600;
       color: #3a3c3e;
    }
 
    .Eran_Mobile_Card_Right {
       font-size: 20px;
-      font-weight: 500;
+      font-weight: 400;
       color: #3a3c3e;
    }
 
    .Eran_Card_Img {
-      max-width: 40px;
-      max-height: 40px;
+      width: auto;
+      height: 40px;
       margin: 2px;
       padding: 2px;
       object-fit: contain;

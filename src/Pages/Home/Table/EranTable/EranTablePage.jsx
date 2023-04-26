@@ -121,9 +121,9 @@ function EnhancedTableHead(props) {
             padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
             sx={{
-              color: "black",
-              fontSize: "17px",
-              fontWeight: "bold",
+              fontsize: "15px",
+              fontWeight: "900",
+              color: "#3a3c3e",
             }}
           >
             <TableSortLabel
@@ -342,9 +342,9 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                               textOverflow: "ellipsis",
                               whiteSpace: "nowrap",
                               textAlign: "right",
-                              color: "black",
-                              fontSize: "17px",
-                              fontWeight: "600",
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                           >
                             {" "}
@@ -360,9 +360,9 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                               textOverflow: "ellipsis",
                               whiteSpace: "nowrap",
                               textAlign: "right",
-                              color: "black",
-                              fontSize: "17px",
-                              fontWeight: "600",
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                           >
                             {" "}
@@ -386,7 +386,7 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                                     key={n}
                                     sx={{
                                       width: "auto",
-                                      height: "60px",
+                                      minHeight: "40px",
                                       margin: "4px",
                                       padding: "2px",
                                     }}
@@ -410,9 +410,9 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                               textOverflow: "ellipsis",
                               whiteSpace: "nowrap",
                               textAlign: "center",
-                              color: "black",
-                              fontSize: "17px",
-                              fontWeight: "600",
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                           >
                             {" "}
@@ -424,9 +424,9 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                           <Link
                             style={{
                               textDecoration: "none",
-                              color: "black",
-                              fontSize: "17px",
-                              fontWeight: "600",
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                             to={`/erantabledetails/${row.id}`}
                           >
@@ -438,13 +438,7 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                     );
                   })}
                   {emptyRows > 0 && (
-                    <TableRow
-                    // style={{
-                    //   height: (dense ? 33 : 53) * emptyRows,
-                    // }}
-                    >
-                      {/* <TableCell colSpan={6} /> */}
-                    </TableRow>
+                    <TableRow>{/* <TableCell colSpan={6} /> */}</TableRow>
                   )}
                 </TableBody>
               </Table>
@@ -492,9 +486,9 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                                 textOverflow: "ellipsis",
                                 whiteSpace: "nowrap",
                                 textAlign: "right",
-                                color: "black",
-                                fontSize: "17px",
-                                fontWeight: "600",
+                                color: "#3a3c3e",
+                                fontSize: "14px",
+                                fontWeight: "500",
                               }}
                             >
                               {" "}
@@ -510,9 +504,9 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                                 textOverflow: "ellipsis",
                                 whiteSpace: "nowrap",
                                 textAlign: "right",
-                                color: "black",
-                                fontSize: "17px",
-                                fontWeight: "600",
+                                color: "#3a3c3e",
+                                fontSize: "14px",
+                                fontWeight: "500",
                               }}
                             >
                               {" "}
@@ -532,29 +526,10 @@ export default function EranTablePage({ loading, countryList, query1 }) {
 
                                   let data1 = require(`../../../../static/ivcgraphemes/${n}`);
                                   return (
-                                    // <Box  key={index} sx={{
-                                    //   width:"60px",
-                                    //   padding:"2px",
-                                    //   aspectRatio: 1 / 1,
-
-                                    // }}>
-                                    //    <img
-                                    //   style={{
-                                    //     width: "100%",
-                                    //     aspectRatio: 1,
-                                    //    objectFit: "fill",
-                                    //    padding:"1px",
-
-                                    //   }}
-
-                                    //   alt="Remy Sharp"
-                                    //   src={data1}
-                                    // />
-                                    // </Box>
                                     <Avatar
                                       sx={{
                                         width: "auto",
-                                        height: "60px",
+                                        minHeight: "40px",
                                         margin: "4px",
                                         padding: "2px",
                                       }}
@@ -578,9 +553,9 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                                 textOverflow: "ellipsis",
                                 whiteSpace: "nowrap",
                                 textAlign: "center",
-                                color: "black",
-                                fontSize: "17px",
-                                fontWeight: "600",
+                                color: "#3a3c3e",
+                                fontSize: "14px",
+                                fontWeight: "500",
                               }}
                             >
                               {" "}
@@ -592,9 +567,9 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                             <Link
                               style={{
                                 textDecoration: "none",
-                                color: "black",
-                                fontSize: "17px",
-                                fontWeight: "600",
+                                color: "#3a3c3e",
+                                fontSize: "14px",
+                                fontWeight: "500",
                               }}
                               to={`/erantabledetails/${row.id}`}
                             >
@@ -779,7 +754,7 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                       <h4 className="Eran_Mobile_Card_Right">
                         <span
                           style={{
-                            width: "100px",
+                            width: "150px",
                             overflow: "hidden",
                             display: "inline-block",
                             textOverflow: "ellipsis",
@@ -939,7 +914,7 @@ export default function EranTablePage({ loading, countryList, query1 }) {
                       <h4 className="Eran_Mobile_Card_Right">
                         <span
                           style={{
-                            width: "100px",
+                            width: "150px",
                             overflow: "hidden",
                             display: "inline-block",
                             textOverflow: "ellipsis",

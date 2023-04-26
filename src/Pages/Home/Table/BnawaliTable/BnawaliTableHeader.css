@@ -35,7 +35,7 @@
 }
 
 .Banawali_Heading {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 600;
     color: white;
 }
@@ -86,7 +86,7 @@
     }
 
     .Banawali_Heading {
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 600;
         color: white;
     }
@@ -144,19 +144,19 @@
 }
 
 @media screen and (min-width:481px) and (max-width:768px) {
-    #BhirranaTable_Grid {
+    #BanawaliTable_Grid {
         width: 100% !important;
         height: auto;
         display: block !important;
     }
 
 
-    .Bhirrana_Grid_Left {
+    .Banawali_Grid_Left {
         display: none;
 
     }
 
-    .Bhirrana_Grid_Right {
+    .Banawali_Grid_Right {
         display: none;
 
     }
@@ -185,14 +185,14 @@
     }
 
     .Banawali_Mobile_Card_Left {
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 600;
         color: #3a3c3e;
     }
 
     .Banawali_Mobile_Card_Right {
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 400;
         color: #3a3c3e;
     }
 
@@ -207,22 +207,7 @@
 }
 
 @media screen and (min-width:320px) and (max-width:480px) {
-    #BhirranaTable_Grid {
-        width: 100% !important;
-        height: auto;
-        display: block !important;
-    }
 
-
-    .Bhirrana_Grid_Left {
-        display: none;
-
-    }
-
-    .Bhirrana_Grid_Right {
-        display: none;
-
-    }
 
     #BanawaliTable_Grid {
         width: 100% !important;
@@ -265,14 +250,14 @@
     }
 
     .Banawali_Mobile_Card_Left {
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 600;
         color: #3a3c3e;
     }
 
     .Banawali_Mobile_Card_Right {
         font-size: 20px;
-        font-weight: 500;
+        font-weight: 400;
         color: #3a3c3e;
     }
 

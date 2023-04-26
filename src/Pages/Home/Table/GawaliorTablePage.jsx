@@ -12,8 +12,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Paper from "@mui/material/Paper";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Switch from "@mui/material/Switch";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import { visuallyHidden } from "@mui/utils";
@@ -21,7 +19,6 @@ import {
   Box,
   Table,
   Typography,
-  useTheme,
   Avatar,
   Card,
   CardActionArea,
@@ -30,13 +27,14 @@ import {
 import CircularProgress from "@mui/material/CircularProgress";
 import { useSelector, useDispatch } from "react-redux";
 import { GawaliorImageGetFunction } from "../../../redux/Application/action";
+import "./GawaliorTableHeader.css";
 
 const headCells = [
   {
     id: "signid",
     numeric: false,
     disablePadding: true,
-    label: "signid",
+    label: "Signid",
   },
 
   {
@@ -74,17 +72,7 @@ function EnhancedTableHead(props) {
   return (
     <TableHead>
       <TableRow>
-        <TableCell padding="checkbox">
-          {/* <Checkbox
-            color="primary"
-            indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={rowCount > 0 && numSelected === rowCount}
-            onChange={onSelectAllClick}
-            inputProps={{
-              "aria-label": "select all desserts",
-            }}
-          /> */}
-        </TableCell>
+        <TableCell padding="checkbox"></TableCell>
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
@@ -92,9 +80,9 @@ function EnhancedTableHead(props) {
             padding={headCell.disablePadding ? "none" : "normal"}
             sortDirection={orderBy === headCell.id ? order : false}
             sx={{
-              color: "black",
-              fontSize: "17px",
-              fontWeight: "bold",
+              fontsize: "15px",
+              fontWeight: "900",
+              color: "#3a3c3e",
             }}
           >
             <TableSortLabel
@@ -287,20 +275,11 @@ export default function GawaliorTablePage({ loading, countryList, query1 }) {
                   return (
                     <TableRow
                       hover
-                      // onClick={(event) => handleClick(event, row.name)}
                       role="checkbox"
                       tabIndex={-1}
                       key={row.signid}
                     >
-                      <TableCell padding="checkbox">
-                        {/* <Checkbox
-                             color="primary"
-                             checked={isItemSelected}
-                             inputProps={{
-                               "aria-labelledby": labelId,
-                             }}
-                           /> */}
-                      </TableCell>
+                      <TableCell padding="checkbox"></TableCell>
                       <TableCell
                         component="th"
                         id={labelId}
@@ -314,9 +293,9 @@ export default function GawaliorTablePage({ loading, countryList, query1 }) {
                             display: "inline-block",
                             textOverflow: "ellipsis",
                             whiteSpace: "nowrap",
-                            color: "black",
-                            fontSize: "17px",
-                            fontWeight: "bold",
+                            color: "#3a3c3e",
+                            fontSize: "14px",
+                            fontWeight: "500",
                           }}
                         >
                           {" "}
@@ -336,9 +315,9 @@ export default function GawaliorTablePage({ loading, countryList, query1 }) {
                             display: "inline-block",
                             textOverflow: "ellipsis",
                             whiteSpace: "nowrap",
-                            color: "black",
-                            fontSize: "17px",
-                            fontWeight: "bold",
+                            color: "#3a3c3e",
+                            fontSize: "14px",
+                            fontWeight: "500",
                           }}
                         >
                           {" "}
@@ -356,7 +335,7 @@ export default function GawaliorTablePage({ loading, countryList, query1 }) {
                           <Avatar
                             sx={{
                               width: "auto",
-                              height: "60px",
+                              minHeight: "40px",
                               margin: "10px",
                             }}
                             src={data1}
@@ -371,9 +350,9 @@ export default function GawaliorTablePage({ loading, countryList, query1 }) {
                         scope="row"
                         padding="1"
                         sx={{
-                          color: "black",
-                          fontSize: "17px",
-                          fontWeight: "bold",
+                          color: "#3a3c3e",
+                          fontSize: "14px",
+                          fontWeight: "500",
                         }}
                       >
                         {row.frequency}
@@ -381,15 +360,7 @@ export default function GawaliorTablePage({ loading, countryList, query1 }) {
                     </TableRow>
                   );
                 })}
-                {emptyRows > 0 && (
-                  <TableRow
-                  // style={{
-                  //   height: (dense ? 33 : 53) * emptyRows,
-                  // }}
-                  >
-                    {/* <TableCell colSpan={6} /> */}
-                  </TableRow>
-                )}
+                {emptyRows > 0 && <TableRow></TableRow>}
               </TableBody>
             </Table>
           </TableContainer>

@@ -35,7 +35,7 @@
 }
 
 .Signary_Heading {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 600;
     color: white;
 }
@@ -58,6 +58,7 @@
 .Gawalior_CardList_MobileDevice {
     display: none;
 }
+
 
 
 @media screen and (min-width:1025px) and (max-width:1200px) {
@@ -94,7 +95,7 @@
     }
 
     .Signary_Heading {
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 600;
         color: white;
     }
@@ -171,7 +172,7 @@
     }
 
     .Signary_Heading {
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 600;
         color: white;
     }
@@ -239,7 +240,7 @@
     }
 
     .Signary_Mobile_Card_Left {
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 600;
         color: #3a3c3e;
     }
@@ -304,7 +305,7 @@
     }
 
     .Signary_Mobile_Card_Left {
-        font-size: 28px;
+        font-size: 20px;
         font-weight: 600;
         color: #3a3c3e;
     }

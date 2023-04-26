@@ -21,18 +21,6 @@ export const BnawaliTableHeader = () => {
                 <Toolbar>
                   <h2 className="Banawali_Heading">Banawali</h2>
 
-                  {/* -------------------------------Search Collaboration Div Here----------------------------------- */}
-
-                  {/* <Box
-                  backgroundColor={colors.primary[400]}
-                  className="GawaliorTableHeader_Section_Left"
-                >
-                  <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search..." />
-                  <IconButton type="button" sx={{ p: 1 }}>
-                    <SearchIcon />
-                  </IconButton>
-                </Box> */}
-
                   {/* ----------------------------Right Side All Button Here------------------------------- */}
 
                   <Box sx={{ flexGrow: 1 }} />
