@@ -9,7 +9,7 @@
     height: 110px;
     background-color: #d0d0d0;
     position: fixed;
-    z-index: 10;
+    z-index: 1000;
     margin-left: 0;
     margin-right: 0;
     top: 0;

@@ -349,7 +349,7 @@ export default FourthGrid;
 
 const slides = [
   {
-    title: "BNGL",
+    title: "BANGLE",
     url: Risthal,
     link: "/bngltablepage",
     content:
@@ -363,28 +363,7 @@ const slides = [
       " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
   },
   {
-    title: "MISC",
-    url: Budha,
-    link: "",
-    content:
-      "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
-  },
-  {
-    title: "BNGL",
-    url: Risthal,
-    link: "/bngltablepage",
-    content:
-      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
-  },
-  {
-    title: "IMPL",
-    url: Bihar,
-    link: "",
-    content:
-      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
-  },
-  {
-    title: "MISC",
+    title: "MISCELLANEOUS",
     url: Budha,
     link: "",
     content:
@@ -393,27 +372,6 @@ const slides = [
 ];
 
 const siteSlides = [
-  {
-    title: "Banawali",
-    url: Risthal,
-    link: "/bnawalitablepage",
-    content:
-      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
-  },
-  {
-    title: "Bhirrana",
-    url: Bihar,
-    link: "/bhirranatablepage",
-    content:
-      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
-  },
-  {
-    title: "Chanhujo-daro",
-    url: Budha,
-    link: "/chanhujotablepage",
-    content:
-      "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
-  },
   {
     title: "Banawali",
     url: Risthal,
