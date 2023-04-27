@@ -13,34 +13,9 @@ import EranTableDetails from "./Pages/Home/Table/EranTable/EranTableDetails";
 import AdvancedSearch from "./Pages/AdvancedSearch/AdvancedSearch";
 import ScrollToTop from "./Hoc/ScrollToTop";
 import { TableHeader } from "./Pages/Home/Table/TableHeader";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import {
-  BNGLImageGetFunction,
-  BhirranaImageGetFunction,
-  BnawaliImageGetFunction,
-  DholaviraImageGetFunction,
-  FarmanaImageGetFunction,
-  HarappaImageGetFunction,
-  IMPLImageGetFunction,
-  KalibanganImageGetFunction,
-  KanmerImageGetFunction,
-  KhirsaraImageGetFunction,
-  LothalImageGetFunction,
-  MISCImageGetFunction,
-  MohenjoDaroImageGetFunction,
-  POTImageGetFunction,
-  RODImageGetFunction,
-  RakhigarhiImageGetFunction,
-  SEALImageGetFunction,
-  TABImageGetFunction,
-  TAGImageGetFunction,
-} from "./redux/Application/action";
-import { ChanhujoDaroImageGetFunction } from "./redux/Application/action";
+import { useSelector } from "react-redux";
 
 function App() {
-  const dispatch = useDispatch();
-
   //---------------------------Data Getting Here-------------------------------------------------
 
   const {
@@ -66,31 +41,6 @@ function App() {
     TABImageData,
     TAGImageData,
   } = useSelector((state) => state.ApplicationReducer);
-
-  // -------------------------Function Calling Here--------------------------------
-
-  useEffect(() => {
-    dispatch(IMPLImageGetFunction());
-    dispatch(BNGLImageGetFunction());
-    dispatch(BnawaliImageGetFunction());
-    dispatch(BhirranaImageGetFunction());
-    dispatch(ChanhujoDaroImageGetFunction());
-    dispatch(DholaviraImageGetFunction());
-    dispatch(FarmanaImageGetFunction());
-    dispatch(HarappaImageGetFunction());
-    dispatch(KalibanganImageGetFunction());
-    dispatch(KanmerImageGetFunction());
-    dispatch(KhirsaraImageGetFunction());
-    dispatch(LothalImageGetFunction());
-    dispatch(MohenjoDaroImageGetFunction());
-    dispatch(RakhigarhiImageGetFunction());
-    dispatch(MISCImageGetFunction());
-    dispatch(POTImageGetFunction());
-    dispatch(RODImageGetFunction());
-    dispatch(SEALImageGetFunction());
-    dispatch(TABImageGetFunction());
-    dispatch(TAGImageGetFunction());
-  }, []);
 
   //-----------------------------Banawali Obj Here----------------------------------
   const BnawaliObj = {

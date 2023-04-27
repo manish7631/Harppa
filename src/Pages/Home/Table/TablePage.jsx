@@ -230,8 +230,6 @@ export default function TablePage({ loading, countryList, query1, data }) {
 
   // ------------------First Image Function Call Here-----------------------------------
 
-  console.log("table", data);
-
   useEffect(() => {
     dispatch(EranSearchImageGetFunction(query));
   }, [query]);
