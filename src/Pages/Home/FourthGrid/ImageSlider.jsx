@@ -29,7 +29,6 @@ const ImageSlider = ({ slides }) => {
     <div>
       <Carousel
         showDots={true}
-        infinite={true}
         responsive={responsive}
         itemClass="carousel-item-padding-40-px"
       >

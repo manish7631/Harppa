@@ -1,0 +1,680 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#TableTable_Grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 3fr 8fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+}
+
+.Table_Grid_Left {
+    margin-top: 110px;
+
+    height: auto;
+}
+
+.TableTableHeader_Container {
+    width: 100%;
+    height: auto;
+    padding: 2px;
+    margin: 110px auto;
+}
+
+#Table_AppBar {
+    background-color: rgb(115, 140, 136);
+    width: 100%;
+}
+
+.Table_Heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.TableTableHeader_Section_Left {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 10px 0px 5px 10px;
+    align-items: center;
+    background-color: white;
+}
+
+.Table_Grid_Right {
+    margin-top: 110px;
+    height: auto;
+
+}
+
+
+
+.TableTableDetails_Container {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin: 70px auto;
+    box-sizing: border-box;
+
+
+}
+
+.TableTableDetails_Main {
+    width: 80%;
+    height: auto;
+    padding: 40px 20px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.TableTableDetails_Heading {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+}
+
+.TableTableDetails_Data {
+    width: 45%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 10px;
+    align-items: center;
+    margin: 20px auto;
+
+
+
+}
+
+.Table_Details_Left {
+    font-size: 20px;
+    font-weight: 600;
+    color: #3a3c3e;
+}
+
+.Table_Details_Right {
+    font-size: 20px;
+    font-weight: 400;
+    color: #3a3c3e;
+}
+
+
+.TableTableDetails_Data_Image_Box {
+    display: flex;
+    align-items: center;
+}
+
+.TableTableDetails_Data_Image_Box>.DetailsImage {
+    width: auto;
+    max-height: 40px;
+    margin: 4px;
+    padding: 2px;
+}
+
+
+
+.Table_CardList_MobileDevice {
+    display: none;
+}
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+    #TableTable_Grid {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row: auto;
+        grid-column-gap: 10px;
+    }
+
+    .Table_Grid_Left {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-top: 110px;
+
+    }
+
+    .TableTableHeader_Container {
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+        grid-column-start: 4;
+        grid-column-end: 11;
+    }
+
+
+    #Table_AppBar {
+        background-color: rgb(115, 140, 136);
+        width: 100%;
+    }
+
+    .Table_Heading {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .TableTableHeader_Section_Left {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin: 10px 0px 5px 10px;
+        align-items: center;
+        background-color: white;
+    }
+
+
+    .Table_Grid_Right {
+        grid-column-start: 11;
+        grid-column-end: 12;
+        margin-top: 110px;
+
+    }
+
+    .TableTableDetails_Container {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        margin: 70px auto;
+        box-sizing: border-box;
+
+
+    }
+
+    .TableTableDetails_Main {
+        width: 80%;
+        height: auto;
+        padding: 40px 20px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    .TableTableDetails_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        color: black;
+        padding: 20px 0;
+    }
+
+    .TableTableDetails_Data {
+        width: 65%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 7px 10px;
+        align-items: center;
+        margin: 20px auto;
+
+
+
+    }
+
+    .Table_Details_Left {
+        font-size: 20px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Table_Details_Right {
+        font-size: 20px;
+        font-weight: 400;
+        color: #3a3c3e;
+    }
+
+
+    .TableTableDetails_Data_Image_Box {
+        display: flex;
+        align-items: center;
+    }
+
+    .DetailsImage {
+        width: auto;
+        height: 40px;
+        margin: 4px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
+
+    .CardList_MobileDevice {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    #TableTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Table_Grid_Left {
+        display: none;
+
+    }
+
+    .Table_Grid_Right {
+        display: none;
+
+    }
+
+    #TableTable_Grid {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row: auto;
+        grid-column-gap: 10px;
+        padding: 10px;
+    }
+
+    .Table_Grid_Left {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        margin-top: 110px;
+
+    }
+
+    .TableTableHeader_Container {
+        grid-column-start: 4;
+        grid-column-end: 10;
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+
+    }
+
+    #Table_AppBar {
+        background-color: rgb(115, 140, 136);
+        width: 100%;
+    }
+
+    .Table_Heading {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .TableTableHeader_Section_Left {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin: 10px 0px 5px 10px;
+        align-items: center;
+        background-color: white;
+    }
+
+    .Table_Grid_Right {
+        grid-column-start: 10;
+        grid-column-end: 12;
+        margin-top: 110px;
+
+    }
+
+    .TableTableDetails_Container {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        margin: 70px auto;
+        box-sizing: border-box;
+
+
+    }
+
+    .TableTableDetails_Main {
+        width: 80%;
+        height: auto;
+        padding: 40px 20px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    .TableTableDetails_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        color: black;
+        padding: 20px 0;
+    }
+
+    .TableTableDetails_Data {
+        width: 75%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 7px 10px;
+        align-items: center;
+        margin: 20px auto;
+
+
+
+    }
+
+    .Table_Details_Left {
+        font-size: 20px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Table_Details_Right {
+        font-size: 20px;
+        font-weight: 400;
+        color: #3a3c3e;
+    }
+
+
+    .TableTableDetails_Data_Image_Box {
+        display: flex;
+        align-items: center;
+    }
+
+    .DetailsImage {
+        width: auto;
+        height: 40px;
+        margin: 4px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
+
+    .Table_CardList_MobileDevice {
+        display: none !important;
+    }
+}
+
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    #TableTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Table_Grid_Left {
+        display: none;
+
+    }
+
+    .Table_Grid_Right {
+        display: none;
+
+    }
+
+    .TableTableHeader_Container {
+        width: 90%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+    }
+
+    .Table_CardList_MobileDevice {
+        width: 80%;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .Table_TableList_LargeDevice {
+        display: none;
+    }
+
+    .Table_Card_Mobile {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .Table_Mobile_Card_Left {
+        font-size: 20px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Table_Mobile_Card_Right {
+        font-size: 20px;
+        font-weight: 500;
+        color: #3a3c3e;
+    }
+
+    .Table_Card_Img {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 2px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
+    .TableTableHeader_Section_Left {
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin: 10px 0px 5px 10px;
+        align-items: center;
+        background-color: white;
+    }
+
+    .TableTableDetails_Container {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        margin: 70px auto;
+        box-sizing: border-box;
+
+
+    }
+
+    .TableTableDetails_Main {
+        width: 80%;
+        height: auto;
+        padding: 40px 20px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    .TableTableDetails_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        color: black;
+        padding: 20px 0;
+    }
+
+    .TableTableDetails_Data {
+        width: 85%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 7px 10px;
+        align-items: center;
+        margin: 20px auto;
+
+
+
+    }
+
+    .Table_Details_Left {
+        font-size: 20px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Table_Details_Right {
+        font-size: 20px;
+        font-weight: 400;
+        color: #3a3c3e;
+    }
+
+
+    .TableTableDetails_Data_Image_Box {
+        display: flex;
+        align-items: center;
+    }
+
+    .DetailsImage {
+        width: auto;
+        height: 40px;
+        margin: 4px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
+
+
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    #TableTable_Grid {
+        width: 100% !important;
+        height: auto;
+        display: block !important;
+    }
+
+
+    .Table_Grid_Left {
+        display: none;
+
+    }
+
+    .Table_Grid_Right {
+        display: none;
+
+    }
+
+    .TableTableHeader_Container {
+        width: 98%;
+        height: auto;
+        padding: 2px;
+        margin: 110px auto;
+    }
+
+    .Table_Heading {
+        font-size: 18px !important;
+        font-weight: 600;
+        color: white;
+    }
+
+    .Table_CardList_MobileDevice {
+        width: 100%;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .Table_TableList_LargeDevice {
+        display: none;
+    }
+
+    .Table_Card_Mobile {
+        width: 100%;
+        margin: 10px auto 0 auto;
+    }
+
+    .Table_Mobile_Card_Left {
+        font-size: 20px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Table_Mobile_Card_Right {
+        font-size: 20px;
+        font-weight: 400;
+        color: #3a3c3e;
+    }
+
+    .Table_Card_Img {
+        width: auto;
+        height: 40px;
+        margin: 2px;
+        padding: 2px;
+        object-fit: contain;
+    }
+
+    .TableTableHeader_Section_Left {
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin: 10px 0px 5px 10px;
+        align-items: center;
+        background-color: white;
+    }
+
+    .TableTableDetails_Container {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        margin: 70px auto;
+        box-sizing: border-box;
+
+
+    }
+
+    .TableTableDetails_Main {
+        width: 100%;
+        height: auto;
+        padding: 40px 5px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    .TableTableDetails_Heading {
+        font-size: 28px;
+        font-weight: 600;
+        text-align: center;
+        color: black;
+        padding: 20px 0;
+    }
+
+    .TableTableDetails_Data {
+        width: 98%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 7px 10px;
+        align-items: center;
+        margin: 20px auto;
+
+
+
+    }
+
+    .Table_Details_Left {
+        font-size: 17px;
+        font-weight: 600;
+        color: #3a3c3e;
+    }
+
+    .Table_Details_Right {
+        font-size: 15px;
+        font-weight: 500;
+        color: #3a3c3e;
+    }
+
+
+    .TableTableDetails_Data_Image_Box {
+        display: flex;
+        align-items: center;
+    }
+
+    .DetailsImage {
+        width: auto;
+        height: 40px;
+        margin: 2px;
+        padding: 2px;
+    }
+
+}

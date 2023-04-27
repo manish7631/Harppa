@@ -25,7 +25,7 @@ const Navbar = () => {
         <div ref={navRef} className="Navbar_Right_Side">
           {NavbarRoutes.map((e, index) => {
             return (
-              <ul>
+              <ul key={index}>
                 <li>
                   <NavLink
                     onClick={showNavbar}

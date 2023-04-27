@@ -358,16 +358,51 @@ const slides = [
   {
     title: "IMPL",
     url: Bihar,
-    link: "",
+    link: "/impltablepage",
     content:
       " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
   },
   {
     title: "MISCELLANEOUS",
     url: Budha,
-    link: "",
+    link: "/misctablepage",
     content:
       "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
+  },
+  {
+    title: "POTTERY",
+    url: Risthal,
+    link: "/potterytablepage",
+    content:
+      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
+  },
+  {
+    title: "ROD",
+    url: Bihar,
+    link: "/rodtablepage",
+    content:
+      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
+  },
+  {
+    title: "SEAL",
+    url: Budha,
+    link: "/sealtablepage",
+    content:
+      "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
+  },
+  {
+    title: "TABLET",
+    url: Risthal,
+    link: "/tablettablepage",
+    content:
+      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
+  },
+  {
+    title: "TAG",
+    url: Bihar,
+    link: "/tagtablepage",
+    content:
+      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
   },
 ];
 
@@ -390,6 +425,69 @@ const siteSlides = [
     title: "Chanhujo-daro",
     url: Budha,
     link: "/chanhujotablepage",
+    content:
+      "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
+  },
+  {
+    title: "Dholavira",
+    url: Risthal,
+    link: "/dholaviratablepage",
+    content:
+      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
+  },
+  {
+    title: "Farmana",
+    url: Bihar,
+    link: "/farmanatablepage",
+    content:
+      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
+  },
+  {
+    title: "Harappa",
+    url: Budha,
+    link: "/harappatablepage",
+    content:
+      "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
+  },
+  {
+    title: "Kalibangan",
+    url: Risthal,
+    link: "/kalibangantablepage",
+    content:
+      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
+  },
+  {
+    title: "Kanmer",
+    url: Bihar,
+    link: "/kanmertablepage",
+    content:
+      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
+  },
+  {
+    title: "Khirsara",
+    url: Budha,
+    link: "/khirsaratablepage",
+    content:
+      "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
+  },
+  {
+    title: "Lothal",
+    url: Risthal,
+    link: "/lothaltablepage",
+    content:
+      "In good condition except for a bit broken off the top edge to the right of the centre and some scattered chipping.",
+  },
+  {
+    title: "Mohenho-daro",
+    url: Bihar,
+    link: "/mohenjodarotablepage",
+    content:
+      " No detailed description of the column is available; theinformation here has been gleaned from Plate XVII in #Cunningham_1871a. The bottom of the pillar is broken off.",
+  },
+  {
+    title: "Rakhigarhi",
+    url: Budha,
+    link: "/rakhigarhitablepage",
     content:
       "An image of a seated Buddha, very perfect … with a headdress like that now worn by the Abbots in Bhutân. It is a plain cap, fitting close to the head, with long lappets on…",
   },

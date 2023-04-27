@@ -19,18 +19,20 @@ import {
   Box,
   Table,
   Typography,
-  useTheme,
   Avatar,
-  Card,
-  CardActionArea,
   CardContent,
+  CardActionArea,
+  Card,
 } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useSelector, useDispatch } from "react-redux";
-import { BnawaliImageGetFunction } from "../../../../redux/Application/action";
+import {
+  EranImageGetFunction,
+  EranSearchImageGetFunction,
+} from "../../../redux/Application/action";
 
 import { Link } from "react-router-dom";
-import "./BnawaliTableHeader.css";
+import "./TableHeader.css";
 
 function descendingComparator(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -97,11 +99,9 @@ const headCells = [
 ];
 function EnhancedTableHead(props) {
   const {
-    onSelectAllClick,
     order,
     orderBy,
-    numSelected,
-    rowCount,
+
     onRequestSort,
   } = props;
   const createSortHandler = (property) => (event) => {
@@ -209,7 +209,7 @@ EnhancedTableToolbar.propTypes = {
   numSelected: PropTypes.number.isRequired,
 };
 
-export default function BnawaliTablePage({ loading, countryList, query1 }) {
+export default function TablePage({ loading, countryList, query1, data }) {
   const [order, setOrder] = React.useState("asc");
   const [orderBy, setOrderBy] = React.useState("calories");
   const [dense, setDense] = useState(false);
@@ -224,21 +224,17 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
 
   const dispatch = useDispatch();
 
-  //---------------------UseSelector Redux Data Call --------------------------------------
-
-  const { isLoading, BnawalImageData } = useSelector(
-    (state) => state.ApplicationReducer
-  );
-
   useEffect(() => {
     setQuery(query1);
   }, [query1]);
 
   // ------------------First Image Function Call Here-----------------------------------
 
+  console.log("table", data);
+
   useEffect(() => {
-    dispatch(BnawaliImageGetFunction());
-  }, []);
+    dispatch(EranSearchImageGetFunction(query));
+  }, [query]);
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";
@@ -266,12 +262,17 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
   // // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
     page > 0
-      ? Math.max(0, (1 + page) * rowsPerPage - BnawalImageData.length)
+      ? Math.max(
+          0,
+          (1 + page) * rowsPerPage - data.search
+            ? data.search.length
+            : data.data.length
+        )
       : 0;
 
   // ----------------------------Loading Function Start Here-------------------------------
 
-  if (isLoading) {
+  if (data.isLoading) {
     return (
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <CircularProgress />
@@ -281,7 +282,7 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box className="TableList_LargeDevice">
+      <Box className="Eran_TableList_LargeDevice">
         <Paper sx={{ width: "100%", mb: 2 }}>
           {/* ------------------------Table Container Start Here---------------------------------- */}
 
@@ -294,7 +295,7 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
               }
             >
               <Table
-                sx={{ minWidth: 750 }}
+                sx={{ minWidth: 750, background: "white" }}
                 aria-labelledby="tableTitle"
                 size={dense ? "small" : "medium"}
               >
@@ -302,12 +303,12 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
                   order={order}
                   orderBy={orderBy}
                   onRequestSort={handleRequestSort}
-                  rowCount={BnawalImageData.length}
+                  rowCount={data.search ? data.search.length : data.data.length}
                 />
                 <TableBody>
                   {/* -------------------Eran Search Data Maping Here------------------- */}
 
-                  {BnawalImageData.slice(
+                  {data.EranImageSearchData.slice(
                     pageSearch * perpage,
                     pageSearch * perpage + perpage
                   ).map((row, index) => {
@@ -373,13 +374,13 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
                               try {
                                 let n = e.split("/").pop();
 
-                                let data1 = require(`../../../../static/ivcgraphemes/${n}`);
+                                let data1 = require(`../../../static/ivcgraphemes/${n}`);
                                 return (
                                   <Avatar
                                     key={n}
                                     sx={{
                                       width: "auto",
-                                      height: "40px",
+                                      minHeight: "40px",
                                       margin: "4px",
                                       padding: "2px",
                                     }}
@@ -413,19 +414,13 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
                           </span>
                         </TableCell>
 
-                        <TableCell
-                          align="center"
-                          marginLeft="20px"
-                          sx={{
-                            color: "#3a3c3e",
-                            fontSize: "14px",
-                            fontWeight: "500",
-                          }}
-                        >
+                        <TableCell align="center" marginLeft="20px">
                           <Link
                             style={{
                               textDecoration: "none",
-                              color: `black`,
+                              color: "#3a3c3e",
+                              fontSize: "14px",
+                              fontWeight: "500",
                             }}
                             to={`/erantabledetails/${row.id}`}
                           >
@@ -436,7 +431,7 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
                       </TableRow>
                     );
                   })}
-                  {emptyRows > 0 && <TableRow></TableRow>}
+                  {emptyRows > 0 && <TableRow> </TableRow>}
                 </TableBody>
               </Table>
             </TableContainer>
@@ -451,12 +446,12 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
                   order={order}
                   orderBy={orderBy}
                   onRequestSort={handleRequestSort}
-                  rowCount={BnawalImageData.length}
+                  rowCount={data.search ? data.search.length : data.data.length}
                 />
                 <TableBody>
                   {/* ----------------Eran Data Maping Here-------------------------- */}
 
-                  {stableSort(BnawalImageData, getComparator(order, orderBy))
+                  {stableSort(data.data, getComparator(order, orderBy))
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     .map((row, index) => {
                       const labelId = `enhanced-table-checkbox-${index}`;
@@ -521,12 +516,12 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
                                 try {
                                   let n = e.split("/").pop();
 
-                                  let data1 = require(`../../../../static/ivcgraphemes/${n}`);
+                                  let data1 = require(`../../../static/ivcgraphemes/${n}`);
                                   return (
                                     <Avatar
                                       sx={{
                                         width: "auto",
-                                        height: "40px",
+                                        minHeight: "40px",
                                         margin: "4px",
                                         padding: "2px",
                                       }}
@@ -588,7 +583,7 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
             <TablePagination
               rowsPerPageOptions={[5, 10, 25]}
               component="div"
-              count={BnawalImageData.length}
+              count={data.search ? data.search.length : data.data.length}
               rowsPerPage={perpage}
               page={pageSearch}
               onPageChange={handleChangePageSearch}
@@ -599,7 +594,7 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
             <TablePagination
               rowsPerPageOptions={[5, 10, 25]}
               component="div"
-              count={BnawalImageData.length}
+              count={data.search ? data.search.length : data.data.length}
               rowsPerPage={rowsPerPage}
               page={page}
               onPageChange={handleChangePage}
@@ -608,175 +603,357 @@ export default function BnawaliTablePage({ loading, countryList, query1 }) {
           )}
         </Paper>
       </Box>
-      <Box className="CardList_MobileDevice">
-        {BnawalImageData.slice(
-          page * rowsPerPage,
-          page * rowsPerPage + rowsPerPage
-        ).map((row, index) => {
-          const labelId = `enhanced-table-checkbox-${index}`;
+      <Box className="Table_CardList_MobileDevice">
+        {query ? (
+          <>
+            {data.EranImageSearchData.slice(
+              pageSearch * perpage,
+              pageSearch * perpage + perpage
+            ).map((row, index) => {
+              const labelId = `enhanced-table-checkbox-${index}`;
 
-          let b = row.links;
+              let b = row.links;
 
-          let len = b.length - 2;
+              let len = b.length - 2;
 
-          let str1 = b.substring(2, len);
+              let str1 = b.substring(2, len);
 
-          let newArr = str1.split("', '");
-          return (
-            <Card className="Banawali_Card_Mobile">
-              <CardActionArea>
-                <CardContent
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <h3 className="Banawali_Mobile_Card_Left">Seqid</h3>
-
-                  <h4 className="Banawali_Mobile_Card_Right">
-                    <span
-                      style={{
-                        width: "100px",
-                        overflow: "hidden",
-                        display: "inline-block",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
-                        textAlign: "right",
-                      }}
-                    >
-                      {row.seqid}
-                    </span>
-                  </h4>
-                </CardContent>
-                <CardContent
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <h3 className="Banawali_Mobile_Card_Left">Seq_In_Nums</h3>
-
-                  <h4 className="Banawali_Mobile_Card_Right">
-                    <span
-                      style={{
-                        width: "100px",
-                        overflow: "hidden",
-                        display: "inline-block",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
-                        textAlign: "right",
-                      }}
-                    >
-                      {row.seq_in_num}
-                    </span>
-                  </h4>
-                </CardContent>
-                <CardContent
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <h3 className="Banawali_Mobile_Card_Left">Site</h3>
-
-                  <h4 className="Banawali_Mobile_Card_Right">
-                    <span
-                      style={{
-                        width: "100px",
-                        overflow: "hidden",
-                        display: "inline-block",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
-                        textAlign: "right",
-                      }}
-                    >
-                      {row.site}
-                    </span>
-                  </h4>
-                </CardContent>
-                <CardContent
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 className="Banawali_Mobile_Card_Left">Links</h3>
-
-                  <h4 className="Banawali_Mobile_Card_Right">
-                    <Box
+              let newArr = str1.split("', '");
+              return (
+                <Card className="Table_Card_Mobile">
+                  <CardActionArea>
+                    <CardContent
                       sx={{
                         display: "flex",
-                        justifyContent: "right",
+                        justifyContent: "space-between",
                       }}
                     >
-                      {newArr.map((e, index) => {
-                        try {
-                          let n = e.split("/").pop();
+                      <h3 className="Table_Mobile_Card_Left">Seqid</h3>
 
-                          let data1 = require(`../../../../static/ivcgraphemes/${n}`);
-                          return (
-                            <img
-                              className="Banawali_Card_Img"
-                              key={index}
-                              src={data1}
-                            />
-                          );
-                        } catch (err) {
-                          console.log("err", err);
-                        }
-                      })}
-                    </Box>
-                    {/* </span> */}
-                  </h4>
-                </CardContent>
-                <CardContent
-                  sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <h3 className="Banawali_Mobile_Card_Left">Actions</h3>
-
-                  <h4 className="Banawali_Mobile_Card_Right">
-                    <span
-                      style={{
-                        width: "150px",
-                        overflow: "hidden",
-                        display: "inline-block",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
-                        textAlign: "right",
+                      <h4 className="Table_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          {row.seqid}
+                        </span>
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
                       }}
                     >
-                      <Link
-                        style={{
-                          textDecoration: "none",
-                          color: `black`,
+                      <h3 className="Table_Mobile_Card_Left">Seq_In_Nums</h3>
+
+                      <h4 className="Table_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          {row.seq_in_num}
+                        </span>
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h3 className="Table_Mobile_Card_Left">Site</h3>
+
+                      <h4 className="Table_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "100px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          {row.site}
+                        </span>
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
+                    >
+                      <h3 className="Table_Mobile_Card_Left">Links</h3>
+
+                      <h4 className="Table_Mobile_Card_Right">
+                        <Box
+                          sx={{
+                            display: "flex",
+                            justifyContent: "right",
+                          }}
+                        >
+                          {newArr.map((e, index) => {
+                            try {
+                              let n = e.split("/").pop();
+
+                              let data1 = require(`../../../static/ivcgraphemes/${n}`);
+                              return (
+                                <Avatar
+                                  key={index}
+                                  sx={{
+                                    width: "auto",
+                                    height: "30px",
+                                    margin: "4px",
+                                    padding: "2px",
+                                  }}
+                                  src={data1}
+                                  variant="square"
+                                />
+                              );
+                            } catch (err) {
+                              console.log("err", err);
+                            }
+                          })}
+                        </Box>
+                        {/* </span> */}
+                      </h4>
+                    </CardContent>
+                    <CardContent
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <h3 className="Table_Mobile_Card_Left">Actions</h3>
+
+                      <h4 className="Table_Mobile_Card_Right">
+                        <span
+                          style={{
+                            width: "150px",
+                            overflow: "hidden",
+                            display: "inline-block",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            textAlign: "right",
+                          }}
+                        >
+                          <Link
+                            style={{
+                              textDecoration: "none",
+                              color: `black`,
+                            }}
+                            to={`/erantabledetails/${row.id}`}
+                          >
+                            {" "}
+                            See Details
+                          </Link>
+                        </span>
+                      </h4>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              );
+            })}
+          </>
+        ) : (
+          <>
+            {data.data
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((row, index) => {
+                const labelId = `enhanced-table-checkbox-${index}`;
+
+                let b = row.links;
+
+                let len = b.length - 2;
+
+                let str1 = b.substring(2, len);
+
+                let newArr = str1.split("', '");
+                return (
+                  <Card className="Table_Card_Mobile">
+                    <CardActionArea>
+                      <CardContent
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
                         }}
-                        to={`/erantabledetails/${row.id}`}
                       >
-                        {" "}
-                        See Details
-                      </Link>
-                    </span>
-                  </h4>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          );
-        })}
+                        <h3 className="Table_Mobile_Card_Left">Seqid</h3>
 
-        {/*  ---------------------Pagination For Normal Data Here----------------- */}
-        <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
-          component="div"
-          count={BnawalImageData.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
+                        <h4 className="Table_Mobile_Card_Right">
+                          <span
+                            style={{
+                              width: "100px",
+                              overflow: "hidden",
+                              display: "inline-block",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              textAlign: "right",
+                            }}
+                          >
+                            {row.seqid}
+                          </span>
+                        </h4>
+                      </CardContent>
+                      <CardContent
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <h3 className="Table_Mobile_Card_Left">Seq_In_Nums</h3>
+
+                        <h4 className="Table_Mobile_Card_Right">
+                          <span
+                            style={{
+                              width: "100px",
+                              overflow: "hidden",
+                              display: "inline-block",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              textAlign: "right",
+                            }}
+                          >
+                            {row.seq_in_num}
+                          </span>
+                        </h4>
+                      </CardContent>
+                      <CardContent
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <h3 className="Table_Mobile_Card_Left">Site</h3>
+
+                        <h4 className="Table_Mobile_Card_Right">
+                          <span
+                            style={{
+                              width: "100px",
+                              overflow: "hidden",
+                              display: "inline-block",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              textAlign: "right",
+                            }}
+                          >
+                            {row.site}
+                          </span>
+                        </h4>
+                      </CardContent>
+                      <CardContent
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                        }}
+                      >
+                        <h3 className="Table_Mobile_Card_Left">Links</h3>
+
+                        <h4 className="Table_Mobile_Card_Right">
+                          <Box
+                            sx={{
+                              display: "flex",
+                              justifyContent: "right",
+                            }}
+                          >
+                            {newArr.map((e, index) => {
+                              try {
+                                let n = e.split("/").pop();
+
+                                let data1 = require(`../../../static/ivcgraphemes/${n}`);
+                                return (
+                                  <img
+                                    className="Table_Card_Img"
+                                    key={index}
+                                    src={data1}
+                                  />
+                                );
+                              } catch (err) {
+                                console.log("err", err);
+                              }
+                            })}
+                          </Box>
+                          {/* </span> */}
+                        </h4>
+                      </CardContent>
+                      <CardContent
+                        sx={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <h3 className="Table_Mobile_Card_Left">Actions</h3>
+
+                        <h4 className="Table_Mobile_Card_Right">
+                          <span
+                            style={{
+                              width: "150px",
+                              overflow: "hidden",
+                              display: "inline-block",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              textAlign: "right",
+                            }}
+                          >
+                            <Link
+                              style={{
+                                textDecoration: "none",
+                                color: `black`,
+                              }}
+                              to={`/erantabledetails/${row.id}`}
+                            >
+                              {" "}
+                              See Details
+                            </Link>
+                          </span>
+                        </h4>
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                );
+              })}
+          </>
+        )}
+
+        {query ? (
+          // ---------------------Pagination For Search Here-----------------------
+          <TablePagination
+            rowsPerPageOptions={[5, 10, 25]}
+            component="div"
+            count={data.search ? data.search.length : data.data.length}
+            rowsPerPage={perpage}
+            page={pageSearch}
+            onPageChange={handleChangePageSearch}
+            onRowsPerPageChange={handleChangeRowsPerPageSearch}
+          />
+        ) : (
+          // ---------------------Pagination For Normal Data Here-----------------
+          <TablePagination
+            rowsPerPageOptions={[5, 10, 25]}
+            component="div"
+            count={data.search ? data.search.length : data.data.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onPageChange={handleChangePage}
+            onRowsPerPageChange={handleChangeRowsPerPage}
+          />
+        )}
       </Box>
     </Box>
   );
